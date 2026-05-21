@@ -259,7 +259,7 @@ Not uniform unfolding. It breathes -- open and compact alternate, a big explosio
 - **Serif** (Noto Serif SC): Magazine main title, naming mega-name, lead, pull-quote
 - **Sans** (Noto Sans SC): Body text, failed station head, text following kicker
 - **Mono** (JetBrains Mono / SF Mono): Number num, kicker label, byline, footnote numbers, stamp
-- **Hand** (Caveat / 楷体): Handwritten annotations scribble, ask questions, caption
+- **Hand** (Caveat / KaiTi): Handwritten annotations scribble, ask questions, caption
 
 Font family contrast is the core of magazine visual feel. If any one is absent, the visual returns to AI's single-font uniformity.
 
@@ -365,7 +365,7 @@ Write all CSS into `{{CUSTOM_CSS}}`, all HTML into `{{CONTENT_HTML}}`.
   --amber-soft: #D7A85A;
   --sans: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
   --serif: 'Noto Serif SC', 'Songti SC', serif;
-  --hand: 'Caveat', '楷体', 'STKaiti', cursive;
+  --hand: 'Caveat', 'KaiTi', 'STKaiti', cursive;
   --mono: 'JetBrains Mono', 'SF Mono', monospace;
 }
 

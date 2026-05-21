@@ -21,7 +21,7 @@ Route by input type:
 |-------|------|-------|
 | URL (regular webpage) | WebFetch | Login-required pages use markdown-proxy |
 | arxiv link | WebFetch (HTML version) | Get abstract + method + experiment sections |
-| PDF / local file | Read | Large PDFs use pages parameter for分段 reading |
+| PDF / local file | Read | Large PDFs use pages parameter forsegmented reading |
 | Direct text | Skip | Go directly to Step 2 |
 | Paper/book name | WebSearch | Get URL then go through WebFetch |
 
@@ -31,14 +31,14 @@ Ensure you have: core argument / reasoning chain / key examples / boundary discu
 
 After reading, be silent for 30 seconds, answer this one question:
 
-> What is this piece's core argument? How does it支撑 that argument? Which steps are the key turns?
+> What is this piece's core argument? How does it support that argument? Which steps are the key turns?
 
 Write down:
 
 - *Core argument*: one sentence
 - *3-5 key turns*: one sentence each
 
-This is the spine of the Q chain. If the spine can't stand, the Qs below are all浮的 — go back and re-read.
+This is the spine of the Q chain. If the spine can't stand, the Qs below are all floating/unmoored — go back and re-read.
 
 ## Step 3: Design the Q Chain
 
@@ -56,10 +56,10 @@ Q types: four categories (action / contrast / cause / boundary) and patterns see
 
 ## Step 4: Write As
 
-Each A strictly four parts, none可省, order不可乱:
+Each A strictly four parts, none can be omitted, order must not be disrupted:
 
 ```
-*Conclusion*: (one sentence — can stand alone,摘抄-able)
+*Conclusion*: (one sentence — can stand alone, quotable)
 
 *Formalization*: (compress the thought into one line of visible relationships using words + simple symbols — see "Formalization Writing" below)
 
@@ -74,7 +74,7 @@ Each A strictly four parts, none可省, order不可乱:
 Hard requirements:
 
 - *Conclusion*: can stand alone — reader forwards this sentence to a friend, friend gets it
-- *Formalization*: use words + simple symbols (→ = ≠ + × etc.) to compress the thought into one line of visible relationships — it's "geometry of thought", not "mathematical formula". Let the reader see the对应关系 at a glance. See `../References/QuestionDesign.md` "Formalization Writing" for details
+- *Formalization*: use words + simple symbols (→ = ≠ + × etc.) to compress the thought into one line of visible relationships — it's "geometry of thought", not "mathematical formula". Let the reader see the correspondences at a glance. See `../References/QuestionDesign.md` "Formalization Writing" for details
 - *Reasoning steps*: each step only advances one inference, the previous step opens the door for the next
 - *Boundary*: write "conditions where it doesn't hold", not "future work" — the former is honesty, the latter is PR jargon
 
@@ -104,21 +104,21 @@ You can sketch a diagram (not in org, just your own scaffolding):
 Q1 ─┬─→ Q2
     └─→ Q3
 Q2 ──→ Q4
-Q4 ──→ Q5 (closing反问)
+Q4 ──→ Q5 (closing rhetorical question)
 ```
 
 ## Step 6: Pass Red Lines
 
-逐条 scan:
+scan item by item:
 
 - [ ] Each Q cannot be dismissed with a one-line definition
 - [ ] Each A has all four parts (conclusion / formalization / steps / boundary)
-- [ ] Formalization line reveals relationship at a glance — not a math formula, not堆砌 jargon
-- [ ] Q chain has direction (not并列 list)
+- [ ] Formalization line reveals relationship at a glance — not a math formula, not piling up jargon
+- [ ] Q chain has direction (not a parallel list)
 - [ ] No "What is X" type Qs
 - [ ] Q sentences ≤ 20 characters (scannable in one glance)
 - [ ] No academic tone ("it is noteworthy that" "in summary" "against the backdrop of")
-- [ ] A doesn't堆砌 jargon as safety blanket — all terminology translated into concrete actions or objects
+- [ ] A doesn't pile up jargon as safety blanket — all terminology translated into concrete actions or objects
 - [ ] 5-10 Qs
 
 Any one fails, go back and fix.
@@ -135,7 +135,7 @@ date "+%Y-%m-%d %a %H:%M"   # → date field
 Denote schema filename: `{YYYYMMDDTHHMMSS}--qa-{topic}__qa.org`
 
 - `qa-` prefix: marks Q-A type (isomorphic with ljg-paper's `paper-`)
-- Topic: 5-10 character提炼 of core argument, remove punctuation. Prefer method name/concept name/soul-sentence keyword
+- Topic: 5-10 character extraction of core argument, remove punctuation. Prefer method name/concept name/soul-sentence keyword
 - `__qa` suffix: keyword tag for denote search
 
 Output path: `~/Documents/notes/`
@@ -154,7 +154,7 @@ Report path to user after writing.
 
 * Introduction
 
-(A paragraph, 3-5 sentences: what this piece is about, why it's worth extracting as questions. Lands the reader, not a综述)
+(A paragraph, 3-5 sentences: what this piece is about, why it's worth extracting as questions. Lands the reader, not a survey)
 
 * Q1: {One sharp question, ≤ 20 chars}
 
@@ -175,7 +175,7 @@ Report path to user after writing.
 
 * Closing
 
-(One sentence that压住 the entire Q-A chain: what the author truly contributed. Not a summary, a naming)
+(One sentence that anchors the entire Q-A chain: what the author truly contributed. Not a summary, a naming)
 ```
 
 Notes:
@@ -188,7 +188,7 @@ Notes:
 ## Acceptance
 
 - *Q cuts to heart*: each Q cannot be dismissed with a one-line definition
-- *A has formalized closure*: each A has all four parts — conclusion sentence can be摘抄, formalization reveals relationship at a glance
-- *Q chain has direction*: deleting one Q causes后续 collapse
+- *A has formalized closure*: each A has all four parts — conclusion sentence can be quoted standalone, formalization reveals relationship at a glance
+- *Q chain has direction*: deleting one Q causes subsequent collapse
 - *Doesn't restate the original*: it's skeleton reconstruction, not paragraph rewriting
-- *Natural language*: read each sentence silently, listen if it sounds like how a real person speaks — verb-driven, no jargon堆砌, no academic tone
+- *Natural language*: read each sentence silently, listen if it sounds like how a real person speaks — verb-driven, no jargon piling, no academic tone

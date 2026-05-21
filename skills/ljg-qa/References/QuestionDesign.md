@@ -4,7 +4,7 @@ How to make Q cut to the heart, and A not scatter.
 
 ## Four Q Types (Action-Contrast-Cause-Boundary)
 
-Each type对应 one支点 of the author's argument. A good Q chain mixes at least three types.
+Each type corresponds to one pivot point of the author's argument. A good Q chain mixes at least three types.
 
 | Type | Pattern | Example |
 |------|---------|---------|
@@ -26,7 +26,7 @@ Only through mixing can you reproduce the original's real tension of "method + c
 
 - ❌ "What is X?" — dismissible with one definition, no load-bearing
 - ❌ "How many steps does X have?" — doesn't count as a question, it's asking for a table of contents
-- ❌ "Is X important?" — answer预设, no tension
+- ❌ "Is X important?" — answer is presupposed, no tension
 - ❌ "How should we view X?" — academic tone, no concrete action
 - ❌ "What are the characteristics of X?" — textbook chapter title, answer will be a list
 
@@ -51,7 +51,7 @@ Key: the contrast must be grounded in a concrete dilemma, not floating in abstra
 Bad: "Why does method X work?"
 Good: "The whole thing rides on assumption A — what if A doesn't hold? What's the backup?"
 
-Key:追问 the deepest假设, not the surface rationale.
+Key:probe the deepest assumption, not the surface rationale.
 
 ### Boundary-type Q
 
@@ -62,10 +62,10 @@ Key: the boundary must be testable, not a generic "future work" disclaimer.
 
 ## A Four-Part Structure
 
-Each A must strictly follow four parts, none可省, order不可乱:
+Each A must strictly follow four parts, none can be omitted, order must not be disrupted:
 
 ```
-*Conclusion*: (one sentence — can be摘抄 standalone, forwarded to a friend who gets it)
+*Conclusion*: (one sentence — can be quoted standalone, forwarded to a friend who gets it)
 
 *Formalization*: (compress the thought into one line of visible relationships using words + simple symbols)
 

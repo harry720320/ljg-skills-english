@@ -90,4 +90,4 @@ git checkout master
 
 ## Step 7: Report
 
-List: which skills were synced, new version numbers, remaining manual差异 (if any).
+List: which skills were synced, new version numbers, remaining manual differences (if any).

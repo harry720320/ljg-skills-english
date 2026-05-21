@@ -56,7 +56,7 @@ Visually rendered with **light green background + dark green left border**, dist
 - `.highlight` = the author's golden conclusion
 - `.prompt` = a question/prompt thrown to the reader
 
-No more than 5 `.prompt` instances per card, avoid highlight泛滥.
+No more than 5 `.prompt` instances per card, avoid highlight overuse.
 
 **Drop cap (first body paragraph):**
 The first regular paragraph (not `.subtitle`, `.highlight`, `.item`) adds `dropcap` class:
@@ -65,7 +65,7 @@ The first regular paragraph (not `.subtitle`, `.highlight`, `.item`) adds `dropc
 ```
 Only the first body paragraph uses this, creating a classic editorial opening ritual.
 
-**Item groups (并列 items with heading + body):**
+**Item groups (parallel items with heading + body):**
 ```html
 <div class="item">
   <p class="label">item heading</p>

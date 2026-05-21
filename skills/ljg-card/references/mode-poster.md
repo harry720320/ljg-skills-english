@@ -67,7 +67,7 @@ Template renders at 1080x1440 full resolution, body text 36px, line-height 1.7.
 ```
 Judgment criteria: standalone paragraph, < 25 chars, carries key insight. Use `.highlight` not `<p><strong>`.
 
-**Item groups (并列 items with heading + body):**
+**Item groups (parallel items with heading + body):**
 ```html
 <div class="item">
   <p class="label">item heading</p>
