@@ -9,9 +9,9 @@
 
 * Problem
 
-{Open with a concrete example — specific scenario / input-output / failure screenshot / user story — let the reader亲历 the dilemma in this example. Describe in one or two sentences.}
+{Open with a concrete example — specific scenario / input-output / failure screenshot / user story — let the reader experience the dilemma in this example. Describe in one or two sentences.}
 
-{Three-part narrative,贯穿 with the same example: (1) Experience the dilemma (2) Why old solutions couldn't work on this example — expose shortcomings on the same example (3) What this paper's authors saw that others missed — only引出 direction, don't展开 mechanism.}
+{Three-part narrative, threaded through the same example: (1) Experience the dilemma (2) Why old solutions couldn't work on this example — expose shortcomings on the same example (3) What this paper's authors saw that others missed — only hint at the direction, don't unfold the mechanism.}
 
 {If no clear predecessor, skip (2), go directly "Experience → New Opening".}
 
@@ -20,7 +20,7 @@
 #+ATTR_ORG: :width 1200
 [[file:images/{identifier}--paper-{short_title}-overview.png]]
 
-{Don't restate the problem. Continue on the concrete example from "Problem",打开 the paper's method step by step on it.}
+{Don't restate the problem. Continue on the concrete example from "Problem", unfolding the paper's method step by step on it.}
 
 {Open with an anchor — the anchor is what the method looks like on that example (e.g. "on that Turing Award problem, the method is like a triage desk"). Each paragraph advances one step, giving the reader "ah, I see" mini-revelations. Revelation verbs: "At this point you see..." "So then..." "How do they solve this step — they thought of..."}
 
@@ -38,7 +38,7 @@
 
 {One sentence: the intellectual crystal this paper truly found.}
 
-{Stripped of the paper's context, does this sentence itself still have force? Don't restate the conclusion —提炼 what you yourself saw. If there's none, say so directly.}
+{Stripped of the paper's context, does this sentence itself still have force? Don't restate the conclusion — distill what you yourself saw. If there's none, say so directly.}
 
 * Advisor Review
 

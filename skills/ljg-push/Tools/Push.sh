@@ -231,9 +231,9 @@ check_readme() {
   echo "$missing" | sed 's/^/    - /'
   echo ""
   warn "Each push is a chance to refresh README. Ask yourself:"
-  echo "    - 新增 skill 了吗？ → README 的 skill 清单 / 安装命令需要加一行"
-  echo "    - 删了 skill 吗？ → README 对应行要删"
-  echo "    - skill 描述大改了吗？ → README 的简介可能要同步"
+  echo "    - Added a new skill? → Add a row to the README skill list / install command"
+  echo "    - Deleted a skill? → Remove the corresponding README line"
+  echo "    - Skill description changed significantly? → README intro may need updating"
   echo ""
   if [ "$SKIP_README_CHECK" = "1" ]; then
     warn "--skip-readme-check passed: ignoring above and continuing."

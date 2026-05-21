@@ -6,13 +6,13 @@
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&display=swap');
 
   :root {
-    /* 基底 */
-    --bg: #FAF8F4;            /* 暖米白底 */
-    --ink: #1F1F1F;           /* off-black 正文 */
-    --ink-strong: #111111;    /* 标题 */
-    --ink-light: #6B6B6B;     /* 标注 */
+    /* Base */
+    --bg: #FAF8F4;            /* warm rice-white background */
+    --ink: #1F1F1F;           /* off-black body text */
+    --ink-strong: #111111;    /* headings */
+    --ink-light: #6B6B6B;     /* annotations */
 
-    /* 5 类学科语义色（deep = 色条/分类标签；light = 卡片底） */
+    /* 5 discipline semantic colors (deep = bar/category label; light = card background) */
     --green-deep: #5B8A6F;
     --green-light: #DCE3D5;
     --blue-deep:  #5979A6;
@@ -24,13 +24,13 @@
     --amber-deep: #B8924A;
     --amber-light:#F0E5D2;
 
-    /* 关系箭头 / 手写标注 */
+    /* Relation arrow / handwritten annotation */
     --arrow: #D2693C;
 
-    /* 字族 */
+    /* Font families */
     --sans: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
     --serif: 'Noto Serif SC', 'Songti SC', serif;
-    --hand: 'Caveat', '楷体', 'STKaiti', 'KaiTi', cursive;
+    --hand: 'Caveat', 'STKaiti', 'KaiTi', cursive;
     --mono: 'SF Mono', 'Menlo', monospace;
   }
 
@@ -45,7 +45,7 @@
     overflow: visible;
   }
 
-  /* 极淡纸张噪点（不是点阵） */
+  /* Subtle paper grain (not halftone) */
   .page > .grain {
     position: absolute; inset: 0;
     filter: url(#noise);
@@ -55,7 +55,7 @@
     mix-blend-mode: multiply;
   }
 
-  /* 整页 SVG overlay：用来画跨卡片的弯曲连接箭头 */
+  /* Full-page SVG overlay: draws cross-card curved connection arrows */
   .relations {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
@@ -64,7 +64,7 @@
     overflow: visible;
   }
 
-  /* 卡片基础样式：仅提供"骨架"，具体颜色由 {{CUSTOM_CSS}} 中的变体类覆盖 */
+  /* Card base styles: skeleton only; colors overridden by {{CUSTOM_CSS}} variant classes */
   .card {
     position: relative;
     padding: 28px 32px 32px 40px;
@@ -93,7 +93,7 @@
     margin: 14px 0 18px;
   }
 
-  /* 学科色变体 */
+  /* Discipline color variants */
   .card.green  { background: var(--green-light);  border-color: var(--green-deep); }
   .card.green  .category { color: var(--green-deep); }
   .card.blue   { background: var(--blue-light);   border-color: var(--blue-deep); }
@@ -105,7 +105,7 @@
   .card.amber  { background: var(--amber-light);  border-color: var(--amber-deep); }
   .card.amber  .category { color: var(--amber-deep); }
 
-  /* 中央核心卡：更大、信息更密、不强绑学科色（默认中性米色） */
+  /* Core card: larger, denser, not tied to discipline color (default neutral beige) */
   .card.core {
     background: #F5F1E8;
     border-left-color: var(--ink-strong);
@@ -119,7 +119,7 @@
   }
   .card.core .body { font-size: 23px; }
 
-  /* 关系箭头标签：橙色手写体，浮于 SVG 路径之上 */
+  /* Relation arrow label: orange handwritten, floats above SVG path */
   .relation-label {
     position: absolute;
     font: 600 30px/1.1 var(--hand);
@@ -130,7 +130,7 @@
     white-space: nowrap;
   }
 
-  /* 顶部标题区 */
+  /* Top title area */
   .title-block {
     padding: 60px 60px 30px;
   }
@@ -185,11 +185,11 @@
     <feColorMatrix type="saturate" values="0"/>
   </filter>
   <defs>
-    <!-- 橙色手绘箭头 marker -->
+    <!-- Orange hand-drawn arrow marker -->
     <marker id="arrow-orange" markerWidth="14" markerHeight="10" refX="13" refY="5" orient="auto">
       <path d="M0,0 L14,5 L0,10 L4,5 Z" fill="#D2693C"/>
     </marker>
-    <!-- 黑色细箭头 marker（卡片内部流程用） -->
+    <!-- Black thin arrow marker (for intra-card flow) -->
     <marker id="arrow-ink" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#1F1F1F"/>
     </marker>
@@ -201,7 +201,7 @@
   <div class="colophon">
     <div class="who">
       <img src="{{LOGO}}" alt="">
-      <span>李继刚</span>
+      <span>Li Jigang</span>
     </div>
     {{SOURCE_LINE}}
   </div>

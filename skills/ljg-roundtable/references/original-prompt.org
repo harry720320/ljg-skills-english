@@ -1,6 +1,6 @@
 #+title:      Roundtable Discussion
 #+date:       [2025-12-18 Thu 11:11]
-#+filetags:   :2025日更:
+#+filetags:   :2025daily:
 #+identifier: 20251218T111157
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -87,7 +87,7 @@
   (responds-to 'deepen-section ()
     (let (focused-question (formulate-deeper-question-from-contradiction last-core-contradiction))
          (set question-under-discussion focused-question)
-         (display "【Moderator】: Alright, let's pause the forward progress. Let's continue围绕 the core point of contention just discussed and explore at a deeper level:「" focused-question "」")))
+         (display "【Moderator】: Alright, let's pause the forward progress. Let's continue circling around the core point of contention just discussed and explore at a deeper level:「" focused-question "」")))
 
   (responds-to 'add-representative (person-name)
     (let (new-person (create-instance 'representative person-name))

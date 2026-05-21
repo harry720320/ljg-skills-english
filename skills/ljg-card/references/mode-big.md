@@ -63,7 +63,7 @@ Line break principles:
 - Place punctuation at the end of a line, not starting a new line
 - Starting a new line for keywords/rhetorical questions can enhance impact
 
-Reference image line break example ("人人拥有「寫輪眼」的时代，稀缺性在哪里？"):
+Reference image line break example ("In the age when everyone has the 'Sharingan,' where does scarcity lie?"):
 ```
 人人拥有
 「寫輪眼」
@@ -88,7 +88,7 @@ To emphasize a word/phrase: use `<span class="shu">keyword</span>` to color it v
 第四行
 ```
 
-Mixed traditional/simplified Chinese is preserved as-is (e.g., the reference image retains traditional script for「寫輪眼」).
+Mixed traditional/simplified Chinese is preserved as-is (e.g., the reference image retains traditional script for 'Sharingan').
 
 ### 3.2 Optional: Subtitle/Small Text
 

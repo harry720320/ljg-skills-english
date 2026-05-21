@@ -57,7 +57,7 @@
 
 {After the target paper, who else pushed this problem forward?}
 
-{If follow-up papers found, use the same structure to讲述 them. If none, say "As of now, this is the latest advance on this line."}
+{If follow-up papers found, use the same structure to narrate them. If none, say "As of now, this is the latest advance on this line."}
 
 * At a Glance
 

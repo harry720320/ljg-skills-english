@@ -78,7 +78,7 @@ Three-layer progressive translation output:
 *Sense layer (Expressiveness)*: Restate the paragraph's meaning in natural Chinese. Adjust word order, supplement implied logic, break long sentences. No translation-ese.
 
 *Finishing touch layer (Elegance, on demand)*: Only triggered in three situations —
-- Chinese-English concepts have systematic mismatch (e.g. freedom vs liberty, Chinese "自由" can't cover it)
+- Chinese-English concepts have systematic mismatch (e.g. freedom vs liberty, Chinese "ziyou (freedom)" can't cover it)
 - Author used domain jargon incomprehensible to outsiders
 - Sentence has double meaning or cultural allusion, literal translation loses information
 
@@ -91,7 +91,7 @@ After translation, automatically pause, enter Phase 2.
 - *Cultural translation*: When encountering Chinese-English writing tradition differences, proactively point them out —
   - English concession structure ("However, one might argue...") ≠ author's stance wavering
   - English prose's understatement tradition: the flatter the tone, the more serious the author
-  - English news inverted pyramid vs Chinese narrative structure (起承转合)
+  - English news inverted pyramid vs Chinese narrative structure (qichengzhuanhe — introduction, development, twist, conclusion)
 
 #### `[Muscle]` Muscle paragraphs — Flow reading
 
