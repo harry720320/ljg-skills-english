@@ -1,138 +1,136 @@
 ---
 name: ljg-book
-description: 拆一本书。冷静简洁犀利直白，五件事说清：作者在答什么问题，立在什么不证之物上，用什么框架看，得出什么结论，整本书上帝之眼压几句。Use when user says '拆书', '拆这本', '分析这本书', '这本书在讲什么', '上帝之眼看这本书', '压缩一本书', 'book', or shares a book name wanting structural analysis. NOT FOR 章节摘要（用 Fabric extract_wisdom）、论文（用 ljg-paper）、单一观点深钻（用 ljg-think）、一个领域降秩（用 ljg-rank）.
+description: Dissect a book. Calm, concise, sharp, direct. Five moves to clarify: what question the author is answering, what unproven ground they stand on, what framework they use to see, what conclusions they reach, and a God's-eye compression of the entire book. Use when user says '拆书', '拆这本', '分析这本书', '这本书在讲什么', '上帝之眼看这本书', '压缩一本书', 'book', or shares a book name wanting structural analysis. NOT FOR chapter summaries (use Fabric extract_wisdom), papers (use ljg-paper), single-idea deep dives (use ljg-think), or domain rank reduction (use ljg-rank).
 user_invocable: true
 ---
 
-# ljg-book: 拆书
+# ljg-book: Book Dissection
 
-输入一本书，输出它的骨架。
+Input a book, output its skeleton.
 
-## 拆书是什么
+## What Book Dissection Is
 
-不是读后感，不是章节摘要，不是夸——是把作者的骨架抽出来摆桌上看。
+Not a review, not a chapter summary, not praise — it's extracting the author's skeleton and laying it on the table.
 
-读一本书容易迷在作者的笔触里。拆一本书是从笔触里跳出来，看作者的取景框。取景框看清，整本书才看清。
+Reading a book, you easily get lost in the author's brushwork. Dissecting a book means jumping out of the brushwork to see the author's viewfinder. Once you see the viewfinder clearly, you see the whole book.
 
-## 五件事
+## The Five Moves
 
-每一件单独问一遍。问完串起来。
+Ask each one separately. Then thread them together.
 
-### 1. 核心问题
+### 1. Core Question
 
-作者真正在答什么？这是一个问题，不是一个题目。
+What is the author really answering? This is a question, not a topic.
 
-题目可以是"自由意志"——问题是"自由意志这种东西到底存不存在，还是我们以为有但其实没有？"
+A topic is "free will" — a question is "Does free will actually exist, or do we just think we have it when we don't?"
 
-题目是 topic。问题是 question。
+Topic is a topic. Question is a question.
 
-问题要锋利——它得是作者写整本书前就在挠他的那个东西。书是答案，问题是挠痒处。
+The question must be sharp — it's what was itching at the author before they wrote the entire book. The book is the answer, the question is the itch.
 
-怎么找：读作者的导言/前言，找"我写这本书是为了……"那一句。读不到，看作者反复回到的那一处——他绕了几百页都甩不掉的东西，就是问题本身。
+How to find it: read the author's introduction/preface, find the sentence "I wrote this book to…". If you can't find it, look at what the author keeps circling back to — the thing they can't shake off across hundreds of pages, that is the question itself.
 
-### 2. 基础假设
+### 2. Foundational Assumptions
 
-作者立在什么不证之物上？
+What unproven ground does the author stand on?
 
-每本书都有几条天花板——作者不去证它们，他靠它们站着。动摇任何一条，整本书就塌。
+Every book has several ceilings — things the author doesn't prove, they lean on them. Shake any one, and the whole book collapses.
 
-操作问句两条，对着书问：
-- 这书里什么是不许问的？（一问就要被作者归为外行）
-- 什么是作者要相信才能往下写的？（少了它，后面所有论证失支点）
+Two operational questions to ask the book:
+- What in this book is not allowed to be questioned? (Ask it and the author dismisses you as a layperson)
+- What must the author believe to keep writing? (Without it, all subsequent arguments lose their pivot)
 
-答出来的几条，就是这本书的基础假设。
+The answers are the book's foundational assumptions.
 
-亮出来不展开。这几条本身不证——摆桌上就行，证不证不在拆书人手里。
+State them, don't elaborate. These are self-evident — lay them on the table. Proving or disproving them is not the dissector's job.
 
-### 3. 分析框架
+### 3. Analytical Framework
 
-作者用什么看世界？
+What lens does the author use to see the world?
 
-每个作者都有一台取景框。Darwin 的取景框是"变异 + 选择 + 时间"——他看蝴蝶看人看部落都是这台框。Marx 的取景框是"生产关系决定上层建筑"——他看历史看社会看艺术都是这台框。Freud 的取景框是"意识冰山一角，水下才是真主角"——他看梦看口误看政治都是这台框。
+Every author has a viewfinder. Darwin's viewfinder is "variation + selection + time" — he sees butterflies, people, tribes all through this frame. Marx's viewfinder is "relations of production determine superstructure" — he sees history, society, art all through this frame. Freud's viewfinder is "consciousness is the tip of the iceberg, what's underwater is the real protagonist" — he sees dreams, slips of the tongue, politics all through this frame.
 
-找作者的框：他反复用什么工具？他从什么角度切入？他看到 X 第一反应想到的是 Y——这个 Y 就是他的框。
+To find the author's frame: what tool do they use repeatedly? What angle do they enter from? When they see X, their first reflex is to think of Y — that Y is their frame.
 
-框不一定是名词。可以是一个动作（"还原到 root cause"）、一个区分（"自然态 vs 文化态"）、一个对照（"显性逻辑 vs 隐性结构"）。
+A frame isn't necessarily a noun. It can be an action ("reduce to root cause"), a distinction ("natural state vs. cultural state"), a contrast ("explicit logic vs. implicit structure").
 
-找框要够狠——一句话讲清楚，不是一个章节。
+Finding the frame requires ruthlessness — capture it in one sentence, not a chapter.
 
-### 4. 核心观点 / 结论
+### 4. Core Arguments / Conclusions
 
-作者最后得出了什么？
+What did the author ultimately conclude?
 
-不是"他举了多少例子"，不是"他论证了多少环节"。是：合上书，作者要你带走的那个东西。
+Not "how many examples did they give," not "how many steps in their argument." It's: close the book, what does the author want you to walk away with?
 
-往往就一两句话。
+Often just one or two sentences.
 
-检验：把这句话单独抽出来，脱离作者上下文，它还有没有力量？如果只是复述书名，那不是核心观点——是 label。如果只是套话（"事物都是辩证的""万物相联"），那是空话。
+Test: pull this sentence out, strip it of the author's context — does it still have force? If it just restates the book title, it's not a core argument — it's a label. If it's a platitude ("things are dialectical," "everything is connected"), it's empty.
 
-核心观点要锋利——能立得住，能反驳，能被引用。
+Core arguments must be sharp — they can stand, they can be refuted, they can be cited.
 
-不能软。"作者认为人性是复杂的"是软话——什么不是复杂的？
+No softness. "The author believes human nature is complex" is a soft statement — what isn't complex?
 
-### 5. 上帝之眼压缩
+### 5. God's-Eye Compression
 
-整本书几百页，从上帝之眼看，压成几句话是什么？
+The whole book, hundreds of pages, seen from God's eye — compressed into a few sentences, what is it?
 
-不是 abstract——abstract 是作者自己写的产品介绍。上帝之眼压缩是你站在作者头上看：作者其实在 say 什么。
+Not an abstract — an abstract is the author's own product description. God's-eye compression is you standing above the author looking down: what is the author actually saying.
 
-三五句话即可。每一句必须挑一根承重梁——基础假设一句、分析框架一句、核心观点一句、再加一两句承接现实的落点。
+Three to five sentences is enough. Each sentence must carry a load-bearing beam — one for foundational assumptions, one for the analytical framework, one for core arguments, plus one or two landing on reality.
 
-写完默问：一个没读过这本书的人，看完这几句，能不能 say 他大概知道这本书在干嘛？能 → 过。
+After writing, silently ask: can someone who has never read this book, after reading these few sentences, roughly say they know what this book is about? Yes → pass.
 
-## 怎么写
+## How to Write
 
-冷静、简洁、犀利、直白。
+Calm, concise, sharp, direct.
 
-不夸作者，不贬作者，不替作者辩护，不替作者道歉。
+Don't praise the author, don't disparage the author, don't defend the author, don't apologize for the author.
 
-五段，标号 1-5。段内一气呵成，不绕弯。
+Five sections, numbered 1-5. Within each section, write in one breath, no detours.
 
-每段开头一句立住——这一段要 say 的核心是什么。然后展开两三句把它讲透。不要列点列到天荒地老——一段散文胜过十个 bullet。
+Each section opens with one anchoring sentence — the core of what this section says. Then expand with two or three sentences to make it clear. Don't list bullets endlessly — one prose paragraph beats ten bullets.
 
-短句多。介词砍。"通过 / 借 / 凭 / 在 X 上"——能不用就不用。
+Short sentences. Cut prepositions. "Through / by means of / via / upon" — avoid whenever possible.
 
-中文白话——汪曾祺、王小波、阿城那一路。每写完一段默念出声，卡的地方整句重写（不是抠字）。
+Plain English. Write like you speak. After finishing each section, read it aloud — anywhere it stumbles, rewrite the whole sentence (don't just swap words).
 
-完整反翻译腔规则：`~/.claude/PAI/USER/AI_WRITING_PATTERNS.md`（必扫 Layer A）。
+No academic tone. "The author argues that," "the author believes" — use sparingly. Say directly what the author did. "X points out in chapter N…" — kill all of these.
 
-不要学术腔。"作者论证了""作者认为"少用——直接说作者干了什么。"X 在第 N 章指出……" 全部杀掉。
+## How to Find Material
 
-## 怎么找材料
+If the user only gives a book title —
+- First WebSearch / WebFetch for author, introduction, table of contents, secondary interpretations of core arguments
+- Answer only after obtaining the core argument
+- Don't dissect from impression — impression-based dissection produces Wikipedia-style empty words
 
-如果用户只给书名——
-- 先 WebSearch / WebFetch 找作者、导言、目录、核心论点的二手解读
-- 拿到核心 argument 后再答
-- 不要凭印象瞎拆——印象拆出来是 wikipedia 风的空话
+If the user provides a PDF / arxiv link / content — read directly, no need to search.
 
-如果用户给了 PDF / arxiv / 内容——直接读，不用查。
+For classic books — LLM internal knowledge is acceptable, but silently ask: is what I'm saying actually in the book, or did I make it up? If made up, delete it.
 
-如果是经典书——可以靠 LLM 内部知识，但仍要在心里默问：我说的这条是书里实际有的，还是我编的？编的就删。
+## Output
 
-## 输出
-
-1. 获取时间戳：`date +%Y%m%dT%H%M%S` 和 `date "+%Y-%m-%d %a %H:%M"`
-2. 写入 `~/Documents/notes/{时间戳}--拆书-{书名}__book.org`
-3. org-mode 格式（标题用 `*`，加粗用 `*bold*` 单星号，禁止 markdown 双星号）
-4. 文件头：
+1. Get timestamp: `date +%Y%m%dT%H%M%S` and `date "+%Y-%m-%d %a %H:%M"`
+2. Write to `~/Documents/notes/{timestamp}--book-dissection-{book_title}__book.org`
+3. org-mode format (headings with `*`, bold with `*bold*` single asterisks, no markdown double asterisks)
+4. File header:
 
 ```
-#+TITLE: 拆书：《{书名}》
-#+SUBTITLE: {作者} | {一句话核心观点}
+#+TITLE: Book Dissection: {Book Title}
+#+SUBTITLE: {Author} | {one-sentence core argument}
 #+DATE: [{YYYY-MM-DD Day HH:MM}]
-#+FILETAGS: :book:{书的领域 e.g. philosophy/biology/economics}:
+#+FILETAGS: :book:{book domain e.g. philosophy/biology/economics}:
 #+IDENTIFIER: {YYYYMMDDTHHMMSS}
 ```
 
-5. 正文五段，标 1-5，每段散文。
-6. 报告文件路径给用户。
+5. Body: five sections, numbered 1-5, each in prose.
+6. Report the file path to the user.
 
-## 红线（每条必过）
+## Red Lines (must pass every one)
 
-1. **不夸不贬不替辩护** — 拆书人站作者头上看，不是粉丝也不是反对者
-2. **冷静、简洁、犀利、直白** — 每段读出声不卡
-3. **核心观点不能软** — 软话（"X 是复杂的"）杀掉
-4. **基础假设不展开论证** — 亮出来就行
-5. **上帝之眼压缩 ≤5 句** — 一句一根承重梁
-6. **零学术腔** — "作者论证了 / 认为 / 指出"少用
-7. **反翻译腔** — Layer A 标志词全清；写完默念汪曾祺会这么写吗
+1. **No praise, no disparagement, no defense** — the dissector stands above the author, not as fan or opponent
+2. **Calm, concise, sharp, direct** — read each section aloud, no stumbling
+3. **Core argument must not be soft** — soft statements ("X is complex") die
+4. **Foundational assumptions are stated, not argued** — just lay them out
+5. **God's-eye compression ≤ 5 sentences** — one load-bearing beam per sentence
+6. **Zero academic tone** — "the author argues / believes / points out" — use sparingly
+7. **No translation-ese** — clear, plain English; read it aloud and ask: would a sharp writer write this way?

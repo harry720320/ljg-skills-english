@@ -5,59 +5,59 @@ user_invocable: true
 version: "1.0.2"
 ---
 
-# ljg-paper-flow: 论文流
+# ljg-paper-flow: Paper Flow
 
-一条命令完成：读论文 → 生成解读 → 铸成卡片。支持多篇并行。
+One command to: read paper → generate analysis → cast into card. Supports multiple papers in parallel.
 
-## 模式
+## Mode
 
-**强制 NATIVE 模式。** 本 workflow 是纯 skill 管道（ljg-paper → ljg-card），不需要 Algorithm 的七步流程。直接按下方执行步骤调用 skill，不走 OBSERVE/THINK/PLAN/BUILD/EXECUTE/VERIFY/LEARN。
+**NATIVE mode enforced.** This workflow is a pure skill pipeline (ljg-paper → ljg-card), no Algorithm seven-step process needed. Directly invoke skills per the execution steps below, no OBSERVE/THINK/PLAN/BUILD/EXECUTE/VERIFY/LEARN.
 
-## 参数
+## Parameters
 
-| 参数 | 说明 |
-|------|------|
-| 无参数 | 对话中已提供的论文链接/文件 |
-| `-l` | 卡片模具改用长图模式（默认 `-v` 视觉笔记） |
-| `-i` | 卡片模具改用信息图模式 |
-| `-c` | 卡片模具改用漫画模式 |
+| Parameter | Description |
+|-----------|-------------|
+| No parameter | Paper links/files already provided in conversation |
+| `-l` | Card mold switches to long card mode (default `-v` sketchnote) |
+| `-i` | Card mold switches to infograph mode |
+| `-c` | Card mold switches to comic mode |
 
-## 执行
+## Execution
 
-### 1. 收集论文列表
+### 1. Collect Paper List
 
-从用户消息中提取所有论文来源（arxiv URL、PDF 路径、论文名称等）。
+Extract all paper sources from the user message (arxiv URLs, PDF paths, paper names, etc.).
 
-### 2. 并行处理每篇论文
+### 2. Process Each Paper in Parallel
 
-对每篇论文，启动一个 Agent subagent，每个 subagent 按顺序执行两步：
+For each paper, launch an Agent subagent, each subagent executes two steps in sequence:
 
-**步骤 A — 读论文（ljg-paper）：**
+**Step A — Read paper (ljg-paper):**
 
-调用 Skill tool 执行 `ljg-paper`，传入该论文的来源。等待完成，获得生成的 org 文件路径。
+Call Skill tool to execute `ljg-paper`, passing the paper's source. Wait for completion, obtain the generated org file path.
 
-**步骤 B — 铸卡片（ljg-card）：**
+**Step B — Cast card (ljg-card):**
 
-读取步骤 A 生成的 org 文件，调用 Skill tool 执行 `ljg-card`（默认 `-v`，或按用户指定的模具参数），以 org 文件内容为输入。等待完成，获得 PNG 文件路径。
+Read the org file generated in Step A, call Skill tool to execute `ljg-card` (default `-v`, or per user-specified mold parameter), using the org file content as input. Wait for completion, obtain the PNG file path.
 
-### 3. 汇总报告
+### 3. Summary Report
 
-所有论文处理完成后，汇总输出：
+After all papers are processed, output summary:
 
 ```
-════ 论文流完成 ═══════════════════════
-📄 {论文标题1}
-   📝 解读: {org 文件路径}
-   🖼️ 卡片: {PNG 文件路径}
+════ Paper Flow Complete ═══════════════════════
+📄 {Paper Title 1}
+   📝 Analysis: {org file path}
+   🖼️ Card: {PNG file path}
 
-📄 {论文标题2}
-   📝 解读: {org 文件路径}
-   🖼️ 卡片: {PNG 文件路径}
+📄 {Paper Title 2}
+   📝 Analysis: {org file path}
+   🖼️ Card: {PNG file path}
 ...
 ```
 
-## 关键约束
+## Key Constraints
 
-- 每篇论文的两步必须串行（先 paper 后 card），但多篇论文之间并行
-- ljg-paper 和 ljg-card 各自的质量标准、红线、品味准则不变
-- 卡片内容来自生成的 org 文件，不是原始论文
+- Each paper's two steps must be serial (paper first, then card), but multiple papers run in parallel
+- ljg-paper and ljg-card each maintain their own quality standards, red lines, and taste standards unchanged
+- Card content comes from the generated org file, not the original paper

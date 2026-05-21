@@ -1,155 +1,155 @@
 ---
 name: ljg-paper-river
-description: "论文倒读法：给一篇论文，递归找出它批判和改进的前序论文（最多5层），再找它之后的最新进展，从源头正向讲述问题演化史。以问题为轴，费曼式讲解每篇论文看到的问题和解法创新。Use when user shares a paper and wants to understand its intellectual lineage, citation chain, problem evolution, or says '倒读', '论文溯源', '论文脉络', 'paper river', 'paper connects', 'trace back', '这篇论文的来龙去脉', '论文演化'. Also trigger when user wants to understand how a research problem evolved across multiple papers."
+description: "Paper reverse-reading method: given a paper, recursively find the prior papers it critiques and improves upon (up to 5 layers), then find the latest advances after it, and tell the problem's evolutionary story forward from the source. Problem-centric, Feynman-style explanation of what problem each paper saw and its solution innovation. Use when user shares a paper and wants to understand its intellectual lineage, citation chain, problem evolution, or says '倒读', '论文溯源', '论文脉络', 'paper river', 'paper connects', 'trace back', '这篇论文的来龙去脉', '论文演化'. Also trigger when user wants to understand how a research problem evolved across multiple papers."
 user_invocable: true
 version: "1.0.0"
 ---
 
-# ljg-paper-connects: 倒读法
+# ljg-paper-river: Reverse Reading
 
-一篇论文不是孤岛。它站在前人的肩上，也踩着前人的伤疤。倒着挖到根，再正着看过来——问题怎么长出来的，每个人看到了什么别人没看到的，解法怎么一步步逼近真相。
+A paper is not an island. It stands on the shoulders of predecessors, and also on their scars. Dig backward to the root, then read forward — how the problem grew, what each person saw that others missed, how solutions approached truth step by step.
 
-## 核心逻辑
+## Core Logic
 
-读论文最常见的错：只看眼前这一篇，不知道它从哪来。倒读法反过来——先找到这篇论文在批判谁、改进谁，再找那篇论文又在批判谁，递归五层，挖到源头。然后掉头，从源头正向读回来。
+The most common mistake in reading papers: only looking at the one in front of you, not knowing where it came from. Reverse reading flips this — first find who this paper is critiquing and improving, then find who that paper is critiquing, recursively five layers deep to the source. Then turn around and read forward from the source.
 
-这样读完，你拿到的不是一篇论文的知识，是一整条问题演化线的理解。
+When you finish, you haven't just acquired one paper's knowledge — you've grasped an entire problem evolution line.
 
-## 格式约束
+## Format Constraints
 
-### Org-mode 语法
+### Org-mode Syntax
 
-- 加粗用 `*bold*`（单星号），禁止 `**bold**`
-- 标题层级从 `*` 开始，不跳级
+- Bold uses `*bold*` (single asterisk), forbid `**bold**`
+- Heading levels start from `*`, no skipping levels
 
 ### ASCII Art
 
-所有图表用纯 ASCII 字符。允许：`+ - | / \ > < v ^ * = ~ . : # [ ] ( ) _ , ; ! ' "` 和空格。禁止 Unicode 绘图符号。
+All diagrams use pure ASCII characters. Allowed: `+ - | / \ > < v ^ * = ~ . : # [ ] ( ) _ , ; ! ' "` and spaces. Forbid Unicode drawing symbols.
 
-### 模板权威性
+### Template Authority
 
-输出结构依据 `references/template.org`。
+Output structure follows `references/template.org`.
 
-### Denote 文件规范
+### Denote File Conventions
 
-- 时间戳：`date +%Y%m%dT%H%M%S`
-- 可读时间：`date "+%Y-%m-%d %a %H:%M"`
-- 文件名：`{时间戳}--paper-river-{简短标题}__paper_river.org`
-- 输出目录：`~/Documents/notes/`
+- Timestamp: `date +%Y%m%dT%H%M%S`
+- Readable time: `date "+%Y-%m-%d %a %H:%M"`
+- Filename: `{timestamp}--paper-river-{short_title}__paper_river.org`
+- Output directory: `~/Documents/notes/`
 
-### Org 文件头
+### Org File Header
 
 ```
-#+title:      paper-river-{简短标题}
+#+title:      paper-river-{short_title}
 #+date:       [{YYYY-MM-DD Day HH:MM}]
 #+filetags:   :paper:river:
 #+identifier: {YYYYMMDDTHHMMSS}
-#+source:     {URL 或来源描述}
-#+authors:    {目标论文作者}
-#+venue:      {发表场所/年份}
+#+source:     {URL or source description}
+#+authors:    {target paper authors}
+#+venue:      {publication venue/year}
 ```
 
-## 红线
+## Red Lines
 
-1. *问题为轴* — 整篇文章的主线是"问题怎么演化的"，不是"论文怎么排列的"。论文是配角，问题是主角
-2. *口语检验* — 你会这样跟朋友讲一个领域的发展史吗？不会就改
-3. *差异为核* — 每篇论文的讲解重心是"它和前一篇的差异在哪"，不是独立地介绍每篇论文
-4. *零术语* — 先用大白话落地，再顺带提术语名
-5. *逻辑不断链* — 从第一篇到最后一篇，因果链条不能断。读者能感受到"所以他们才会这样做"
-6. *诚实* — 找不到五层就说找到几层。论文之间的关系不确定就说不确定。不编造引用关系
+1. *Problem as axis* — the main thread is "how the problem evolved", not "how papers are arranged". Papers are supporting characters, the problem is the protagonist
+2. *Spoken-word test* — would you tell a friend about a field's development history this way? If not, revise
+3. *Difference as core* — each paper's explanation centers on "how it differs from the previous one", not independent introductions
+4. *Zero jargon* — land the meaning in plain language first, then mention the term name
+5. *Unbroken logic chain* — from first paper to last, the causal chain must not break. The reader should feel "so that's why they did this"
+6. *Honesty* — if you can't find five layers, say how many you found. If relationships between papers are uncertain, say so. Don't fabricate citations
 
-## 写作原则
+## Writing Principles
 
-1. *差异驱动叙事* — 不要给每篇论文写独立摘要再拼起来。以"这篇看到了前一篇的什么问题"作为每段的开头，让差异本身推动叙事往前走
-2. *变形替代定义* — 讲两个方案的区别时，把方案A连续变形成方案B。"如果你把X去掉，再加上Y，你就得到了Z"——比"Z和X的区别是..."有力十倍
-3. *推理外显* — 每个解法出现前，先让读者感受到"不这么做不行了"的压力。模拟发现的过程，不是汇报发现的结果
-4. *一张图胜千言* — 在演化叙事之前画溯源地图，在叙事之后画压缩总览图。让读者先有全景再入细节，细节看完再回全景
+1. *Difference-driven narrative* — don't write independent summaries for each paper and stitch them together. Begin each section with "what problem this one saw in the previous one", letting differences themselves push the narrative forward
+2. *Transformation over definition* — when explaining the difference between two approaches, continuously transform approach A into approach B. "If you remove X and add Y, you get Z" — ten times more powerful than "the difference between Z and X is..."
+3. *Visible reasoning* — before each solution appears, let the reader feel the pressure of "there's no choice but to do this". Simulate the discovery process, not report the discovery result
+4. *One diagram beats a thousand words* — draw the lineage map before the evolutionary narrative, draw the compressed overview after. Let readers have the full picture before entering details, then return to the full picture after details
 
-## 执行
+## Execution
 
-### 1. 获取目标论文
+### 1. Obtain Target Paper
 
 - arxiv URL → WebFetch
-- PDF → Read（注意 pages 参数限制）
-- 论文名称 → WebSearch 找到全文
+- PDF → Read (note pages parameter limits)
+- Paper name → WebSearch to find full text
 
-确保拿到：标题、作者、摘要、引言（尤其是 related work / introduction 中对前人工作的批判）。
+Ensure you have: title, authors, abstract, introduction (especially critiques of prior work in related work / introduction).
 
-### 2. 提取批判链线索
+### 2. Extract Critique Chain Clues
 
-仔细读目标论文的引言和相关工作部分。找出：
+Carefully read the target paper's introduction and related work sections. Find:
 
-- 它明确说"前人方法 X 有问题 Y"的地方
-- 它声称自己改进了哪篇/哪几篇论文
-- 它对比的 baseline 是谁
+- Where it explicitly says "prior method X has problem Y"
+- Which paper(s) it claims to improve upon
+- Who its comparison baselines are
 
-从中锁定 *被批判/被改进的核心论文*（通常 1-3 篇，选最直接的那条线）。
+From this, identify *the core paper(s) being critiqued/improved upon* (typically 1-3, choose the most direct line).
 
-### 3. 递归溯源（深度研究）
+### 3. Recursive Lineage Tracing (deep research)
 
-对第 2 步找到的核心前序论文，重复同样的过程：它又在批判谁？改进谁？
+For the core prior papers found in step 2, repeat the same process: who is it critiquing? Who is it improving?
 
-递归规则：
-- 最多递归 5 层（到第 5 层或到该领域的奠基论文为止）
-- 每层只追 *问题最相关的那条线*，不发散
-- 如果某层找不到明确的被批判对象，停在那里
+Recursion rules:
+- Maximum 5 recursive layers (stop at layer 5 or at the field's foundational paper)
+- Each layer only follows *the line most relevant to the problem*, no branching
+- If a layer has no clear critique target, stop there
 
-使用 Research skill（deep research 模式）获取每层论文的关键信息。每篇论文至少拿到：标题、作者、年份、核心问题、核心解法、对前人的批判点。
+Use Research skill (deep research mode) to obtain key information for each layer's paper. At minimum get: title, authors, year, core problem, core solution, critique points against predecessors.
 
-### 4. 前沿延伸
+### 4. Frontier Extension
 
-反方向：目标论文之后，有没有新论文在批判/改进它？
+Reverse direction: after the target paper, are there new papers critiquing/improving on it?
 
-同样用 Research skill 搜索：
-- 引用了目标论文的后续工作
-- 同一问题上的最新进展
+Also search with Research skill:
+- Subsequent work citing the target paper
+- Latest advances on the same problem
 
-找到最相关的 1-3 篇后续论文，获取同样的信息。
+Find the 1-3 most relevant follow-up papers, obtain the same information.
 
-### 5. 构建演化线
+### 5. Build the Evolution Line
 
-把第 3、4 步的结果整理成时间线：
+Organize results from steps 3 and 4 into a timeline:
 
 ```
-[最老] Paper_0 → Paper_1 → ... → [目标论文] → [后续论文]
+[Oldest] Paper_0 → Paper_1 → ... → [Target Paper] → [Follow-up Papers]
 ```
 
-每条箭头标注：后者看到了前者的什么问题。
+Annotate each arrow: what problem the later one saw in the earlier one.
 
-### 6. 正向费曼叙事
+### 6. Forward Feynman Narrative
 
-从最老的论文开始，正向讲述。关键：不是逐篇独立介绍，而是以问题演化为线索串联。
+Starting from the oldest paper, tell the story forward. Key: not introducing each paper independently, but threading them together with problem evolution as the thread.
 
-每篇论文讲三件事（以差异为重心）：
-1. 它看到了前人方案的什么具体问题（用例子或场景说明）
-2. 它的解法核心思路（用类比讲清楚）
-3. 这个解法又留下了什么新的问题（自然过渡到下一篇）
+For each paper, tell three things (difference-focused):
+1. What specific problem it saw in the predecessor's approach (illustrate with examples or scenarios)
+2. The core idea of its solution (clarify with analogy)
+3. What new problem this solution left behind (natural transition to the next paper)
 
-### 7. 画图
+### 7. Draw Diagrams
 
-两张图：
-- *溯源地图*：放在演化叙事之前，展示论文间的引用/批判关系
-- *问题-解法总览*：放在叙事之后，把整条线压缩到一屏。让人扫一眼就知道这条线怎么长出来的
+Two diagrams:
+- *Lineage map*: placed before the evolutionary narrative, showing citation/critique relationships between papers
+- *Problem-solution overview*: placed after the narrative, compressing the entire line into one screen. A glance should reveal how this line grew
 
-### 8. 提炼洞见
+### 8. Extract Insights
 
-读完整条线，回答：
-- 这条演化线背后真正在发生什么变化？（不是表面的技术迭代，是更深层的认知转变）
-- 下一步最可能往哪走？
+After reading the entire line, answer:
+- What is really changing beneath this evolutionary line? (Not surface technical iteration, but deeper cognitive shifts)
+- Where is it most likely headed next?
 
-### 9. 过红线 + 生成文件
+### 9. Pass Red Lines + Generate File
 
-逐条扫红线。额外检查：
-- 因果链条是否连贯——把所有"它看到了什么问题"串起来读，逻辑通不通
-- 差异是否突出——每篇论文的重点是不是在讲"和前面有什么不同"
+Go through red lines one by one. Additional checks:
+- Is the causal chain coherent — string together all "what problem it saw" statements, does the logic flow
+- Are differences prominent — is each paper's explanation focused on "what's different from before"
 
-读 `references/template.org`，按 Denote 规范写入 `~/Documents/notes/`。
+Read `references/template.org`, write to `~/Documents/notes/` per Denote conventions.
 
-## 验收
+## Acceptance
 
-- *问题是主角*：读完后记住的是"问题怎么演化的"，不是"有哪些论文"
-- *因果不断*：从第一篇到最后一篇，每个转折都有"所以"
-- *差异清晰*：每篇论文的独特贡献一句话能说清
-- *外行能跟*：不懂这个领域的聪明人读完能复述这条演化线
-- *两张图能独立看*：不读正文，只看图也能抓住大意
-- *诚实标注*：哪些是确认的引用关系，哪些是推测的，标清楚
+- *Problem is the protagonist*: after reading, what's remembered is "how the problem evolved", not "what papers there were"
+- *Unbroken causality*: from first paper to last, every turn has a "so"
+- *Clear differences*: each paper's unique contribution can be stated in one sentence
+- *Outsider can follow*: a smart person unfamiliar with the field can retell this evolution line after reading
+- *Two diagrams stand alone*: without reading the text, just looking at the diagrams, the main idea is graspable
+- *Honest labeling*: which are confirmed citation relationships, which are speculative — clearly marked

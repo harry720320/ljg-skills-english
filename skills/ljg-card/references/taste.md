@@ -1,108 +1,108 @@
-# 设计品味准则（全模具通用）
+# Design Taste Standards (shared across all molds)
 
-所有模具生成 HTML 前，必须经过本准则校验。这是视觉质量的底线。
+All molds must pass this standards checklist before generating HTML. This is the visual quality floor.
 
-## 1. 基线参数
+## 1. Baseline Parameters
 
-| 维度 | 默认值 | 含义 |
-|------|--------|------|
-| DESIGN_VARIANCE | 8 | 1=完美对称，10=艺术混沌 |
-| VISUAL_DENSITY | 4 | 1=画廊留白，10=驾驶舱信息密度 |
+| Dimension | Default | Meaning |
+|-----------|---------|---------|
+| DESIGN_VARIANCE | 8 | 1=perfect symmetry, 10=artistic chaos |
+| VISUAL_DENSITY | 4 | 1=gallery whitespace, 10=cockpit information density |
 
-根据模具自动调整：
-- `-l` 长图：DESIGN_VARIANCE=5, VISUAL_DENSITY=3（阅读舒适优先）。变化通过**色调感知**实现——不同内容气质对应不同背景底色和强调色（见 mode-long.md 步骤 2.5）
-- `-i` 信息图：DESIGN_VARIANCE=7, VISUAL_DENSITY=8（数据密度优先）。变化通过**动态 REF 编码**和**内容驱动的自定义布局**实现
-- `-c` 海报：DESIGN_VARIANCE=9, VISUAL_DENSITY=2（视觉冲击优先）。与长图共享色调系统，结尾标记仅在末页出现
+Auto-adjusted by mold:
+- `-l` Long card: DESIGN_VARIANCE=5, VISUAL_DENSITY=3 (reading comfort first). Variation achieved through **hue perception** — different content temperaments对应 different background colors and accent colors (see mode-long.md step 2.5)
+- `-i` Infograph: DESIGN_VARIANCE=7, VISUAL_DENSITY=8 (data density first). Variation achieved through **dynamic REF encoding** and **content-driven custom layouts**
+- `-c` Comic: DESIGN_VARIANCE=9, VISUAL_DENSITY=2 (visual impact first). Shares hue system with long card, end marker only appears on final page
 
-## 2. 排版工程
+## 2. Typography Engineering
 
-### 标题
-- 大标题：`tracking-tighter`（字间距紧凑），`leading-none`（行高极小）
-- **禁用 Inter 字体**。长图/海报用衬线体（Noto Serif SC），信息图用等宽+无衬线混排
-- 仪表盘/技术类场景严禁衬线体——只用高端无衬线（Geist、Satoshi、Cabinet Grotesk）
+### Headings
+- Large headings: `tracking-tighter` (tight letter spacing), `leading-none` (minimal line height)
+- **Inter font forbidden**. Long card/comic use serif (Noto Serif SC), infograph uses mono + sans-serif混合
+- Dashboard/technical scenarios strictly forbid serif — only premium sans-serif (Geist, Satoshi, Cabinet Grotesk)
 
-### 正文
-- 默认：`text-base`、`leading-relaxed`、最大行宽 `65ch`
-- `-i` 信息图：正文 ≥36px、行高 ≥1.6、标注 ≥24px（手机端 1080px→390px 缩放 2.8 倍后需可读）
-- 段落文本颜色避免纯黑，用 `#333` 或 `#4a4a4a` 等深灰
+### Body Text
+- Default: `text-base`, `leading-relaxed`, max line width `65ch`
+- `-i` Infograph: body ≥36px, line-height ≥1.6, labels ≥24px (must remain readable after 1080px→390px mobile scaling of 2.8x)
+- Paragraph text color avoid pure black, use deep gray like `#333` or `#4a4a4a`
 
-### 数字
-- 当 VISUAL_DENSITY > 7（信息图模式），所有数字用等宽字体（`font-family: monospace`）
+### Numbers
+- When VISUAL_DENSITY > 7 (infograph mode), all numbers use monospace (`font-family: monospace`)
 
-## 3. 色彩校准
+## 3. Color Calibration
 
-### 硬性规则
-- 最多 **1 个强调色**，饱和度 < 80%
-- **禁止「AI 紫蓝」**：紫色按钮光晕、霓虹渐变一律禁止
-- 同一张图内严格统一冷暖调——不在暖灰和冷灰之间摇摆
-- **禁止纯黑** `#000000`：用 Off-Black（`#1a1a1a`）、Zinc-950 或炭灰
+### Hard Rules
+- Maximum **1 accent color**, saturation < 80%
+- **Forbid "AI purple-blue"**: purple button glows, neon gradients一律 forbidden
+- Strictly unify warm/cool tone within a single image — don't oscillate between warm gray and cool gray
+- **Forbid pure black** `#000000`: use Off-Black (`#1a1a1a`), Zinc-950, or charcoal
 
-### 渐变约束
-- 不要对大标题使用渐变填充文字
-- 背景渐变仅限微妙过渡，避免色彩跳跃
+### Gradient Constraints
+- Don't use gradient fill on large heading text
+- Background gradients limited to subtle transitions, avoid color jumps
 
-## 4. 布局多样化
+## 4. Layout Diversity
 
-### DESIGN_VARIANCE > 4 时
-- **禁止居中 Hero**：标题不要默认居中。用左对齐、分屏、非对称留白
-- **禁止「三等分卡片」**：3 列等宽并排是 AI 生成的头号标志。用 2 列锯齿、非对称网格、或横向滚动替代
+### When DESIGN_VARIANCE > 4
+- **Forbid centered Hero**: headings must not default to centered. Use left-aligned, split-screen, asymmetric whitespace
+- **Forbid "three-column cards"**: 3 equal-width并列 columns is the #1 AI-generation tell. Replace with 2-column staggered, asymmetric grid, or horizontal scroll
 
-### DESIGN_VARIANCE ≥ 8 时
-- 使用 CSS Grid 分数单位（如 `grid-template-columns: 2fr 1fr 1fr`）
-- 允许大面积留白（`padding-left: 20vw` 级别的空间感）
-- 允许 Masonry 式错落布局
+### When DESIGN_VARIANCE ≥ 8
+- Use CSS Grid fractional units (e.g. `grid-template-columns: 2fr 1fr 1fr`)
+- Allow large whitespace areas (`padding-left: 20vw`-level spatial sense)
+- Allow Masonry-style staggered layout
 
-### 卡片与容器
-- 卡片仅在层级关系（elevation）有功能需求时使用
-- 数据指标让它们「呼吸」——用 `border-top`、`divide-y` 或纯留白分组，而非一个个方盒子
-- 阴影必须染色（与背景色调一致），不要灰色默认阴影
+### Cards & Containers
+- Cards only used when hierarchy (elevation) has functional need
+- Data metrics should "breathe" — group with `border-top`, `divide-y`, or pure whitespace, not individual boxes
+- Shadows must be tinted (matching background tone), no gray default shadows
 
-## 5. AI 生成禁忌清单
+## 5. AI Generation Forbidden Checklist
 
-生成任何视觉内容前，逐项排查以下 AI 典型痕迹：
+Before generating any visual content,逐项 check for these typical AI traces:
 
-### 视觉 & CSS
-- **禁止外发光**：不要 `box-shadow` 默认光晕。用内边框或染色阴影
-- **禁止过饱和强调色**：强调色必须与中性色优雅融合
-- **禁止自定义鼠标指针**（静态图不涉及，但生成 HTML 时也不要加）
+### Visual & CSS
+- **Forbid outer glow**: no `box-shadow` default glow. Use inner borders or tinted shadows
+- **Forbid oversaturated accent colors**: accent colors must blend elegantly with neutrals
+- **Forbid custom cursors** (static images not relevant, but don't add them in generated HTML either)
 
-### 排版
-- **禁止 Inter 字体**：用 Geist、Outfit、Cabinet Grotesk 或 Satoshi
-- **禁止 H1 尖叫**：标题不要靠单纯放大来建立层级。用字重和颜色控制
+### Typography
+- **Forbid Inter font**: use Geist, Outfit, Cabinet Grotesk, or Satoshi
+- **Forbid H1 screaming**: headings must not建立 hierarchy through pure size scaling. Use weight and color to control
 
-### 内容 & 数据（「Jane Doe 效应」）
-- **禁止通用人名**：John Doe、Sarah Chan、Jack Su 禁止出现。用有创意的真实名字
-- **禁止假数据**：不要 `99.99%`、`50%`、`1234567`。用有机的「脏」数据（`47.2%`、`+1 (312) 847-1928`）
-- **禁止创业烂名**：Acme、Nexus、SmartFlow 禁止。发明有品味的品牌名
-- **禁止 AI 文案腔**：「赋能」「无缝」「释放」「下一代」禁止。用具体动词
-- **禁止 Unsplash 链接**：如需占位图，用 `https://picsum.photos/seed/{随机字符串}/800/600` 或 SVG
+### Content & Data ("Jane Doe Effect")
+- **Forbid generic names**: John Doe, Sarah Chan, Jack Su forbidden. Use creative real names
+- **Forbid fake data**: no `99.99%`, `50%`, `1234567`. Use organic "dirty" data (`47.2%`, `+1 (312) 847-1928`)
+- **Forbid startup cliché names**: Acme, Nexus, SmartFlow forbidden. Invent tasteful brand names
+- **Forbid AI copywriting tone**: "empower" "seamless" "unlock" "next-generation" forbidden. Use concrete verbs
+- **Forbid Unsplash links**: if placeholder images needed, use `https://picsum.photos/seed/{random_string}/800/600` or SVG
 
-### 间距 & 对齐
-- padding 和 margin 必须数学精确，不留尴尬间隙
-- 相邻元素严格对齐，视觉线条贯通
+### Spacing & Alignment
+- padding and margin must be mathematically precise, no awkward gaps
+- Adjacent elements strictly aligned, visual lines贯通
 
-## 6. 材质与表面
+## 6. Material & Surface
 
-### 玻璃态（Glassmorphism）
-如需毛玻璃效果，不要只用 `backdrop-blur`。必须叠加：
-- 1px 内边框：`border: 1px solid rgba(255,255,255,0.1)`
-- 微妙内阴影：`box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)`
-模拟物理边缘折射。
+### Glassmorphism
+If frosted glass effect needed, don't just use `backdrop-blur`. Must叠加:
+- 1px inner border: `border: 1px solid rgba(255,255,255,0.1)`
+- Subtle inner shadow: `box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)`
+Simulating physical edge refraction.
 
-### 圆角
-- 主容器用大圆角（`border-radius: 2.5rem`）
-- 扩散阴影（极淡、大范围）：`box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05)`
+### Border Radius
+- Main containers use large radius (`border-radius: 2.5rem`)
+- Diffuse shadows (extremely faint, large spread): `box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05)`
 
-## 7. 出厂自检
+## 7. Factory Self-Check
 
-生成 HTML 后、截图前，逐项确认：
+After generating HTML, before screenshot,逐项 confirm:
 
-- [ ] 是否避免了居中 Hero（DESIGN_VARIANCE > 4 时）？
-- [ ] 是否避免了三等分等宽卡片？
-- [ ] 标题是否用了非 Inter 字体？
-- [ ] 颜色是否统一冷暖调，无纯黑？
-- [ ] 强调色是否 ≤ 1 个且饱和度 < 80%？
-- [ ] 数据是否真实感（非 99.99% 式假数据）？
-- [ ] 文案是否去除了 AI 腔（赋能/无缝/释放）？
-- [ ] 间距是否数学精确，无尴尬留白？
-- [ ] 阴影是否染色（非灰色默认）？
+- [ ] Avoided centered Hero (when DESIGN_VARIANCE > 4)?
+- [ ] Avoided three-column equal-width cards?
+- [ ] Headings using non-Inter font?
+- [ ] Colors unified warm/cool tone, no pure black?
+- [ ] Accent colors ≤ 1 and saturation < 80%?
+- [ ] Data feels real (no 99.99%-style fake data)?
+- [ ] Copywriting stripped of AI tone (empower/seamless/unlock)?
+- [ ] Spacing mathematically precise, no awkward whitespace?
+- [ ] Shadows tinted (not gray default)?

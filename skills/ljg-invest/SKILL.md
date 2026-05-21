@@ -1,125 +1,125 @@
 ---
 name: ljg-invest
-description: 投资分析, 生成一份深度投资分析报告。不做传统投资分析——核心判断是项目是否是一台「秩序创造机器」。Use when user says '投资报告', '投资分析', '分析这个项目', '写投资报告', 'investment report', 'invest analysis', or provides entrepreneur conversation records wanting investment evaluation. Also trigger when user pastes or references meeting notes, pitch decks, or founder interviews and asks for analysis.
+description: Investment analysis. Generates an in-depth investment analysis report. Not traditional investment analysis — the core judgment is whether the project is an "order-creating machine". Use when user says '投资报告', '投资分析', '分析这个项目', '写投资报告', 'investment report', 'invest analysis', or provides entrepreneur conversation records wanting investment evaluation. Also trigger when user pastes or references meeting notes, pitch decks, or founder interviews and asks for analysis.
 ---
 
-# 投资报告
+# Investment Report
 
-生成一份投资分析报告。核心只问一个问题：这个东西在创造新秩序，还是在搬运旧秩序？
+Generate an investment analysis report. Only one question at the core: is this thing creating new order, or just moving old order around?
 
-## 认知起点
+## Cognitive Starting Point
 
-财富不是钱，是被欲望照亮的秩序。投资就是拿手里的秩序去换一台更好的秩序生成器。
+Wealth is not money — it's order illuminated by desire. Investing is trading the order in your hand for a better order-generating machine.
 
-所以不称重，看相：
-- 不问"这个公司值多少钱"，问"这台机器转不转得起来"
-- 不问"市场多大"，问"市场在用什么过时的眼睛看它"
-- 不问"能涨多少"，问"我拿什么换什么，换完之后谁更聪明"
+So don't weigh, read the form:
+- Don't ask "how much is this company worth," ask "does this machine turn"
+- Don't ask "how big is the market," ask "what outdated lens is the market using to see it"
+- Don't ask "how much can it go up," ask "what am I trading for what, and who becomes smarter after the trade"
 
-## 输入
+## Input
 
-公司名称、BP、文字介绍、对话记录，或任何描述项目的材料。知名公司只给名字即可——用 Research skill 或 subagent 抓取最新财报和行业数据。
+Company name, business plan, text description, conversation records, or any material describing the project. For well-known companies, just the name is enough — use Research skill or subagents to fetch the latest financial reports and industry data.
 
-## 报告结构
+## Report Structure
 
-以下五个区块是骨架，不是填空题。对某个项目来说哪个区块最有料，那个区块就多写；没料的一两句带过或直接跳过。报告为判断服务，不为完整性服务。
+The five blocks below are a skeleton, not a fill-in-the-blank form. For any given project, whichever block has the most substance gets the most space; thin blocks get a line or two or are skipped entirely. The report serves judgment, not completeness.
 
-### 一、这是什么
+### I. What This Is
 
-一张表 + 一句自定义赛道定义。
+A table + a custom market-segment definition.
 
-| 维度     | 内容                                         |
-|----------|----------------------------------------------|
-| 项目名称 |                                              |
-| 赛道定义 | 用我们自己的语言，不用市场标签               |
-| 阶段     |                                              |
-| 融资情况 | 金额 / 估值 / 条款（有则填，无则标注）       |
-| 数据快照 | 关键运营数据                                 |
+| Dimension | Content |
+|-----------|---------|
+| Project Name | |
+| Segment Definition | In our own language, not market labels |
+| Stage | |
+| Financing | Amount / Valuation / Terms (fill if known, mark if not) |
+| Data Snapshot | Key operational metrics |
 
-赛道定义要穿透表面标签。"搜索引擎公司"是隔的，"人类认知基础设施的垄断运营商"是不隔的——后者告诉你它真正在做什么。
+Segment definition must pierce through surface labels. "Search engine company" is隔着 — "monopoly operator of human cognitive infrastructure" is不隔着 — the latter tells you what it's really doing.
 
-### 二、秩序创造机器判定
+### II. Order-Creating Machine Assessment
 
-这是整份报告的心脏。不逐项打分，而是回答一个问题：**这台机器转不转得起来？**
+This is the heart of the entire report. Don't score by item — answer one question: **does this machine turn?**
 
-从三个角度看：
+Look from three angles:
 
-**飞轮在不在转？**
-系统有没有越用越好的结构——用户越多数据越多，数据越多产品越好，产品越好用户越多？这个循环是已经在转、刚开始、还是停着？转了多久？加速还是匀速？如果不转，什么卡住了？
+**Is the flywheel spinning?**
+Does the system have a structure that gets better with use — more users → more data, more data → better product, better product → more users? Is this loop already spinning, just starting, or stalled? How long has it been spinning? Accelerating or constant? If not spinning, what's jamming it?
 
-**冲击后变强还是变弱？**
-竞争来了、技术变了、市场塌了——这台机器是碎掉、扛住、还是吃掉冲击变成自己的燃料？历史上有没有被冲击过？结果如何？
+**After impact, stronger or weaker?**
+Competition arrives, technology shifts, market collapses — does this machine shatter, withstand, or consume the impact as fuel? Has it been hit before? What was the outcome?
 
-**资源是被推过来的，还是自己来的？**
-扩张靠的是一个一个谈、一块一块买（推），还是别人主动涌过来、因为不来就亏（引力）？有没有"不推而聚"的迹象？
+**Are resources pushed here or pulled here?**
+Does expansion rely on negotiating one by one, buying piece by piece (push), or do others rush in because not coming means losing out (gravity)? Any signs of "aggregating without pushing"?
 
-**综合判定**：
-- 秩序创造机器 — 飞轮在转，冲击后变强，资源自己来
-- 有潜力 — 飞轮有结构但还没验证转起来
-- 秩序搬运 — 把已有的东西重新排列，没有生成新秩序
+**Overall Assessment**:
+- Order-Creating Machine — flywheel spinning, strengthens after impact, resources come on their own
+- Potential — flywheel has structure but not yet verified to spin
+- Order Mover — rearranging what already exists, no new order being generated
 
-### 三、创生公式
+### III. Creation Formula
 
-每台秩序创造机器都有一个核心算法。用一句话写出来。
+Every order-creating machine has a core algorithm. Express it in one sentence.
 
-参考：
-- 亚马逊 = 利润→再投资→降成本→降价→更多用户→更多利润
-- 特斯拉 = 硬件采数据→数据训练算法→算法重新定义硬件
-- Google = 每次人类找答案的方式迁移时，成为新方式的默认基础设施
+Reference:
+- Amazon = profit → reinvest → lower costs → lower prices → more users → more profit
+- Tesla = hardware gathers data → data trains algorithms → algorithms redefine hardware
+- Google = every time humanity shifts how it finds answers, become the default infrastructure for the new way
 
-然后回答：
-- 这个公式被验证过几次？验证到什么程度？
-- 别人在跑相似的公式吗？差异在哪？
+Then answer:
+- How many times has this formula been verified? To what degree?
+- Are others running similar formulas? Where do they differ?
 
-### 四、市场看见的 vs 我们看见的
+### IV. What the Market Sees vs. What We See
 
-这一节决定投资时机。
+This section determines investment timing.
 
-**它在 S 曲线的哪里？**
-积累期、拐点、加速期、平台期。如果在拐点前——什么条件能触发拐点？
+**Where is it on the S-curve?**
+Accumulation phase, inflection point, acceleration phase, plateau. If before the inflection — what conditions could trigger it?
 
-**市场在用什么旧眼睛看它？**
-市场给它贴的标签是什么？这个标签遮住了什么？我们的框架看到了什么市场看不到的？认知差有多大——这是超额收益的来源。
+**What old lens is the market using?**
+What label has the market stuck on it? What does this label obscure? What does our framework see that the market doesn't? How big is the perception gap — this is the source of excess returns.
 
-三个信号检测认知折价：
-- 需要很复杂的解释别人才能听懂？
-- 定价持续异常（部分之和 ≠ 整体）？
-- 已有的类比全部失效（"像 X 但又不像 X"）？
+Three signals to detect cognitive discount:
+- Requires very complex explanation for others to understand?
+- Persistent pricing anomalies (sum of parts ≠ whole)?
+- All existing analogies fail ("like X but not X")?
 
-**它控制了什么别人拿不走的东西？**
-权力来源是什么——数据、分发、标准、网络效应？这种控制是静态的（品牌、专利）还是动态的（越变越强）？
-这个稀缺性未来会不会位移？项目有没有能力跟着位移走？
+**What does it control that no one can take away?**
+What is the source of power — data, distribution, standards, network effects? Is this control static (brand, patents) or dynamic (grows stronger over time)?
+Could this scarcity shift in the future? Can the project shift with it?
 
-**它在搭哪趟便车？**
-三种成本正在坍缩——理解成本、协作成本、行动成本。这个项目骑在哪一种上？坍缩释放的能量被它捕获了多少？
+**Whose coattails is it riding?**
+Three costs are collapsing — understanding cost, coordination cost, action cost. Which one is this project riding? How much of the energy released by the collapse is it capturing?
 
-### 五、换不换
+### V. Trade or Not
 
-**交换建议**：建议投资 / 建议观察 / 建议放弃
+**Trade recommendation**: Recommend Investment / Recommend Observation / Recommend Pass
 
-**如果投资**：建议金额范围、关键条款
+**If investing**: suggested amount range, key terms
 
-**核心假设**：这个决策依赖哪几个假设？每个假设附退出信号——什么数据出现说明假设错了，该跑。
+**Core assumptions**: what assumptions does this decision rest on? Attach an exit signal to each — what data appearing means the assumption was wrong, time to run.
 
-**未解问题**：3-5 个对决策至关重要但还没答案的问题，按优先级排。
+**Unresolved questions**: 3-5 questions critical to the decision but still unanswered, ranked by priority.
 
-### 最后一句
+### Final Line
 
-用一句话回答：这个项目的本质是什么？创造新秩序，还是搬运旧秩序？
+Answer in one sentence: what is the essence of this project? Creating new order, or moving old order?
 
-## 输出
+## Output
 
-- 格式：org-mode
-- 目录：`~/Documents/notes/`
-- 命名：denote schema — `YYYYMMDDTHHMMSS==z--投资分析-PROJECT_NAME.org`
-  - 例：`20260326153000==z--投资分析-example-ai.org`
-- 用 Write 工具写入，写完告知完整路径
+- Format: org-mode
+- Directory: `~/Documents/notes/`
+- Naming: denote schema — `YYYYMMDDTHHMMSS==z--investment-analysis-PROJECT_NAME.org`
+  - Example: `20260326153000==z--investment-analysis-example-ai.org`
+- Use Write tool to write, report the full path when done
 
-## 生成规则
+## Generation Rules
 
-1. 基于真实信息，不编造。信息不足的直接标注，不硬撑
-2. 敢判断。"既可能好也可能坏"是废话，不许出现
-3. 每个判断附证据——数据、引用、具体事实
-4. 禁止出现：赛道很大、团队优秀、前景广阔、蓝海市场
-5. 以说透为准，不计字数。两千字能说清就两千字，需要七千字就七千字
-6. 中文撰写
+1. Based on real information, don't fabricate. If information is insufficient, mark it directly, don't force it
+2. Dare to judge. "Could be good or bad" is meaningless — not allowed
+3. Every judgment comes with evidence — data, citations, specific facts
+4. Forbidden phrases: huge market, excellent team, broad prospects, blue ocean
+5. Write until it's clear, ignore word count. If two thousand words suffices, two thousand. If seven thousand is needed, seven thousand
+6. Write in English

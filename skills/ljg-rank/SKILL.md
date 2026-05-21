@@ -1,478 +1,238 @@
 ---
 name: ljg-rank
-description: 给一个领域，找出背后真正撑着它的几根独立的力。十几个现象砍到不可再少的生成器——砍完能把现象一个个生回来，才算数。Use when user says '降秩', '找秩', '秩是什么', '这个领域靠什么撑着', '背后是什么', or wants to decompose any domain to its irreducible generators.
+description: Given a domain, find the few independent forces that truly支撑 it. Cut down dozens of phenomena to the irreducible generators — only counts if you can regenerate every phenomenon from them. Use when user says '降秩', '找秩', '秩是什么', '这个领域靠什么撑着', '背后是什么', or wants to decompose any domain to its irreducible generators.
 user_invocable: true
 ---
 
-# 降秩引擎
+# Rank Reduction Engine
 
-输入一个领域，输出它的秩。
+Input a domain, output its rank.
 
-## 秩是什么
+## What Rank Is
 
-秩不是"关键要素",不是"核心原则",不是"总结要点"。
+Rank is not "key factors", not "core principles", not "summary of key points".
 
-秩是这么个东西:这个领域里真正独立的生成器,究竟有几根?拿这几根,能不能把全部现象一个个倒回来?能,才算找到。
+Rank is this: how many truly independent generators does this domain actually have? Take those few, can you regenerate every single phenomenon from them? Yes, only then have you found it.
 
-但能倒回来只是底线。**Deutsch 在《无穷的开始》里立的尺**——好解释要过两关:
+But regeneration is only the floor. **Deutsch's criterion from The Beginning of Infinity** — a good explanation must pass two gates:
 
-- **解释力**(reach)——不光能推出清单里的现象,还能推出清单外的,而且现实里真验得上。
-- **难以变更**(hard to vary)——每根生成器、每个细节,都是被现象逼出来的。动一处,预测就崩。
+- **Reach** — not only can it derive the phenomena on your list, it can derive ones not on your list, and those actually check out in reality.
+- **Hard to vary** — every generator, every detail, was forced by the phenomena. Change one thing, the predictions collapse.
 
-坏解释能用十种说法糊过去——它根本不是在解释,是用模糊把面铺得很广。好解释只有这一种说法能把所有现象对上——动一根就塌。
+Bad explanations can paper over things ten different ways — they're not really explaining, they're using vagueness to spread a wide surface. Good explanations have only one way to match all phenomena — move one piece and it all collapses.
 
-找秩,找的就是这种"动一根就塌"的好解释。
+Finding rank is finding this "move one piece and it all collapses" kind of good explanation.
 
-## 怎么找:先抬头,再往下挖
+## How to Find: First Look Up, Then Dig Down
 
-挖之前,先抬头看一眼这个领域立在什么上面——**它的基本假设是哪几条?**
+Before digging, first look up at what this domain stands on — **what are its foundational assumptions?**
 
-### 0. 先看基本假设(往上看,看到天花板)
+### 0. First Examine Foundational Assumptions (look up, see the ceiling)
 
-一套理论,按亚里士多德的规矩,总要有几条不证自明的起点。基督教就立在三条上:
+A theoretical system, per Aristotelian convention, always has a few self-evident starting points. Christianity stands on three:
 
-- 《圣经》是真的,一切思考从这里起。
-- 上帝唯一,确实存在。
-- 人是上帝造的,上帝爱人。
+- The Bible is true, all thinking starts from here.
+- God is unique, and indeed exists.
+- Humans are created by God, and God loves humans.
 
-这三条不许问"为什么"——它们靠信,不靠证。动摇任何一条,整套教义就塌。
+These three are not allowed to be asked "why" — they stand on faith, not proof. Shake any one, the entire doctrinal system collapses.
 
-每个领域都有这种东西。物理学里是"自然律在时空中稳定"——你没法用实验去证,实验本身就预设了它。经济学里是"人会按自己的偏好排序选择"——这不是观察出来的结论,是入场的门票。哲学里是"语言能指称世界"——分析哲学整个家都建在这块地基上。
+Every domain has these. In physics, "laws of nature are stable across spacetime" — you can't prove this with experiment, experiment itself presupposes it. In economics, "people rank choices by preference" — this isn't a conclusion from observation, it's the ticket to enter. In philosophy, "language can refer to the world" — the entire house of analytic philosophy is built on this foundation.
 
-降秩之前,先把这几条挖出来,**明明白白写在纸上**。
+Before rank reduction, dig these out first, **write them clearly on paper**.
 
-操作问句两条,对着领域问:
+Two operational questions to ask the domain:
 
-- **这里什么是不许问的?**(一问就被当外行,或者被当冒犯)
-- **什么是靠相信才成立的?**(没有它,后面所有论证都失去支点)
+- **What here is not allowed to be questioned?** (Ask it and you're treated as an outsider or offensive)
+- **What holds only by belief?** (Without it, all subsequent arguments lose their pivot)
 
-答出来的几条,就是这个领域的基本假设。
+The answers are this domain's foundational assumptions.
 
-**假设和 rank,一句话分清**:
+**Assumptions vs rank, distinguished in one sentence:**
 
-- **基本假设是天花板**——往上不可追,信而立。
-- **root rank 是地板**——往下追到追不动,挖而见。
+- **Foundational assumptions are the ceiling** — upward, not further traceable, stand by faith.
+- **Root rank is the floor** — downward, trace to where tracing stops, found by digging.
 
-两个方向,一上一下。**地板没找到,鬼打墙;天花板没看清,容易把信仰当真理说出去**——后者更危险,因为听上去也像真理。
+Two directions, one up one down. **Floor not found = chasing ghosts; ceiling not clearly seen = easy to mistake faith for truth and proclaim it** — the latter is more dangerous, because it sounds like truth too.
 
-写进文章里的方式:开头一两句,把基本假设交代清楚。不展开论证,不解释"为什么是这几条"——它们的位置就是不证。然后才开始往下挖 rank。
+How to write into the article: opening line or two, clearly state the foundational assumptions. Don't elaborate arguments, don't explain "why these" — their position is self-evident. Then begin digging down for rank.
 
-### 1-7. 往下挖:穿透工序
+### 1-7. Dig Down: The Penetration Process
 
-判据是事后才能验的事,挖 rank 的力气全在过程里。判据再严,也只能挑出伪根——前提是工序走到了底。
+Criteria are things you check afterward — the muscle of finding rank is all in the process. Criteria can only filter out false roots, no matter how strict — provided the process has gone to the bottom.
 
-七步,心里走完,不写进文章:
+Seven steps, walk through mentally, don't write into the article:
 
-1. **铺现象**——领域里 10+ 个有代表性的现象,光铺,不解释。要的是给 rank 留一份可反生成的检验靶。
-2. **列候选**——每个现象问一句"为什么会这样",候选生成器全贴出来。这一步必然杂,伪根混在里头。
-3. **递归追问**——这是穿透的命门。**每个候选,再追一刀:它下面还有没有更基本的?追到追不动为止。** 最常见的失败是停在现象层。比如降秩"创业",候选写出来是愿景、执行、团队、市场——看着都对,其实只是表面的"关键要素",不是 root rank。再追:愿景从哪来?执行靠什么?追到追不动,那一层才是 root rank。
-4. **合并同源**——两根候选其实是同一个生成器在两面上露脸,合掉。判别一句话:去掉一个,另一个还会不会自己冒出来?
-5. **砍**——拿掉一根,剩下的能不能反生成全部现象?砍得掉的扔,砍不掉的留。这一步把判据里的"最小性"落到地。
-6. **反生成**——剩下的几根,从头把现象清单走一遍,看能不能逐条复现。复现不了的那条,指向少了一根。
-7. **预测 + 变更双测**——两道闸一起过:
-   - **预测清单外**(reach):这几根能不能推出清单里没有的现象?推出来的,现实里真有吗?
-   - **变更测试**(hard to vary):随便挑一根,改一个细节——换个条件、换个方向、换个强度。预测还对吗?还对,这根是松的伪根,可以换;改一处就垮,这根才是紧的真根,动不得。Deutsch 的原话:你能改的,都不是它的内核。
+1. **Lay out phenomena** — 10+ representative phenomena in the domain, just lay them out. Don't explain. The purpose is to leave a verification target for regeneration.
 
-七步走完,几根候选才够格放上判据台。
+2. **List candidates** — for each phenomenon, ask "why does this happen?", post all candidate generators. This step is necessarily messy, false roots mixed in.
 
-工序心里走透,但**别写进文章**——和判据一样,是内功不是叙事钩子。读者看不到挖的过程,但感觉得到背后是凿到底的。
+3. **Recursive追问** — this is the lifeblood of penetration. **For each candidate,追问 one more cut: is there something even more fundamental beneath it?追问 until you can't追问 anymore.** The most common failure is stopping at the phenomenon layer. For example, rank-reducing "entrepreneurship" — candidates come out as vision, execution, team, market — looks right, but these are just surface "key factors", not root rank.追问 further: where does vision come from? What does execution depend on?追问 until you can't, that layer is root rank.
 
-## 五条心内判据
+4. **Merge同源** — two candidates are actually the same generator showing two faces. Merge them. Test: remove one, would the other still emerge on its own?
 
-工序走完之后,这五条是事后再过一遍的闸,**同样不是写出来给人看的**。
+5. **Cut** — remove one, can the remaining regenerate all phenomena? What can be cut, discard. What can't be cut, keep. This step grounds the "minimality" criterion.
 
-**前三条管骨架(这几根的形状对不对)**:
-1. **生成性**——这几根能把每个现象都推回来
-2. **最小性**——拿掉任何一根,就有现象推不出来(管的是"数量"——不能少)
-3. **独立性**——每两根之间,都找得到"一个动了另一个没动"的案例
+6. **Regenerate** — take the remaining few, walk through the phenomenon list from scratch, see if each can be reproduced. One that can't be reproduced points to a missing generator.
 
-**后两条管解释力(够不够称得上好解释)—— Deutsch《无穷的开始》**:
-4. **解释力**(reach)——能推出清单外的现象,而且现实里真有
-5. **难以变更**(hard to vary)——改一根的任何一个细节,预测就错(管的是"细节"——不能动)
+7. **Prediction + variation dual test** — pass through two gates together:
+   - **Predict beyond the list** (reach): can these few derive phenomena not on the list? Of those derived, do they actually exist in reality?
+   - **Variation test** (hard to vary): randomly pick one generator, change one detail — different condition, different direction, different intensity. Do predictions still hold? If yes, this generator is loose, a false root, replaceable; if changing one thing collapses it, this is a tight true root, immovable. Deutsch's original words: what you can change is not its core.
 
-最狠的是第五条。最小性管"数量"——不能拿走;hard to vary 管"细节"——不能动。一个生成器,要是"换种说法也通""调一下也成立",它就是松的伪根,预测力是装出来的——靠的是模糊把面铺广,不是靠精准。**坏解释怎么改都还能用;好解释一动就塌**——这是 Deutsch 在《无穷的开始》里立的核心分判。
+After seven steps, the few candidates earn the right to stand on the criteria platform.
 
-过不了一条,推倒重来——回到工序第 3 步接着追。第五条过不了,往往不是少了一根,而是某一根写得太松——逼自己改到"这根只能这么说,改不动"为止。
+The process is walked through thoroughly in the mind, but **don't write it into the article** — like the criteria, it's internal skill, not narrative hook. The reader can't see the digging process, but can feel that the foundation was凿到底的.
 
-判据在心里走结实,但**别落到纸上**——不要出现"砍一刀看看""拆一根试试"这种验证动作。这些会打断读者从"乱"到"简"的那一口气。读者看不到验证过程,但感觉得到底下是硬的。
+## Five Internal Criteria
 
-## 两层判断:先找 root rank,再看能不能叠坐标系
+After the process, these five are the gate to pass through afterward, **also not to be written out for others to see**.
 
-判据过完,几根线浮出来了。先别急着写——分两层看它们长成什么样。
+**First three govern the skeleton (is the shape of these few right?)**:
+1. **Generativity** — these few can derive every phenomenon
+2. **Minimality** — remove any one, some phenomenon can't be derived (governs "quantity" — can't be fewer)
+3. **Independence** — between any two, you can find a case where "one changed, the other didn't"
 
-**第一层:找 root rank(根骨架)**
+**Last two govern explanatory power (is it good enough to count as a good explanation?) — Deutsch's The Beginning of Infinity**:
+4. **Reach** — can derive phenomena beyond the list, and they actually exist in reality
+5. **Hard to vary** — change any detail of any generator, predictions break (governs "details" — can't be moved)
 
-root rank 是这个领域真正的根骨架。不预设几根,不预设根与根之间什么关系,就找。它可能长成:
+The harshest is the fifth. Minimality governs "quantity" — can't take away; hard to vary governs "details" — can't move. A generator that "works with different phrasing too" or "still holds adjusted a bit" is a loose false root, its predictive power is faked — relying on vagueness to spread surface wide, not on precision. **Bad explanations still work however you change them; good explanations collapse with one move** — this is the core distinction Deutsch established in The Beginning of Infinity.
 
-- 几根并排撑着(柱子式)
-- 几根一层套一层(最深一根是元命题)
-- 几根咬住互相推(环状)
-- 几根一段接一段(链式)
+If it fails any one, tear down and restart — go back to process step 3 and keep追问. If the fifth fails, it's often not a missing generator, but one written too loosely — force yourself to refine until "this generator can only be said this way, impossible to change."
 
-读完 root rank,读者手里拿到的是**世界观**——这领域的骨架,一种看世界的新方式。
+Criteria are walked through solidly in the mind, but **don't land them on paper** — don't show verification actions like "cut one to test" "remove one to try". These would break the reader's single breath from "chaos" to "simplicity". The reader can't see the verification process, but can feel the foundation is solid.
 
-**形状反问 · 反坍缩闸**(找完几根线,下笔前强制自检)
+## Two-Layer Judgment: First Find Root Rank, Then See If You Can Stack a Coordinate System
 
-九种形状,逐一过一遍——
+After passing criteria, several threads have surfaced. Don't rush to write — look at what shape they form in two layers.
 
-- 钻井剖面?(一层托一层,最深一根是元命题)
-- 并排?(柱子式,正交可滑动)
-- 反馈环?(互相正负推)
-- 阶段链?(一段接一段,有时间或逻辑顺序)
-- 张力光谱?(一根线两端拉,案例落中间)
-- 树形分叉?(一根分多根,多根再分)
-- 网状?(多对多互勾,没有层级)
-- 振荡?(涨涨落落,节奏交替)
-- 多切片?(超过两轴的多维分类)
+**Layer 1: Find Root Rank (root skeleton)**
 
-**AI 一上手就爱想到"钻井剖面"——这是懒惰锚点**。任何概念都能拆三层(表层/中层/底层),拆完看着齐整,但很多东西的真实结构根本不是垂直往下钻的。
+Root rank is this domain's true root skeleton. Don't preset how many generators, don't preset what relationship between them, just find. It might grow into:
 
-强制反问:
-- 这几根之间,真有先后或嵌套关系吗?(钻井 vs 并排)
-- 还是其实在互相推?(钻井 vs 反馈环)
-- 还是其实有时间或逻辑顺序?(钻井 vs 阶段链)
-- 还是其实只是一根光谱?(钻井 vs 光谱)
+- Several standing side by side支撑 (pillar-style)
+- Several nested layer upon layer (the deepest is the meta-proposition)
+- Several biting each other and pushing each other (loop)
+- Several linked one after another (chain)
 
-把另外 8 种逐一排除掉,才能落到"钻井剖面"。**这道排除不能跳**——跳过的代价是 root rank 失真,把先后关系、反馈关系、张力关系一股脑压成嵌套。
+After reading root rank, what the reader holds in hand is a **worldview** — the skeleton of this domain, a new way of seeing the world.
 
-**第二层:能不能叠一台操作坐标系**
+**Shape反问 · Anti-collapse gate** (after finding the few threads, forced self-check before writing)
 
-root rank 找完了,再问一句:里头**有没有哪一根线**,能展开成几个独立可调的状态参数?
+Nine shapes, go through one by one —
 
-举例:Fritz 的 root rank 第三根是"火箭几何 vs 钟摆几何"。火箭几何要"愿景"和"现状"两个点;把这两点的清晰度、诚实度当成可调的轴,就长出一个二维坐标系。坐标系不是 root rank 的替身,是它在某根线上长出来的孩子。
+- Drilling profile? (layer holding layer, deepest is the meta-proposition)
+- Side by side? (pillar-style, orthogonal and slideable)
+- Feedback loop? (mutual positive/negative pushing)
+- Stage chain? (one after another, with temporal or logical order)
+- Tension spectrum? (one thread pulled at both ends, cases land in between)
+- Tree branching? (one splits into many, many split further)
+- Network? (many-to-many interlocked, no hierarchy)
+- Oscillation? (rising and falling, rhythmic alternation)
+- Multi-slice? (multi-dimensional classification beyond two axes)
 
-能展开的话,坐标系就**叠**在 root rank 之上。读者读完坐标系,多拿到一样东西:**操作仪**——任何具体情境往框里一摆,就能看出落在哪个象限、哪一层。
+**AI's first instinct is always "drilling profile" — this is the lazy anchor.** Any concept can be split into three layers (surface/middle/deep), looks neat after splitting, but many things' real structure is not vertical drilling at all.
 
-两层不打架——机制讲"是什么",坐标系讲"在哪儿",答的是两个问题,可以一起给。
+Forced反问:
+- Do these threads really have sequential or nested relationships? (drilling vs side by side)
+- Or are they actually pushing each other? (drilling vs feedback loop)
+- Or is there actually temporal or logical order? (drilling vs stage chain)
+- Or is it actually just a single spectrum? (drilling vs spectrum)
 
-**什么时候叠,什么时候不叠**:
+Only after eliminating the other 8 one by one can you settle on "drilling profile". **This elimination cannot be skipped** — the cost of skipping is root rank失真, crushing sequential relationships, feedback relationships, tension relationships wholesale into nesting.
 
-- root rank 里有一根线天生就要两个或多个正交、连续可调的状态参数 -> 叠
-- root rank 里每根都是一次性的动作或阶段(不能滑) -> 不强叠
-- 硬把机制压成坐标系会失真——比如把"点火/凝结"硬画成两根轴,每个现象按 (x,y) 落一个点,没意义,因为它们根本不是同一刻共存的连续量
+**Layer 2: Can You Stack an Operating Coordinate System**
 
-能叠坐标系,秩就升了一档——读者走出来,手里既有世界观,也有一台操作仪。
+After finding root rank, ask one more question: **is there any one thread** within it that can unfold into several independently adjustable state parameters?
 
-**取景框反问 · 反坍缩闸**(展开第二层之前,强制自检)
+Example: Fritz's root rank third thread is "rocket geometry vs pendulum geometry". Rocket geometry requires two points: "vision" and "current state"; treating the clarity and honesty of these two points as adjustable axes grows a two-dimensional coordinate system. The coordinate system is not a replacement for root rank — it's a child that grew on one of its threads.
 
-确认要叠之前,先问一句:我要展开的这根线,真的是 *两根独立可滑动的轴* 吗?
+If unfoldable, the coordinate system is **stacked** on top of root rank. After reading the coordinate system, the reader gains one more thing: **an operating instrument** — any specific situation placed into the frame immediately reveals which quadrant, which layer it falls in.
 
-- 会不会其实只有一根光谱?(那就用光谱滑标——案例落中间某点,比四象限更贴)
-- 会不会其实是反馈关系?(那就画环路图——标 +/-)
-- 会不会其实是阶段?(那就用链式或台阶——标转换条件)
-- 会不会其实分多支?(那就用树形)
+The two layers don't conflict — mechanism tells "what it is", coordinate system tells "where it is", answering two different questions, can be given together.
 
-**AI 的另一个懒惰锚点是 2x2 矩阵**。咨询和战略框架的训练数据里 2x2 极多,任何两个变量都能切四象限,切完看着像在分析。但很多 root rank 不是两个独立维度——是单一光谱、是反馈环、是链式。
+**When to stack, when not to**:
 
-强制反问:
-- 这两根维度真的独立吗?(独立 vs 同一根线的两面)
-- 真的可滑动吗?(连续可调 vs 离散阶段)
-- 四象限里每一格都对得上现实吗?(三格都空着,就根本不该用 2x2)
+- Root rank has a thread that innately requires two or more orthogonal, continuously adjustable state parameters → stack
+- Root rank's threads are all one-time actions or stages (can't slide) → don't force stack
+- Forcing mechanism into a coordinate system causes失真 — e.g. forcing "ignition/condensation" into two axes, placing every phenomenon at an (x,y) point, meaningless, because they're not coexisting continuous quantities at the same moment
 
-把光谱/环路/链式/树形挨个排除掉,才能确认 2x2。
+If a coordinate system can be stacked, the rank rises one tier — the reader walks out with both a worldview and an operating instrument in hand.
 
-## 中文母语化 · 反坍缩闸
+**Viewfinder反问 · Anti-collapse gate** (forced self-check before unfolding layer 2)
 
-下笔前,默念三遍:**「一个没读过英文的中国人,会这么说话吗?」**
+Before confirming to stack, ask one question: is this thread I'm about to unfold really *two independent, slideable axes*?
 
-每写完一段,再默念一遍。答"不会"——*别改词*,**整段推倒重想**。
+- Could it actually be just one spectrum? (then use spectrum slider — cases land somewhere in between, more fitting than four quadrants)
+- Could it actually be a feedback relationship? (then draw a loop diagram — mark +/-)
+- Could it actually be stages? (then use chain or steps — mark transition conditions)
+- Could it actually branch into multiple? (then use tree)
 
-最容易踩的英语化句式(踩到就重写整段,不是抠字眼):
+**AI's other lazy anchor is the 2x2 matrix.** Consulting and strategy framework training data has enormous amounts of 2x2 — any two variables can be cut into four quadrants, looks like analysis after cutting. But many root ranks are not two independent dimensions — they're single spectrums, feedback loops, chains.
 
-| 英语化 | 中文母语 |
-|---|---|
-| 它建立在前一根上 | 前一根托着它 |
-| 它有内在方向 | 它自己往那儿走 |
-| 这一区分回答的是 X,不是 Y | 这问的是 X,不是 Y |
-| 这意味着... | 也就是说... / 这就是为什么... |
-| 在...的过程中 | ...的时候 / 在... |
-| 对...而言 | 对...来说 |
-| 是...的(强调句) | 直接说 |
-| 进行 + 名词 | 换成动词 |
-| 名词化抽象("X 性"、"Y 化") | 换成具体的动词或物件 |
+Forced反问:
+- Are these two dimensions truly independent? (independent vs two faces of the same thread)
+- Are they truly slideable? (continuously adjustable vs discrete stages)
+- Does every cell in the four quadrants actually correspond to reality? (if three cells are empty, shouldn't use 2x2 at all)
 
-**要改的不是词,是表达的取景框**——从英语 critical thinking 的句式,切到中文白话作者的笔调(汪曾祺、王小波、阿城、李娟那一路)。
+Only after eliminating spectrum/loop/chain/tree one by one can you confirm 2x2.
 
-事后扫词只能修个表面,治不了根。根在"想的时候就是英文"。改写时,把英文先撂下,蹲在中文里重新想一遍这件事该怎么说出来。
+## Natural Language · Anti-collapse Gate
 
-写完默念出声,听耳朵卡不卡。卡的地方,**整段重写**,不是修补。
+Before writing, silently recite three times: **"Would someone who speaks this language natively say it this way?"**
 
-## 怎么写
+After finishing each paragraph, silently recite once more. Answer "no" — *don't change words*, **rewrite the entire paragraph from scratch**.
 
-一气呵成的散文。
+After writing, read aloud, listen if the ear stumbles. Where it stumbles, **rewrite the entire paragraph**, not patch.
 
-带读者走一段路——从"这个领域看着挺乱"走到"原来就这几根线在牵"。不分章节,不加小标题,让推理自己推着往前走。
+## How to Write
 
-三条要求:
-- **一口气读完**——不熟这个领域的人也停不下来
-- **记得住**——读完能转身用一句话跟朋友说清楚
-- **有落差**——从混沌到极简的反差,就是降秩的美感
+A single-breath prose essay.
 
-**两段式(如果叠了坐标系)**:
+Take the reader on a journey — from "this domain looks chaotic" to "oh, just these few threads are pulling everything." No chapter divisions, no subheadings, let the reasoning push itself forward.
 
-- 上半:把 root rank 的骨架走透——元命题、动力学、形状,讲清楚。读者读完拿到世界观。
-- 下半:在 root rank 某根线上展开坐标系——两根轴、四象限、每格对应什么,讲清楚。读者读完拿到操作仪。
+Three requirements:
+- **Read in one breath** — even someone unfamiliar with the domain can't stop
+- **Memorable** — after reading, can turn around and explain clearly to a friend in one sentence
+- **Has落差** — the contrast from chaos to extreme simplicity, that is the aesthetic of rank reduction
 
-两段中间不要硬切。让推理顺过去——上半最后一句最好留个引子,像"这套机制落到具体情境里怎么看?",把读者顺到下半。
+**Two-part structure (if a coordinate system is stacked)**:
 
-## 文末配一张 ASCII 结构图——形式跟着骨架走
+- Upper half: walk through the root rank skeleton — meta-proposition, dynamics, shape, make it clear. Reader walks out with a worldview.
+- Lower half: unfold the coordinate system on one thread of root rank — two axes, four quadrants, what each cell corresponds to, make it clear. Reader walks out with an operating instrument.
 
-光说"这几根线"不够——要**把这几根之间的关系画出来**。
+Don't hard-cut between the two halves. Let reasoning flow naturally — the last sentence of the upper half should ideally leave a hook, like "How does this mechanism look when applied to specific situations?", smoothly carrying the reader to the lower half.
 
-但**画法不止一种**。root rank 长成什么样,取景框就该长成什么样。下笔前先问一句:**这个 rank 的关系,本身是什么形状?** 答完再选画法。**形式跟着骨架走,不是反过来。**
+## End with an ASCII Structure Diagram — Form Follows Skeleton
 
-九种取景框家族——这一张表是骨架到画法的总索引:
+Just saying "these few threads" isn't enough — **draw the relationships between these few**.
 
-| Root rank 形态 | 关系本质 | 取景框 |
+But **drawing isn't one-size-fits-all**. However root rank grows, the viewfinder should grow that way. Before drawing, first ask: **what shape is this rank's relationship, itself?** Answer that, then choose the drawing method. **Form follows skeleton, not the reverse.**
+
+Nine viewfinder families — this table is the master index from skeleton to drawing method:
+
+| Root rank form | Relationship essence | Viewfinder |
 |---|---|---|
-| 几根并排独立、可滑动 | 正交 | 二轴 / 多轴坐标系 |
-| 一层托一层(最深一根是元命题) | 嵌套穿透 | 钻井剖面 |
-| 一根线两端拉扯 | 张力对立 | 光谱 / 滑标 |
-| 互相正负推动 | 反馈循环 | 环路图(标 +/-) |
-| 一段接一段 | 阶段递进 | 链式 / 台阶 |
-| 一根分多根,多根再分 | 层级分叉 | 树形图 |
-| 多对多互勾 | 耦合网络 | 网状图 |
-| 涨涨落落、节奏交替 | 振荡 | 波形 / 振荡曲线 |
-| 多维分类(如抽象度 x 远近度 x 时间) | 多维分类 | N 轴 / 多切片 |
+| Several side by side, independent, slideable | Orthogonal | 2-axis / multi-axis coordinate system |
+| One layer holding another (deepest is meta-proposition) | Nested penetration | Drilling profile |
+| One thread pulled at both ends | Tension opposition | Spectrum / slider |
+| Mutual positive/negative pushing | Feedback loop | Loop diagram (marked +/-) |
+| One after another | Stage progression | Chain / steps |
+| One splits into many, many split further | Hierarchical branching | Tree diagram |
+| Many-to-many interlocked | Coupled network | Network diagram |
+| Rising and falling, rhythmic alternation | Oscillation | Waveform / oscillation curve |
+| Multi-dimensional classification | Multi-dim classification | N-axis / multi-slice |
 
-**硬约束：只用纯 ASCII 字符**。禁用任何 Unicode 符号（包括箭头 → ← ↑ ↓、方框 ┌─┐└┘├┤│、圆点 • ◆ ●、粗体 ▶ ◀ 等）。
+**Hard constraint: pure ASCII characters only.** Forbid any Unicode symbols.
 
-允许字符集：字母、数字、中文汉字、空格，以及 `- = | + * / \ < > ^ v [ ] ( ) { } . , : ; _ #`。
+Allowed character set: letters, digits, Chinese characters, spaces, and `- = | + * / \ < > ^ v [ ] ( ) { } . , : ; _ #`.
 
-对照表（左禁用 / 右替换）：
+**Overlay style (root rank + viewfinder) draw two diagrams**: upper diagram is the root rank skeleton (choose one from the nine above), lower diagram is the viewfinder stacked on one thread (mark demo coordinates / demo points / demo paths). Connect the two diagrams with a line — e.g. "unfold here ->" or "zoom in on this cell" — telling the reader where the second diagram嵌 in the first. Reader sees the skeleton at a glance, and also sees that one cell of the skeleton hides a viewfinder — worldview and operating instrument enter the brain simultaneously.
 
-- `┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼` -> `+`
-- `─ ━` -> `-`（或 `=` 表粗线）
-- `│ ┃` -> `|`
-- `→ ▶` -> `->`
-- `← ◀` -> `<-`
-- `↑` -> `^` 或 `|^`
-- `↓` -> `v` 或 `|v`
-- `◀─▶` -> `<->` 或 `<--->`
-- `●` -> `*` 或 `o`
-- `×` -> `x`
+No rigid templates. Must show bone — label generator names, relationship directions, positive/negative influences. Reader glances at the diagram, skeleton enters the brain.
 
-下面九种范例——每种配一张最小可用的 ASCII 图 + 一行**演示要求**。挑哪一种，跟前面工序穿透出来的 root rank 形状走。
+## Output
 
-### 1. 二轴 / 多轴坐标系
-
-适合:root rank 的几根线正交、独立、可滑动。Fritz 火箭几何(愿景清晰度 x 现状诚实度)就是这种。
-
-**演示要求**:图里必须标几个具体现象的坐标——比如"拥抱"落在哪、"问候"落在哪、"熵的局部逆转"落在哪。读者一眼看见这框怎么用,才学得会。空有坐标轴没有演示点,框就是空摆设。
-
-**坐标系分两档,决定每个象限里画什么**:
-
-- *属性型坐标系*——两根轴是分类或状态属性(比如轻-重 x 情感-理性、外向-内向 x 直觉-感知)。每个象限只是个分类标签,格子里没什么动力学要发生。按上面的要求做就行——四角标演示坐标和例子,格子里不再画。
-
-- *动力学型坐标系*——两根轴是动力学维度,每个象限里的系统会演化出独特的时间行为。像势函数(保守-耗散 x 单-多极小)、相变(温度-压强)、博弈(零和-非零和 x 一次-重复)。这种坐标系扁平地"贴标签"是浪费——每个象限都该升级成**带矩形边框的微型 ASCII 画**,把"这格里系统怎么动"裱在框里直接画出来。
-
-一句话判别:**这格里的系统,有没有一段画得出来的动作?** 有——升级为动力学画面;没有——退回属性标签。
-
-**动力学画面怎么画**:
-- 每个象限是一个矩形边框(用 `+ - |` 围,像一幅装裱过的小 ASCII 画)
-- 框内顶部画"这格的微型动力学缩影"——地形 / 状态 / 箭头 / 小球 / 曲线,任选,纯 ASCII
-- 框内中部用一行字描述"这格里系统在做什么"
-- 框内底部标该象限的标签 + 1-2 个典型例子
-- 四个矩形被坐标轴隔开(轴线从矩形之间穿过)
-- 不强求像素级对齐(中文宽度问题难免),但每框内容结构要一致
-
-势函数坐标系范例：
-
-```
-                                    单极小
-                                      |^
-                                      |
-                                      |
-   +--------------------------+       |       +--------------------------+
-   |                          |       |       |                          |
-   |        \________/        |       |       |        \________/        |
-   |           o <->          |       |       |           o .            |
-   |                          |       |       |                          |
-   | 唯一谷 球永恒摆动           |       |       | 唯一谷 球减速落底          |
-   |                          |       |       |                          |
-   | 保守 + 单极小             |       |       | 耗散 + 单极小             |
-   | [钟摆 / 谐振子]           |       |       | [凸优化 / SVM]           |
-   +--------------------------+       |       +--------------------------+
-                                      |
-   保守 <-------------------------+-------------------------> 耗散
-   (能量守恒)                       |     (能量被环境吸走)
-                                      |
-   +--------------------------+       |       +--------------------------+
-   |                          |       |       |                          |
-   |   \_/\_/\_/\_/\_/        |       |       |   \_/\_/\_/\_/\_/        |
-   |   <-o   o   o->          |       |       |     o   .   o            |
-   |                          |       |       |                          |
-   | 多谷 能量越脊穿梭          |       |       | 多谷 球落各谷不出         |
-   |                          |       |       |                          |
-   | 保守 + 多极小             |       |       | 耗散 + 多极小             |
-   | [三体 / 混沌系统]         |       |       | [神经网络 / 蛋白质折叠]   |
-   +--------------------------+       |       +--------------------------+
-                                      |
-                                      |v
-                                    多极小
-```
-
-读者一眼就能看见:每格里"地形 + 球的命运"裱成一幅画,系统怎么演化直接可见。这是分类标签做不到的。
-
-### 2. 钻井剖面
-
-适合:root rank 一层托一层,最深一根是元命题。读者顺着垂直方向往下穿。
-
-```
-+------------------------------------+
-| 表层 现象                            |
-| [用户每天打开 App]                   |
-+------------------------------------+
-                 |
-                 v
-+------------------------------------+
-| 中层 机制                            |
-| [推送 + 反馈 + 习惯回路]              |
-+------------------------------------+
-                 |
-                 v
-+------------------------------------+
-| 底层 元命题                          |
-| [多巴胺间歇强化]                      |
-+------------------------------------+
-```
-
-**演示要求**:每一层都要标具体例子,让读者顺着垂直方向看见"现象 -> 机制 -> 元命题"的穿透路径。最深一层是元命题,别留空——留空就是没钻到底。
-
-### 3. 光谱 / 滑标
-
-适合:root rank 是一根线两端在拉,案例落在中间某点。
-
-```
-极端A <===================o===================> 极端B
-[偏A 的特征]              ^               [偏B 的特征]
-                          |
-                     案例 X 落在这
-```
-
-**演示要求**:两端的特征要标出来,中间某点至少放一个具体案例的位置。光有两端没有案例点 = 空摆设——读者得看见这把尺子是怎么量的。
-
-### 4. 反馈环路
-
-适合:root rank 是几根互相推的环,正负方向必须画出来。
-
-```
-        A --(+)--> B
-        ^          |
-        |          |
-       (-)        (+)
-        |          |
-        |          v
-        D <--(+)-- C
-```
-
-**演示要求**:每条箭头要标 `+` 或 `-`;正环(reinforcing,自我加强)和负环(balancing,自我抑制)的总效应在图旁边注一句——不写正负的环路图等于没画。
-
-### 5. 链式 / 台阶
-
-适合:root rank 是阶段递进,时间或逻辑上一段接一段。
-
-链式横排：
-
-```
-A ---> B ---> C ---> D
-[阶段名] [阶段名] [阶段名] [阶段名]
-```
-
-台阶纵排（节节升）：
-
-```
-                 +----+
-                 | D  |
-            +----+
-            | C  |
-       +----+
-       | B  |
-  +----+
-  | A  |
-  +----+
-```
-
-**演示要求**:每段要命名,还要标转换条件(什么把 A 推到 B,什么把 C 升到 D)。没有转换条件的链 = 罗列,不是机制。
-
-### 6. 树形图
-
-适合:root rank 一根分多根,多根再分。
-
-```
-              root rank
-              /   |   \
-             A    B    C
-            / \   |   /|\
-           a   b  d  x y z
-```
-
-**演示要求**:每个分叉点要命名分类原则(按什么把上一层切成下一层)——不命名分类原则的树是糊的。
-
-### 7. 网状图
-
-适合:root rank 多对多互勾,没有层级。
-
-```
-   A --------- B
-   |\         /|
-   | \       / |
-   |  \     /  |
-   |   \   /   |
-   |    \ /    |
-   |     X     |
-   |    / \    |
-   |   /   \   |
-   |  /     \  |
-   | /       \ |
-   D --------- C
-```
-
-**演示要求**:每条边要有方向(若有方向)和强度(粗线 `=` / 细线 `-`),关键节点要标。一片纯连线不分主次 = 网,但不是骨架。
-
-### 8. 波形 / 振荡曲线
-
-适合:root rank 是涨涨落落、节奏交替(如季节、周期、繁荣-萧条、专注-涣散)。
-
-```
-   /\          /\          /\
-  /  \        /  \        /  \
- /    \      /    \      /    \
-/      \____/      \____/      \____
-^                    ^
-谷                   峰
-[低谷期表现]          [高峰期表现]
-```
-
-**演示要求**:至少标一对谷-峰具体例子,让读者看见周期里不同位置的状态——不标位置的波形等于装饰线。
-
-### 9. N 轴 / 多切片
-
-适合:超过两轴的多维分类(比如 Y 抽象度 x X 远近度 x Z 时间)。3D 难画清,画两两 2D 切片:
-
-```
-切片一: 抽象度 x 远近度          切片二: 抽象度 x 时间
-       高抽象                          高抽象
-         ^                              ^
-         |                              |
-         |                              |
-近 <-----+-----> 远            过去 <---+---> 现在
-         |                              |
-         |                              |
-         v                              v
-       低抽象                          低抽象
-```
-
-**演示要求**:每张切片至少标一个案例落在哪个象限;两两切片画全了才算完整。漏一对 = 留盲区。
-
----
-
-**叠加式(root rank + 取景框)画两张图**:上张是 root rank 的骨架(用上面九种里选一种),下张是叠在某根线上的取景框(标好演示坐标 / 演示点 / 演示路径)。两张图之间用一条线牵——比如"此处展开 ->"或"在这一格里再放大"——告诉读者第二张嵌在第一张的哪一格里。读者一眼看见骨架,又看见骨架某一格里还藏着一台取景仪,世界观和操作仪同时入脑。
-
-不设死板模板。要见骨——标出生成器的名字、关系的方向、正负的影响。读者看图一眼,骨架入脑。
-
-## 输出
-
-1. 获取时间戳：`date +%Y%m%dT%H%M%S` 和 `date "+%Y-%m-%d %a %H:%M"`
-2. 写入 `~/Documents/notes/{时间戳}--{领域}的秩__rank.org`
-3. 报告文件路径给用户
+1. Get timestamp: `date +%Y%m%dT%H%M%S` and `date "+%Y-%m-%d %a %H:%M"`
+2. Write to `~/Documents/notes/{timestamp}--rank-of-{domain}__rank.org`
+3. Report file path to user

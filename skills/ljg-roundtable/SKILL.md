@@ -10,124 +10,124 @@ description: >-
 ## Usage
 
 <example>
-User: 圆桌讨论 人工智能是否拥有真正的创造力？
+User: Roundtable discussion Does AI possess genuine creativity?
 Assistant: [Launches roundtable with moderator and representative figures]
 </example>
 
 <example>
-User: 圆桌 自由意志是否存在？
+User: Roundtable Does free will exist?
 Assistant: [Launches roundtable discussion on free will]
 </example>
 
 ## Instructions
 
-为了执行本项技能，请严格按照以下步骤操作：
+To execute this skill, follow these steps strictly:
 
-1. **读取参考资料**
-   读取 `references/original-prompt.org` 了解原始框架设计意图。
+1. **Read reference materials**
+   Read `references/original-prompt.org` to understand the original framework design intent.
 
-2. **解析议题**
-   从用户输入中提取核心议题。如果用户只说"圆桌讨论"未给议题，询问议题。
+2. **Parse the议题**
+   Extract the core议题 from the user's input. If the user only says "roundtable discussion" without giving an议题, ask for one.
 
-3. **选人：提议代表人物**
-   根据议题，选择 3-5 位**真实历史/当代人物**作为代表，覆盖尽可能多的立场维度。每位人物需要：
-   - 姓名（真实人物，非虚构）
-   - MBTI 人格类型
-   - 核心立场（一句话）
-   - 选择理由（为什么此人对此议题有独特视角）
+3. **Select participants: Propose representative figures**
+   Based on the议题, select 3-5 **real historical/contemporary figures** as representatives, covering as many stance dimensions as possible. Each figure needs:
+   - Name (real person, not fictional)
+   - MBTI personality type
+   - Core stance (one sentence)
+   - Reason for selection (why this person offers a unique perspective on this议题)
 
-   选人原则：
-   - 立场必须形成**张力网络**（非简单正反方）
-   - 优先选择在该领域有**经典著作或知名言论**的人物
-   - 至少包含一位"意外视角"——来自议题本身领域之外的人
+   Selection principles:
+   - Stances must form a **tension network** (not simple pro/con)
+   - Prioritize figures who have **classic works or well-known statements** in the field
+   - Include at least one "unexpected perspective" — someone from outside the议题's own domain
 
-4. **开场：统一定义**
-   以主持人身份开场，展示参会人物列表，然后提出**定义性问题**：
-   > 「在深入探讨之前，我们应当如何定义 [议题核心概念]？它的核心要素是什么？」
+4. **Opening: Unified definition**
+   Open as moderator, display the participant list, then pose a **definitional question**:
+   > "Before we dive deep, how should we define [the core concept of the议题]? What are its essential elements?"
 
-   每位参会者依次发言，格式为：
+   Each participant speaks in turn, in the format:
    ```
-   【人物名】【行动标签】：发言内容
+   [Figure Name][Action Label]: Speech content
 
-   **简言之**：一句话总结
-   ```
-
-   行动标签包括：`陈述`、`质疑`、`补充`、`反驳`、`修正`、`综合`
-
-5. **对话循环**
-   每轮执行以下流程：
-
-   **5a. 动态发言轮**
-   - 不是每人固定说一次——根据讨论动态决定谁该发言
-   - 每人发言必须是对**前面发言的回应**（质疑/补充/反驳），不许自说自话
-   - 每段发言末尾必须有 `**简言之**：` 一句话压缩
-
-   **5b. 主持人综述**
-   发言结束后，主持人做三件事：
-   - 提炼本轮**核心争议点**（不是面面俱到，而是找到最深的裂缝）
-   - 生成**ASCII 思考框架图**（拓扑图/矩阵/光谱/树形——选最贴合本轮结构的形式）
-   - 提出**下一层引导问题**（从核心争议中生长出来的更深问题）
-
-   ASCII 图的设计原则：
-   - 高度概括本轮讨论的**结构**，不是复述内容
-   - 标出正/负反馈环、因果链、张力维度
-   - 形式不固定：可以是 2x2 矩阵、光谱轴、因果环路、层级树——哪种最见骨用哪种
-
-   **5c. 用户指令**
-   综述后展示指令菜单：
-   ```
-   【主持】：(指令: 可 / 止 / 深入此节 / 引入新人物)
+   **In short**: One-sentence summary
    ```
 
-   指令含义：
-   - `可`：接受下一层问题，继续推进
-   - `止`：结束讨论，进入总结
-   - `深入此节`：不推进新问题，继续围绕当前争议点深挖
-   - `引入新人物`：用户指定一位新人物加入（主持人介绍并请其就当前话题表态）
+   Action labels include: `Statement`, `Challenge`, `Supplement`, `Rebuttal`, `Revision`, `Synthesis`
 
-6. **结束：生成知识网络**
-   用户发出 `止` 指令后：
-   - 主持人做**全局总结**
-   - 生成**完整知识网络** ASCII 图：标出所有关键概念、立场、争议点及其关系
-   - 列出**未解决的开放问题**（讨论中暴露但未穷尽的方向）
+5. **Dialogue loop**
+   Each round executes the following flow:
 
-7. **写入 org 文件（完整保存，一字不差）**
-   将讨论**全部原文**写入 org-mode 文件，不压缩、不删减、不改写任何发言内容：
-   1. 运行 `date +%Y%m%dT%H%M%S` 获取时间戳
-   2. 写入 `~/Documents/notes/{timestamp}--圆桌-{议题关键词}__roundtable.org`
-   3. org 文件结构：
+   **5a. Dynamic speaking order**
+   - Not everyone speaks once per round — determine who should speak based on the dynamics of the discussion
+   - Each person's speech must be a **response to the preceding speech** (challenge/supplement/rebuttal), no monologuing
+   - Each speech must end with a `**In short**:` one-sentence compression
+
+   **5b. Moderator summary**
+   After the speeches, the moderator does three things:
+   - Extract the **core point of contention** for this round (not covering everything, but finding the deepest裂缝)
+   - Generate an **ASCII thinking framework diagram** (topological map/matrix/spectrum/tree — choose the form most fitting for this round's structure)
+   - Pose the **next-level guiding question** (a deeper question grown from the core contention)
+
+   ASCII diagram design principles:
+   - Highly概括 the **structure** of this round's discussion, not restating content
+   - Mark positive/negative feedback loops, causal chains, tension dimensions
+   - Form is flexible: can be a 2x2 matrix, spectrum axis, causal loop, hierarchical tree — whichever exposes the bones best
+
+   **5c. User instruction**
+   After the summary, display the instruction menu:
+   ```
+   [Moderator]: (Instructions: Continue / Stop / Deepen this thread / Introduce new participant)
+   ```
+
+   Instruction meanings:
+   - `Continue`: Accept the next-level question, keep advancing
+   - `Stop`: End the discussion, proceed to summary
+   - `Deepen this thread`: Don't advance to a new question; keep digging around the current point of contention
+   - `Introduce new participant`: User specifies a new participant to join (moderator introduces them and asks them to state their position on the current topic)
+
+6. **End: Generate knowledge network**
+   After the user issues the `Stop` instruction:
+   - Moderator gives a **global summary**
+   - Generate a **complete knowledge network** ASCII diagram: marking all key concepts, positions, points of contention, and their relationships
+   - List **unresolved open questions** (directions exposed but not exhausted in the discussion)
+
+7. **Write to org file (complete preservation, not a single word omitted)**
+   Write the **entire discussion verbatim** into an org-mode file, without compressing, omitting, or rewriting any speech content:
+   1. Run `date +%Y%m%dT%H%M%S` to get timestamp
+   2. Write to `~/Documents/notes/{timestamp}--roundtable-{议题 keyword}__roundtable.org`
+   3. Org file structure:
       ```org
-      #+title: 圆桌：{议题}
-      #+date: [{日期}]
+      #+title: Roundtable: {议题}
+      #+date: [{date}]
       #+filetags: :roundtable:
-      * 议题与参会者
-      [完整的参会者介绍，包括姓名、MBTI、立场、选择理由]
-      * 开场：定义
-      [主持人开场词 + 每位参会者的完整定义性发言，原文照录]
-      * 各轮讨论记录
-      ** 第 N 轮：{引导问题}
-      *** 发言记录
-      [本轮所有发言的完整原文，包括行动标签、全部论述、简言之]
-      *** 主持人综述
-      [核心争议点 + ASCII 框架图 + 下一层引导问题，原文照录]
-      * 知识网络（全局）
-      [完整的全局总结 + ASCII 知识网络图]
-      * 开放问题
-      [所有未解决的开放问题]
+      * Topic and Participants
+      [Complete participant introductions, including name, MBTI, stance, selection reason]
+      * Opening: Definition
+      [Moderator's opening remarks + each participant's complete definitional speech, verbatim]
+      * Round-by-Round Discussion Record
+      ** Round N: {guiding question}
+      *** Speech record
+      [Complete original text of all speeches from this round, including action labels, all exposition, In short]
+      *** Moderator summary
+      [Core contention + ASCII framework diagram + next-level guiding question, verbatim]
+      * Knowledge Network (Global)
+      [Complete global summary + ASCII knowledge network diagram]
+      * Open Questions
+      [All unresolved open questions]
       ```
-      **关键要求：每一段发言、每一个 ASCII 图、每一句主持人综述，都必须完整保留原文，禁止摘要或压缩。**
-   4. 向用户报告文件路径
+      **Key requirement: Every speech, every ASCII diagram, every moderator summary sentence must be preserved in full, no summaries or compression allowed.**
+   4. Report the file path to the user
 
-### 主持人行为准则
+### Moderator Code of Conduct
 
-- **理性之锚**：冷静客观，不偏向任何一方
-- **挖深不铺广**：每轮只追一条最深的裂缝，不面面俱到
-- **求真 > 和谐**：鼓励尖锐但有建设性的交锋，拒绝表面共识
-- **元认知**：在综述中暴露讨论的**结构**（假设、前提、推理链），不只复述内容
+- **Anchor of rationality**: Calm and objective, not偏向 any side
+- **Dig deep, don't spread wide**: Each round只追 the single deepest裂缝, don't try to cover everything
+- **Truth-seeking > harmony**: Encourage sharp but constructive confrontation, reject superficial consensus
+- **Meta-cognition**: In the summary, expose the discussion's **structure** (assumptions, premises, reasoning chains), not just restate content
 
-### 参会者行为准则
+### Participant Code of Conduct
 
-- 必须**忠于其真实思想体系**发言，不是泛泛而谈
-- 引用/化用其**经典著作或知名观点**
-- 发言有锋芒：质疑要见骨，补充要推进，不说正确的废话
-- 每段结尾 `**简言之**` 一句话压到极致
+- Must speak **faithful to their actual intellectual system**, not in generalities
+- Reference/adapt their **classic works or well-known viewpoints**
+- Speech must have edge: challenges must cut to the bone, supplements must advance the discussion, no correct but empty words
+- Every speech ends with `**In short**` compressed to the extreme

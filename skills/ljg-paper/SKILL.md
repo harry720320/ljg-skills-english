@@ -1,309 +1,245 @@
 ---
 name: ljg-paper
-description: "Paper reader for non-academics. Takes a paper and extracts its ideas for personal use. Focuses on understanding, not academic critique. Use when user shares an arxiv link, paper URL, PDF, or asks to analyze a research paper. Trigger words: '读论文', '分析论文', 'paper', or when user shares an academic paper."
+description: "Paper reader for non-academics. Takes a paper and extracts its ideas for personal use. Focuses on understanding, not academic critique. Use when user shares an arxiv link, paper URL, PDF, or asks to analyze a research paper. Trigger words: 'read paper', 'analyze paper', 'paper', '读论文', '分析论文', or when user shares an academic paper."
 user_invocable: true
 version: "4.9.0"
 ---
 
-# ljg-paper: 读论文
+# ljg-paper: Read Papers
 
-读论文不是做学术，是猎取思想。把别人的发现拆解成自己能用的认知。
+Reading papers isn't doing academia — it's hunting ideas. Deconstruct others' discoveries into cognition you can use.
 
-## 总目标（先看这个）
+## Overall Goal (read this first)
 
-让一个**不懂这个领域的聪明人**读完笔记，能复述：
-1. 论文在解决什么问题（具体到一个例子）
-2. 作者用什么招数解的（机制 + 设计选择的理由）
-3. 核心发现是什么（包括最反直觉的副发现，往往是论文里最 fascinating 的部分）
-4. 你（读者）能带走什么洞见
+After reading the notes, a **smart person unfamiliar with the field** should be able to recount:
+1. What problem the paper solves (concrete to one example)
+2. What approach the author used to solve it (mechanism + rationale for design choices)
+3. What the core findings are (including the most counter-intuitive副发现, often the most fascinating part)
+4. What insight you (the reader) can take away
 
-如果输出在任何一点上让外行卡住，就是失败。**凝练只在 title 上追求；正文该展开就展开**——目标不是短，是让人从不懂走到懂。
+If the output causes an outsider to stumble on any of these points, it's a failure. **Concision is only pursued in the title; the body should expand where needed** — the goal isn't shortness, it's taking someone from not understanding to understanding.
 
-## 格式约束
+## Format Constraints
 
-### Org-mode 语法
+### Org-mode Syntax
 
-- 加粗用 `*bold*`（单星号），禁止 `**bold**`
-- 标题层级从 `*` 开始，不跳级
+- Bold uses `*bold*` (single asterisk), forbid `**bold**`
+- Heading levels start from `*`, no skipping levels
 
 ### ASCII Art
 
-所有图表用纯 ASCII 字符。允许：`+ - | / \ > < v ^ * = ~ . : # [ ] ( ) _ , ; ! ' "` 和空格。禁止 Unicode 绘图符号。
+All diagrams use pure ASCII characters. Allowed: `+ - | / \ > < v ^ * = ~ . : # [ ] ( ) _ , ; ! ' "` and spaces. Forbid Unicode drawing symbols.
 
-### 模板权威性
+### Template Authority
 
-输出结构依据 `references/template.org`。禁止参考 `~/Documents/notes/` 中已有论文文件的章节结构——旧文件可能使用过期模板。
+Output structure follows `references/template.org`. Forbid referencing the section structure of existing paper files in `~/Documents/notes/` — old files may use outdated templates.
 
-### Denote 文件规范
+### Denote File Conventions
 
-- 时间戳：`date +%Y%m%dT%H%M%S`
-- 可读时间：`date "+%Y-%m-%d %a %H:%M"`
-- 文件名：`{时间戳}--paper-{简短标题}__paper.org`
-- 输出目录：`~/Documents/notes/`
+- Timestamp: `date +%Y%m%dT%H%M%S`
+- Readable time: `date "+%Y-%m-%d %a %H:%M"`
+- Filename: `{timestamp}--paper-{short_title}__paper.org`
+- Output directory: `~/Documents/notes/`
 
-### Org 文件头
+### Org File Header
 
 ```
-#+title:      {一句精练语句提炼论文核心思想或发现}
-#+subtitle:   {论文原始标题，通常英文}
+#+title:      {A refined single sentence capturing the paper's core idea or finding}
+#+subtitle:   {The paper's original title, typically in English}
 #+date:       [{YYYY-MM-DD Day HH:MM}]
 #+filetags:   :paper:
 #+identifier: {YYYYMMDDTHHMMSS}
-#+source:     {URL 或来源描述}
-#+authors:    {作者列表}
-#+venue:      {发表场所/年份}
+#+source:     {URL or source description}
+#+authors:    {author list}
+#+venue:      {publication venue/year}
 ```
 
-#### title 这一句怎么写
+#### How to Write the Title Line
 
-title 是这篇笔记的*灵魂句*——读者扫一眼就知道这篇论文带走什么。它不是文件名，不是方法名，是核心思想或发现的*凝练表达*。
+The title is the *soul sentence* of the notes — a reader glances at it and knows what to take away from this paper. It's not the filename, not the method name — it's a *condensed expression* of the core idea or finding.
 
-不是"把一段话压成一句话"，是"用一刀把骨头取出来"。抽出 title 贴墙上，它本身就该像一句警句、一个篇名、一句能记住的话。
+Not "compress a paragraph into one sentence," but "extract the bone with one cut." Pull the title out and put it on the wall — it should itself read like an aphorism, a chapter title, a memorable line.
 
-**写作约束（按优先级）**
+**Writing Constraints (by priority)**
 
-1. *中文母语凝练* — 像汪曾祺、王小波、阿城、李娟的标题：短、净、有刃。
-   - 写完默问：「一个没读过翻译小说的中国人会这样说吗？」不像 → 重写。
-   - 完整反翻译腔自查表：`~/.claude/PAI/USER/AI_WRITING_PATTERNS.md`（必扫 Layer A）。
-   - 杀句式：被动句（"被锁在…里"）、"是…的"句、长定语后置（"那个由…引起的…"）、"进行+名词"、"让我们…"。
+1. *Concise and sharp* — short, clean, with an edge.
+   - After writing, silently ask: "Does this sound like a real title someone would use?" No → rewrite.
 
-2. *零中英混杂* — title 不出现英文术语（RL / HR / Agent / Multi-agent / token 等都不行）。术语放正文展开，title 只放思想。例外：人名、产品名（GPT、Claude）。
+2. *No mixed Chinese-English* — the title must not contain English terms (no RL / HR / Agent / Multi-agent / token etc.). Terms go in the body to expand; the title only contains the idea. Exception: proper names, product names (GPT, Claude).
 
-3. *6-15 字* — 短到能记住，长到能承得住一个发现。超过 15 字基本就是没炼到位——回去再砍。
+3. *6-15 characters/words* — short enough to remember, long enough to carry a finding. Over 15 words means it hasn't been refined enough — go back and cut more.
 
-4. *动词为骨，名词具体* — 形容词能砍就砍（"重大的""根本的""惊人的"全删）。每个字都得干活。
+4. *Verbs as bone, nouns concrete* — kill adjectives where possible ("significant" "fundamental" "astonishing" — delete all). Every word must do work.
 
-5. *自带张力，三种姿态任选其一*：
-   - *反直觉* — 「学会反成枷锁」
-   - *对仗或并置* — 「教人如教己」「记得太牢，想不出新」
-   - *转折或反讽* — 「答得越准，看见越少」
+5. *Inherent tension, choose one of three stances*:
+   - *Counter-intuitive* — "Learning Becomes the Cage"
+   - *Juxtaposition or contrast* — "Teach as You Learn"
+   - *Turn or irony* — "The Better the Answer, The Less You See"
 
-6. *不复述题目，不当方法名* —
-   - ✗「关于强化学习预训练空间转移的探索性研究」（学术腔）
-   - ✗「PreRL：把强化学习搬进预训练空间」（方法名 + 方法描述）
+6. *Don't restate the topic, don't be a method name* —
+   - ✗ "An Exploratory Study on Transfer of Reinforcement Learning to Pre-training Space" (academic tone)
+   - ✗ "PreRL: Moving RL into Pre-training Space" (method name + method description)
 
-**正例对照（看转化方向）**
+**Three Self-Check Questions (silently ask after writing)**
 
-| 论文核心思想 | ✗ 翻译腔 / 口语化 | ✓ 中文凝练 |
-|------------|------------------|-----------|
-| 奖励信号把模型锁在已会轨迹里，擦掉题目就解锁 | 奖励信号会把模型锁死在已会的轨迹里，擦掉题目就解锁了 | 学会，反成枷锁 |
-| 只用错样本做 RL，反思能力自己长出来 | 只用错样本做 RL，反思能力自己长出来 | 错处长出反省 |
-| 模型在向量空间里思考比生成 token 更省更准 | 模型在向量里想，比一边想一边写更省、更准、更快 | 默想胜出口 |
-| 多智能体缺的是组织协调而非个体智能 | Multi-agent 缺的不是聪明，是 HR——成功率 69 跳到 85 | 多智不如善织 |
-| 老师与学生看待问题的角度不同导致教学失败 | 老师比学生高分还教不会，是因为他想问题的姿势跟学生不一样 | 高分难为师 |
-| 写作时预测剩余长度让模型知道何时收尾 | 把"还要写多长"做成一个值函数，模型每写一个 token 就知道离收尾还有多远 | 知止方能落笔 |
+1. Pull it out and put it on a wall — does it read like a chapter title / aphorism?
+2. Does it sound natural?
+3. If you delete any single word, does it collapse?
 
-注意正例的共性：
-- 4-8 字主干为多，节奏接近成语 / 古文标题
-- 动词带刃：「锁」「长」「默」「善」「止」
-- 有古意但不晦涩；有判断但不抒情
-- 单独抽出能立住
+Any answer is No → go back and rewrite, don't ship a compromise.
 
-**自检三问（写完默念）**
+**Distinguishability Test (must pass)**
 
-1. 抽出来贴墙上，像不像一句篇名 / 警句？
-2. 一个中文母语者会这样说吗？（汪曾祺会这么写吗？）
-3. 删掉任何一个字会不会塌？
+Post the title alone, show it to someone who hasn't read the paper, ask: "What do you think this paper is roughly about?" — they don't need an exact answer, but should have directional sense.
 
-任一答 No → 回去重写，不要凑合发布。
+If they can guess the direction → title passes.
+If they can't guess at all → must use a subtitle兜底.
 
-**可识别性测试（必须过）**
+Report path after writing.
 
-把 title 单独贴出来，给一个没读过这篇论文的人看，问：「这论文大概在讲什么？」——他不需要给出准确答案，但应该有方向感。
+## Red Lines (must pass every one)
 
-如果答得出方向 → title 通过。
-如果完全猜不到（典型是高度凝练的古文式 title），**必须用中文 subtitle 兜底**，让它承担解释功能。英文 subtitle 只是论文原标题，不算兜底：
+1. *Spoken-word test* — would you introduce a paper to a friend this way? No → revise. Academic tone is the default enemy
+2. *Zero jargon* — first land in plain language, then mention the term name alongside. If you must use original terminology to explain, you haven't understood yet
+3. *Short words first* — if two words work, don't use four. "This paper proposes a novel framework" → "They built a thing"
+4. *One thing per sentence* — each sentence advances one step
+5. *Concrete* — nouns visible, verbs strong. Kill adjectives where possible
+6. *Start with a reason* — the first sentence of the problem section should make people want to know the answer
+7. *No filler* — delete academic boilerplate ("With the recent development of...", "It is noteworthy that"). Every sentence works
+8. *Trust the reader* — saying it once is enough. Don't repeat conclusions
+9. *Honesty* — if the paper has flaws, say so. If you don't understand a part, say so
+10. *Will I understand this 6 months from now?* — every term's first appearance must be landed (e.g. "value function = given current state, predict future cumulative reward"), every formula must be translated into natural language, every citation must explain significance to an outsider. Self-check: silently imagine "six months from now I search for this in denote, can I recall the core in 30 seconds?" — No → rewrite
+11. *Outsider first, concision second* — expand where needed, don't cut reader-necessary scaffolding for the sake of "shortness". Concision standards only apply to the title; the body should be as long as needed, rhythm determined by the need to make people understand, not by a fetish for shortness
 
-```
-#+title:      字未出，止已现
-#+subtitle:   把"还要写多远"做成一个 value 函数 — Length Value Model: ...
-```
+## Writing Principles
 
-凝练和可识别性必须共存。只凝练 = 6 个月后自己也认不出是哪篇；只可识别 = 退化回 28 字啰嗦句。两个测试都过才发布。
+Four core principles that determine whether the writing is "a live person talking" or "a machine reporting":
 
-**与其他字段的关系**
+1. *One anchor holds the entire text* — the concrete example established in "Problem" is the anchor. "Translation" and "Core Concepts" all unfold on this anchor, every section returns to it, keeping the reader in the same problem domain. Changing anchors = changing maps = the reader loses all intuition built so far.
+2. *Visible reasoning* — simulate "the process of a person figuring something out" rather than presenting "the result after figuring it out." Use "If A is B, then could C also be D?" to bring the reader along. Make the reader feel the conclusion is one step from being their own
+3. *Transformation over definition* — when explaining the relationship between two concepts, continuously transform A into B, don't say "A and B are in X relationship." "Transform LSTM → it looks like ResNet" is ten times more powerful than "LSTM and ResNet are dual"
+4. *Land on usable* — end with "this means you can ___", not "this makes us reconsider ___". The reader should walk away with something actionable, not a contemplative sigh
 
-- title 与「洞见」section：先写完「洞见」section，回头从那段话里*取骨*（不是压缩，是炼一刀）填进 title。
-- title 与文件名：denote 文件名 `paper-{简短标题}` 的「简短标题」是方法名 / 核心概念名（如 `prerl`、`dsrl`），用于文件检索；title 是思想骨句，用于内容入口——两者不同字段，互不替代。
+## Toolbox (optional)
 
-文件写入后报告路径。
+Tools available when explaining papers, none mandatory:
 
-## 红线（每条必须过）
+- *Analogy* — load-bearing, key components of the method must map onto it. Walk through the method following the analogy
+- *ASCII diagram* — show component relationships, data flow, structural comparisons. Draw after the reader has conceptual scaffolding
+- *Napkin sketch* — "used to think this, now should think this" side-by-side comparison
+- *Good question* — turn the dilemma the paper solves into a question that makes an outsider curious
+- *Progressive examples* — from simple to complex, build understanding step by step
+- *Question chain* — when encountering hidden assumptions, open them with questions
 
-1. *口语检验* — 你会这样跟朋友介绍一篇论文吗？不会→改。学术腔是默认敌人
-2. *零术语* — 先用大白话落地，再顺带提术语名。如果必须用原文术语才能解释，说明还没懂
-3. *短词优先* — 能用两个字说的不用四个字。「本文提出了一种新的框架」→「他们做了个东西」
-4. *一句一事* — 每句只推一步
-5. *具体* — 名词看得见，动词有力气。形容词能砍就砍
-6. *开头给理由* — 问题部分的第一句让人想知道答案
-7. *不填充* — 删学术套话（「近年来随着...的发展」「值得注意的是」）。每句干活
-8. *信任读者* — 说一遍够了。不重复结论
-9. *诚实* — 论文有硬伤就说有硬伤。看不懂的部分说看不懂
-10. *6 个月后的我看得懂吗？* — 每个术语首次出现必须落地（"value function = 给定当前状态预测未来累积奖励"），每个公式必须翻译成自然语言，每个引用都要说明对外行的意义。自检：默想"半年后我在 denote 里搜到这篇，30 秒内能回想起核心吗？"——不能 → 重写
-11. *外行优先于凝练* — 该展开就展开，不要为了"短"砍掉读者真正需要的铺垫。凝练的尺度只针对 title；正文该多长就多长，节奏由让人懂的需要决定，不由"短"的洁癖决定
+## Execution
 
-## 写作原则
-
-四条核心原则，决定文章是"活人在说话"还是"机器在汇报"：
-
-1. *一个锚点撑全文* — 「问题」里立的那个具象例子就是锚点。「翻译」「核心概念」都在这个锚点上展开，每段都回到它，让读者一直待在同一个问题域里。换锚点 = 换地图 = 读者前面建立的直觉全丢。
-   - **「亲历」小节里也只能用一个例子**。两个例子 = 切碎读者直觉，即使两例都强，挑最锋利的一个。反例：先用"产品介绍 100 字"再用"LIFEBench"——两条故事线读者大脑要切换两次。正例：从头到尾"GSM8K 200 token"贯穿——读者一直待在同一个困境里
-2. *推理外显* — 模拟"一个人想明白的过程"，而非呈现"想明白之后的结果"。用"既然A是B，那能不能C也是D？"带读者一起推。让读者觉得结论差一步就是自己想到的
-3. *变形替代定义* — 解释两个概念的关系时，把A连续变形成B，不要说"A和B是XX关系"。「把LSTM变形→看起来像ResNet」比「LSTM和ResNet是对偶的」有力十倍
-4. *落点在能用* — 给出"这意味着你可以___"，而非"这让我们重新思考___"。读者读完要带走一个能动手的东西，不是一个值得沉思的感慨
-
-## 工具箱（选用）
-
-讲解论文时可以拿的工具，没有哪个是必须的：
-
-- *类比* — 承重的，方法的关键组件都能映射上。沿着类比走一遍方法
-- *ASCII 图* — 展示组件关系、数据流、结构对比。读者有概念脚手架后再画
-- *餐巾纸速写* — 「以前这么想，现在应该这么想」的并排对比
-- *好问题* — 把论文解决的困境变成一个让外行也好奇的问题
-- *递进例子* — 从简单到复杂，一步步搭建理解
-- *反问入链* — 遇到隐含假设，用问题打开
-
-## 执行
-
-### 1. 获取内容
+### 1. Get Content
 
 - arxiv URL → WebFetch
-- PDF → Read（注意 pages 参数限制）
-- 本地文件 → Read
-- 论文名称 → WebSearch
+- PDF → Read (note pages parameter limits)
+- Local file → Read
+- Paper name → WebSearch
 
-确保拿到：标题、作者、摘要、核心方法、结果。
+Ensure you have: title, authors, abstract, core method, results.
 
-如果论文有一张承载全文核心思路的总览图（overview / architecture diagram，通常是 Figure 1），提取并保存到 `~/Documents/notes/images/`，文件名 `{identifier}--paper-{简短标题}-overview.png`。
+If the paper has an overview/architecture diagram carrying the entire core idea (usually Figure 1), extract and save to `~/Documents/notes/images/`, filename `{identifier}--paper-{short_title}-overview.png`.
 
-判断标准：这张图让人一看就抓住论文在做什么。不是所有论文都有——没有就跳过，不要硬找。
+Judgment criterion: this diagram lets someone grasp what the paper is doing at a glance. Not all papers have one — skip if not, don't force it.
 
-提取方法：
-- arxiv → 访问 HTML 版（`arxiv.org/html/...`），找到图片 URL，WebFetch 下载
-- PDF → 截取含图页面保存为图片
+### 2. Problem: Let the Reader Encounter That Dilemma
 
-### 2. 问题：让读者遇到那个困境
+Not describing the problem — making the reader *experience* it. Open with a concrete example — a specific scenario, an input-output pair, a failure screenshot, a user story — let the reader see the dilemma in this example.
 
-不是描述问题，是让读者*亲历*那个问题。开场给一个具象示例——一个具体场景、一段输入输出、一张失败截图、一个用户故事——让读者在这个例子上看到困境。
+Three-part narrative,贯穿 with the same example:
 
-不是「大模型在事实回答上存在幻觉问题」，是：「你问 GPT『2023 年图灵奖得主是谁？』它一本正经回答 Yann LeCun。再问一次，它说 Hinton。第三次又变了。」
+1. *Experience* — pull the reader into the scene of the dilemma. The example should be simple enough to describe in a sentence or two
+2. *Old Path* — what did previous researchers do on this example? Why didn't it work? Expose the shortcomings using the same example, let the reader see "ah, this road is indeed blocked"
+3. *New Opening* — what did this paper's authors see in this example that others missed? Lead into their solution direction (only the direction, not the mechanism — that's for "Translation")
 
-三段叙事，用同一个例子贯穿：
+If the paper has no clear predecessor (pioneering problem, new field), skip the second part, go directly "Experience → New Opening".
 
-1. *亲历* — 把读者拉到困境现场。例子最好简单到一两句话能说完
-2. *旧路* — 之前的研究者在这个例子上是怎么做的？为什么走不通？把短板用同一个例子暴露出来，读者看见"哦，这条路确实卡住了"
-3. *新口* — 本论文作者在这个例子上看到了什么别人没看到的入口？引出他们的解法思路（只引出方向，不展开机制——那是「翻译」的事）
+### 3. Translation: Direct to Method Essentials
 
-如果论文没有明确的前作（开创性问题、新领域），跳过第二段，直接「亲历→新口」。
+"Problem" has already thoroughly laid out the dilemma — *this section must not restate the problem*. The focus is "how to do it": the paper's method, mechanism, key insights.
 
-**三段是节奏要求，不是格式要求**——不要硬加 `**亲历/**旧路/**新口` 子标题。问题节用**一段连续叙述**更有钩力，子标题会把"流"切成"段"。子标题留给翻译节用（机制要分步揭开）。
+Continue on the same example. The reader just saw the old path blocked and where the new opening is — now take them through the paper's method step by step on that same example. Changing examples = cutting context, the intuition the reader just built is lost.
 
-反例：「本文提出了一种新的 XXX 框架」——这是学术摘要，不是问题。
+Cover (all on that example):
+- How it works (core mechanism/method)
+- How well it works (pick the 2-3 most illustrative results)
+- Key concepts needed to understand the full text (if any)
 
-### 3. 翻译：直指方法要义
+Subheadings organized by content need, not fixed.
 
-「问题」已经把困境讲透了——*这一节不要再重述问题*。重心是"如何做到"：论文的方法、机制、关键 insight。
+**Translation section must-have checklist (prevents "concision" from cutting muscle):**
 
-*沿用同一个例子*：继续在「问题」里那个具象示例上讲。读者刚刚在那个例子上看到旧路走不通、新口在哪里——你现在带他在同一个例子上一步步打开论文的方法。换例子 = 切语境，读者前面建的直觉就丢了。
+1. *Load-bearing analogy* — not just decoration, must map onto key method components
+2. *Three or more sets of concrete numbers* — baseline / improvement / key ablation. Let the outsider feel "oh the gap is that large"
+3. *One counter-intuitive副发现* — the most "wow" section in the paper, presented as its own section. Must keep if present, don't cut for concision; if none, say "this paper has none", don't force one
+4. *No raw formulas* — formulas are useless to outsiders. Either translate into words, or leave as optional appendix section. **No LaTeX/MathJax-style formulas in the main text**
 
-唯一豁免：如果同一例子无法支撑机制细节（比如算法过程需要展开数据流），引入"子例子"作为延伸——但子例子必须和父例子在同一问题域里，让读者感觉是"放大镜下看局部"，而不是换地图。
+### 4. Core Concepts: Unlock on the Same Example
 
-*开头立锚点*：找到一个具象的中心隐喻或画面——锚点描述的是*方法在那个例子上的样子*。比如「在我们刚才那个图灵奖问题上，方法像一个分诊台：先把不确定的回答拦下来再说」。锚点和「问题」例子焊在一起。
+Pick the paper's most critical **3** concepts (method name, architecture component, mathematical object, new definition...), deconstruct one by one.
 
-*一步步揭开，让读者解锁迷雾*：每段往前推一步，每段都给读者一个新视角，"啊，原来如此"的小揭秘累积成对例子的深度理解。揭秘动词："这时候你看……""于是发生了……""那这一步怎么办呢——他们想到……"。前一段说的事打开后一段的口子。
+**3 is a floor, not a ceiling** — cutting to 2 usually means you missed a key design choice hidden in the method. If the paper genuinely only has 2 independent key concepts (rare), state clearly, don't force.
 
-需要覆盖（都在那个例子上）：
-- 它怎么做的（核心机制/方法）
-- 做出来效果如何（挑最说明问题的两三个结果）
-- 理解全文需要的钥匙概念（如果有）
+Each concept:
+- *One sentence*: what this thing is, what it does
+- *Back to the example*: on that example, what does this concept look like? Without it on that example, what would happen?
+- *Why it matters*: without it, where does the paper's logical chain break
 
-子标题按内容需要组织，不必固定。
+### 5. Insight: Crystallization of Ideas
 
-**翻译节必有清单（防止"凝练"把肉削了）**：
+The most valuable part of the entire paper is often just one point — the new crystal the author truly found.
 
-1. *承重类比* — 不止是装饰，要能映射方法的关键组件。范本：「跑步选手 + 手表」（把"模型"映射成跑步选手、把"value head"映射成手表，类比能撑住整套机制讲解）。烂例：仅"倒计时表"——没把"训练信号怎么来"映射进去，类比浮在表面
-2. *三组以上具体数字* — baseline / 改进 / 关键 ablation。让外行感受到"原来差距这么大"
-3. *一个反直觉的副发现* — 论文里最让人"哇"的一段，单独成节呈现。范本：LenVM 的"token 词云分析"（"think/wait" vs "finalize/confirm"）。**有就必须保留，不能因为追求凝练砍掉；没有就明说"这篇没有"，不要硬挤**
-4. *不放原始公式* — 公式对外行无用。要么用文字翻译（"L_len = ... 意思是模型每写一字都被监督一次"），要么留作可选附录 section。**主文里不出现 LaTeX / MathJax 风格公式**
+Express it in one sentence. This sentence should make the reader feel "I can take this idea with me," not "oh, the paper said something like that."
 
-### 4. 核心概念：在同一例子上解锁
+### 6. Advisor Review
 
-挑出论文中最关键的 **3 个**概念（方法名、架构组件、数学对象、新定义……），逐个拆解。
+Switch identity: a senior professor who has advised grad students in this direction for twenty years. A student brings this paper to you — you judge whether it's worth taking seriously.
 
-**3 个是 floor 不是 ceiling**——砍到 2 个通常意味着漏掉了一个隐藏在方法里的关键设计选择（比如 LenVM 的 constant -1 reward——它不是"组件"，是让整套机制 work 的设计 trick，必须单独成节讲）。如果论文真的只有 2 个独立关键概念（罕见），明确说明，不硬凑。
+In plain language, like chatting with a student in the office:
 
-*每个概念都在「问题」那个例子上落地*——不是孤立讲一个术语，是回到那个例子，让概念在那个语境里浮出水面。读者每解锁一个概念，对那个例子的理解就深一层，迷雾就散一片。
+- *Problem selection judgment*: is the problem worth doing? Real gap or artificial gap?
+- *Method maturity*: cleverness or brute force? Any more natural approaches overlooked? **Find whether the method's fundamental assumptions have problems**
+- *Experimental integrity*: fair baselines? Adequate ablation? Do the numbers hold up under scrutiny?
+- *Writing quality*: did they cut corners where they should have been clearest?
+- *Verdict*: strong accept / weak accept / borderline / weak reject / strong reject, one-sentence reason
 
-每个概念：
-- *一句话*：这东西是什么，干什么用的
-- *回到例子*：在那个例子上，这个概念长什么样？少了它在那个例子上会怎样？解释两个概念的关系时，优先用"把A变形成B"而非"A和B是XX关系"——变形比定义有力
-- *为什么重要*：少了它论文的逻辑链断在哪里
+Praise what's good, point out where the flaws are.
 
-选概念的标准：读者如果不懂这个，后面的洞见和审稿就跟不上。已经在「翻译」里讲透的不重复选。
+### 7. Inspiration: Reminders for Me
 
-### 5. 洞见：思想结晶
+Land on "usable," not "thinkable." End with "this means you can ___", not "this makes us reconsider ___".
 
-整篇论文最值钱的往往就一个点——作者真正找到的那颗新结晶。
+Try connecting from three angles — if it hits, expand; if not, skip; if all miss, say "none":
+- *Transfer*: can this paper's mechanism/perspective transplant-upgrade a component of my system? How specifically to connect?
+- *Remix*: can this paper's component combined with something I already have produce something new? What would it produce?
+- *Inversion*: does this paper's approach contradict my default assumptions? What should I stop doing, start doing?
 
-用一句话把它说出来。这句话应该让读者觉得「这个想法我可以带走」，而不是「哦，论文说了这么个事」。
+### 8. Pass Red Lines
 
-检验标准：把这句话单独抽出来，脱离论文上下文，它还有没有力量？如果只是在复述论文结论，那不是洞见。洞见是你读完之后自己看到的那个东西——论文里未必直说，但逻辑指向它。
+Go through red lines one by one. Generate the file after confirming revisions.
 
-说不出来就重读第三步。如果论文确实没有思想火花，直说「这篇论文是工程改进，没有认知层面的新发现」。不要硬挤。
+### 9. Generate Org File
 
-### 6. 博导审稿
+Get timestamp per Denote conventions, read `references/template.org`, write to `~/Documents/notes/`.
 
-换身份：这个方向上带了二十年研究生的博导。学生拿着论文来找你，你判断这东西值不值得认真对待。
+## Acceptance
 
-用白话说，像在办公室跟学生聊：
-
-- *选题眼光*：问题值不值得做？真缺口还是人造缺口？
-- *方法成熟度*：巧劲还是蛮力？有没有更自然的做法被忽略？**找方法的根本预设有没有问题**——不是只看数字漂亮不漂亮，是看作者*假设了什么*。例：LenVM 假设 sampling 分布在使用 value 信号 nudge 后还稳定——但 nudge 一旦发生分布就变了，value 预测可能失准。这种**self-referential 隐忧**比"scale 不够"重要十倍。自问：这论文如果错，最可能错在哪一步？错的根源是不是一个未被讨论的预设？
-- *实验诚意*：baseline 公不公道？消融到位没？数字经不经得起追问？
-- *写作功力*：最该说清楚的地方有没有偷懒？
-- *判决*：strong accept / weak accept / borderline / weak reject / strong reject，一句话理由
-
-好的说好，差的说差在哪儿。
-
-### 7. 启发：对我的提醒
-
-落点在"能用"，不在"能想"。给出"这意味着你可以___"，而非"这让我们重新思考___"。
-
-用三个视角试探连接，命中展开，没命中跳过，全没命中说「没有」：
-
-- *迁移*：论文的某个机制/视角能移植升级我体系的某个零件吗？具体怎么接？
-- *混搭*：论文的某个组件和我已有的东西组合能产生新东西吗？产出什么？
-- *反转*：论文的做法和我的默认假设相反吗？该停下什么、开始什么？
-
-### 8. 过红线
-
-逐条扫红线。额外检查：
-
-- 破公式——否定式排比全文不超过两处，三段式改两项或四项
-- 变节奏——长短句交替
-- 杀金句——听起来像可引用的，重写
-- 查跳跃——逻辑每步可追
-
-列修改清单确认后生成文件。
-
-### 9. 生成 Org 文件
-
-按 Denote 规范获取时间戳，读 `references/template.org`，写入 `~/Documents/notes/`。
-
-## 验收
-
-- *问题让人亲历*：开场有具象示例，读者在例子上遇到困境；旧解法的短板用同一例子暴露
-- *翻译直指要义*：不重述问题，重心是"如何做到"——方法、机制、关键 insight
-- *同例贯穿*：翻译和核心概念都在「问题」那个例子上展开，读者一直待在同一个问题域里
-- *探索感*：每段都给读者一个新视角，"啊原来如此"的小揭秘累积成对例子的深度理解
-- *有锚点*：翻译部分锚点描述的是"方法在那个例子上的样子"，后续概念围绕它生长
-- *带着推*：读者能感受到"一步步想明白"的过程，而非接收打包好的结论
-- *外行能跟*：不懂这个领域的聪明人读完能复述核心思路
-- *博导像博导*：有判断力有分寸，最后一句判决
-- *启发能动手*：启发部分的落点是"你可以___"，不是"值得思考___"
-- *零割裂感*：读完像一个人在跟你说「我读了篇论文，发现了个有意思的事」
-- *外行能复述四件事*：问题（具体到一个例子）/ 解法（机制+设计理由）/ 核心发现（含反直觉副发现）/ 洞见（带得走的东西）。任一项让外行卡住 → 失败
-- *title 双过*：凝练自检三问 + 可识别性测试都过
-- *翻译节四件齐*：承重类比 / 三组数字 / 反直觉副发现 / 无原始公式
-- *核心概念 ≥ 3*：包含一个"设计选择"概念（不止"组件"）
-- *博导审稿见预设*：方法成熟度一项里指出至少一个未被讨论的根本预设/隐忧
+- *Problem makes people experience*: opens with a concrete example, reader encounters the dilemma in that example; old solutions' shortcomings exposed on the same example
+- *Translation direct to essentials*: doesn't restate the problem, focus is "how to do it" — method, mechanism, key insight
+- *Same example贯穿*: translation and core concepts all unfold on the "Problem" example, reader stays in the same problem domain
+- *Sense of exploration*: every paragraph gives the reader a new perspective, "ah, I see" mini-revelations accumulate into deep understanding of the example
+- *Has an anchor*: translation section anchor describes "what the method looks like on that example", subsequent concepts grow around it
+- *Brings the reader along*: reader can feel the process of "figuring it out step by step", not receiving packaged conclusions
+- *Outsider can follow*: a smart person unfamiliar with the field can retell the core line of reasoning after reading
+- *Advisor sounds like an advisor*: has judgment and分寸, final sentence is a verdict
+- *Inspiration is actionable*: inspiration section lands on "you can ___", not "worth thinking about ___"
+- *Zero fragmentation*: after reading, it feels like one person telling you "I read a paper, found something interesting"
+- *Outsider can retell four things*: problem (concrete to one example) / solution (mechanism + design rationale) / core findings (including counter-intuitive副发现) / insight (something take-away). Any one makes an outsider stumble → failure
+- *Title passes both tests*: concision self-check three questions + distinguishability test both pass
+- *Translation section has all four*: load-bearing analogy / three sets of numbers / counter-intuitive副发现 / no raw formulas
+- *Core concepts ≥ 3*: includes one "design choice" concept (not just "component")
+- *Advisor review sees assumptions*: method maturity section identifies at least one undiscussed fundamental assumption/implicit concern

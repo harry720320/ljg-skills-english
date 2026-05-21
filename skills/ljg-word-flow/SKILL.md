@@ -5,49 +5,49 @@ user_invocable: true
 version: "1.0.1"
 ---
 
-# ljg-word-flow: 词卡
+# ljg-word-flow: Word Card
 
-一条命令完成：解词 → 铸信息图。支持多词并行。
+One command to complete: deconstruct word -- cast infograph. Supports multi-word parallelism.
 
-## 模式
+## Mode
 
-**强制 NATIVE 模式。** 本 workflow 是纯 skill 管道（ljg-word → ljg-card -i），不需要 Algorithm 的七步流程。直接按下方执行步骤调用 skill，不走 OBSERVE/THINK/PLAN/BUILD/EXECUTE/VERIFY/LEARN。
+**Forced NATIVE mode.** This workflow is a pure skill pipeline (ljg-word -- ljg-card -i), does not require the Algorithm's 7-step process. Directly invoke skills per the execution steps below, do NOT go through OBSERVE/THINK/PLAN/BUILD/EXECUTE/VERIFY/LEARN.
 
-## 参数
+## Parameters
 
-直接传入一个或多个英文单词，空格分隔。
+Pass one or more English words directly, separated by spaces.
 
 ```
 /ljg-word-flow Obstacle
 /ljg-word-flow Serendipity Resilience Entropy
 ```
 
-## 执行
+## Execution
 
-### 1. 收集单词列表
+### 1. Collect Word List
 
-从用户消息中提取所有英文单词。
+Extract all English words from the user's message.
 
-### 2. 处理每个单词
+### 2. Process Each Word
 
-对每个单词，串行执行两步：
+For each word, execute two steps serially:
 
-**步骤 A — 解词（ljg-word）：**
+**Step A -- Deconstruct Word (ljg-word):**
 
-调用 Skill tool 执行 `ljg-word`，传入单词。在对话中输出 Markdown 解析结果。
+Invoke Skill tool to execute `ljg-word`, passing the word. Output Markdown analysis result in the conversation.
 
-**步骤 B — 铸信息图（ljg-card -i）：**
+**Step B -- Cast Infograph (ljg-card -i):**
 
-以步骤 A 的解析内容为输入，调用 Skill tool 执行 `ljg-card -i`。生成 PNG 文件到 `~/Downloads/`。
+Using step A's analysis content as input, invoke Skill tool to execute `ljg-card -i`. Generate PNG file to `~/Downloads/`.
 
-### 3. 多词并行
+### 3. Multi-Word Parallelism
 
-多个单词时，每个单词启动一个 Agent subagent 并行处理（每个 subagent 内部 A→B 串行）。
+When there are multiple words, launch one Agent subagent per word for parallel processing (each subagent runs A--B serially internally).
 
-### 4. 汇总报告
+### 4. Summary Report
 
 ```
-════ 词卡完成 ═══════════════════════
+════ Word Card Complete ═══════════════════════
 📖 {Word1}
    🖼️ ~/Downloads/{Word1}.png
 
@@ -56,8 +56,8 @@ version: "1.0.1"
 ...
 ```
 
-## 关键约束
+## Key Constraints
 
-- 先解词后铸卡，顺序不可逆
-- ljg-word 和 ljg-card -i 各自的质量标准不变
-- 信息图内容来自解词结果，不是字典释义
+- Deconstruct first, cast second -- order is irreversible
+- ljg-word and ljg-card -i each maintain their own quality standards
+- Infograph content comes from the word analysis results, not dictionary definitions

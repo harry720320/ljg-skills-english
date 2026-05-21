@@ -1,78 +1,78 @@
-#+title:      paper-river-{简短标题}
+#+title:      paper-river-{short_title}
 #+date:       [{YYYY-MM-DD Day HH:MM}]
 #+filetags:   :paper:river:
 #+identifier: {YYYYMMDDTHHMMSS}
-#+source:     {用户提供的论文 URL 或来源}
-#+authors:    {目标论文作者}
-#+venue:      {发表场所/年份}
+#+source:     {User-provided paper URL or source}
+#+authors:    {Target paper authors}
+#+venue:      {Publication venue/year}
 
-* 问题之河
+* River of Problems
 
-{一句话勾出这条研究线的核心问题——让外行也想知道答案的那种。}
+{One sentence that hooks the core problem of this research line — the kind that makes even an outsider want to know the answer.}
 
-{这个问题为什么难？卡在哪里？为什么一代一代人前赴后继？}
+{Why is this problem hard? Where is the blockage? Why have generations of researchers thrown themselves at it one after another?}
 
-* 溯源地图
+* Lineage Map
 
-{ASCII 图：画出论文之间的演化链。}
+{ASCII diagram: draw the evolution chain between papers.}
 
-{格式示例：}
+{Format example:}
 
 #+begin_example
 [2017] Vaswani et al. - Attention Is All You Need
   |
-  | 问题: RNN 太慢，序列必须一个接一个算
-  | 解法: 扔掉 RNN，纯注意力机制
+  | Problem: RNN too slow, sequences must be computed one by one
+  | Solution: Throw away RNN, pure attention mechanism
   v
 [2018] Devlin et al. - BERT
   |
-  | 问题: Transformer 只朝一个方向看
-  | 解法: 让它同时看左看右（双向）
+  | Problem: Transformer only looks in one direction
+  | Solution: Let it look both left and right (bidirectional)
   v
 [2020] Brown et al. - GPT-3
   ...
 #+end_example
 
-* 演化叙事
+* Evolution Narrative
 
-{从最老的论文开始，以问题为主线，一路讲到目标论文。}
+{Starting from the oldest paper, with the problem as the main thread, tell the story all the way to the target paper.}
 
-{每篇论文一个小节，结构：}
+{Each paper is one subsection, structure:}
 
-** {年份} | {论文简称}: {一句话概括它干了什么}
+** {Year} | {Paper short name}: {One sentence summarizing what it did}
 
-*** 它看到了什么问题
+*** What problem it saw
 
-{前人方案哪里不行？具体到什么场景下会出什么毛病。}
+{Where did the predecessor's approach fall short? Specifically, in what scenario did what go wrong.}
 
-*** 它的解法
+*** Its solution
 
-{核心思路是什么？用类比或例子讲清楚。}
+{What is the core idea? Clarify with an analogy or example.}
 
-*** 为什么这招管用（以及哪里埋了新坑）
+*** Why this trick worked (and where it planted new landmines)
 
-{解法的直觉解释。同时指出它留下的局限——这个局限就是下一篇论文的起点。}
+{Intuitive explanation of the solution. Also point out its remaining limitations — this limitation is the starting point of the next paper.}
 
-* 前沿延伸
+* Frontier Extension
 
-{目标论文之后，这个问题又被谁往前推了？}
+{After the target paper, who else pushed this problem forward?}
 
-{如果找到了后续论文，用同样的结构讲。没有就说「截至目前，这是这条线的最新进展」。}
+{If follow-up papers found, use the same structure to讲述 them. If none, say "As of now, this is the latest advance on this line."}
 
-* 一张图看懂
+* At a Glance
 
-{用 ASCII 画一张「问题-解法」演化图，把整条线压缩到一屏以内。}
+{Draw an ASCII "problem-solution" evolution diagram, compressing the entire line into one screen.}
 
-{横轴是时间，纵轴是不同的解法维度。让人扫一眼就知道这个领域是怎么长出来的。}
+{Horizontal axis is time, vertical axis is different solution dimensions. A glance should show how this field grew.}
 
-* 洞见
+* Insight
 
-{读完整条演化线，你看到了什么？}
+{After reading the entire evolution line, what do you see?}
 
-{不是复述每篇论文的结论，是你自己看到的规律——这条线背后真正在发生什么变化？下一步最可能往哪走？}
+{Not restating each paper's conclusions — it's the pattern you yourself see — what is really changing beneath this line? Where is it most likely headed next?}
 
-* 启发
+* Inspiration
 
-{这条演化线对「怎么做研究」「怎么找问题」有什么启发？}
+{What does this evolution line inspire about "how to do research" and "how to find problems"?}
 
-{落点在"能用"：这意味着你可以___。}
+{Land on "usable": this means you can ___.}

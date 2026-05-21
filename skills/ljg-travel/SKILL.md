@@ -5,194 +5,194 @@ user_invocable: true
 version: "1.0.0"
 ---
 
-# ljg-travel-flow: 旅行研究
+# ljg-travel-flow: Travel Research
 
-一条命令完成：全维度文化研究 → 内容提炼 → org 文档 + 便携卡片。
+One command to complete: full-dimensional cultural research -- content extraction -- org document + portable cards.
 
-方法论借鉴考古学 Desk-Based Assessment（DBA）：到达之前，穷尽一切文献证据。
+Methodology draws from archaeological Desk-Based Assessment (DBA): exhaust all documentary evidence before arrival.
 
-## 模式
+## Mode
 
-**强制 NATIVE 模式。** 本 workflow 是多 skill 管道（Research → ContentAnalysis → ljg-card），不走 Algorithm 七步流程。
+**Forced NATIVE mode.** This workflow is a multi-skill pipeline (Research -- ContentAnalysis -- ljg-card), not the Algorithm 7-step process.
 
-## 参数
+## Parameters
 
-| 参数 | 说明 | 示例 |
-|------|------|------|
-| 城市名 | 必填，目标城市 | 西安、洛阳、大同 |
-| `-f` | 聚焦主题（可选） | `-f 唐代` `-f 石窟` `-f 青铜器` |
-| `-q` | 快速模式，跳过内容提炼，只做研究+文档 | |
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| City name | Required, target city | Xi'an, Luoyang, Datong |
+| `-f` | Focus topic (optional) | `-f Tang Dynasty` `-f Grottoes` `-f Bronze` |
+| `-q` | Quick mode, skip content extraction, only do research + document | |
 
-## 执行
+## Execution
 
-### 1. 解析参数
+### 1. Parse Parameters
 
-从用户消息中提取城市名称和可选参数。如有聚焦主题，后续所有搜索围绕该主题展开。
+Extract city name and optional parameters from the user's message. If a focus topic is specified, all subsequent searches revolve around that topic.
 
-### 2. 全维度研究（Research extensive — 单次调用，12 个 Agent 并行）
+### 2. Full-Dimensional Research (Research extensive -- single call, 12 Agents in parallel)
 
-调用 Skill tool 执行 `Research`，使用 extensive 模式。
+Invoke Skill tool to execute `Research`, using extensive mode.
 
-**核心设计：不分"知识底图"和"平台发现"两步——它们是同一个研究操作的不同搜索角度。** 12 个 Agent 同时出发，一半做学术/百科研究，一半做平台内容搜索。
+**Core design: no separation between "knowledge mapping" and "platform discovery" -- they are different search angles of the same research operation.** 12 Agents set out simultaneously, half doing academic/encyclopedic research, half doing platform content search.
 
-**研究提纲（传入 Research 的 prompt）：**
+**Research outline (prompt passed to Research):**
 
 ```
-对「{城市}」进行深度文化旅行研究。这不是旅游攻略，是出发前的考古学式案头研究（Desk-Based Assessment）。
+Conduct deep cultural travel research on 「{city}」. This is not a travel guide -- it's an archaeological-style desk-based assessment before departure.
 
-研究覆盖以下维度，每个维度需要中英文双语搜索：
+Research covers the following dimensions, each requiring bilingual Chinese-English search:
 
-**维度 A — 历史分层**
-该城市经历了哪些重要历史时期？每个时期在这座城市留下了什么物质遗存？朝代更迭如何影响城市格局？
+**Dimension A -- Historical Strata**
+What important historical periods did this city experience? What material remains did each period leave in this city? How did dynastic changes affect the city's layout?
 
-**维度 B — 博物馆重点**
-该城市有哪些重要博物馆？各博物馆的镇馆之宝和核心馆藏？哪些展品有重大考古意义？必须给出具体文物名称和展厅位置。
+**Dimension B -- Museum Highlights**
+What important museums are in this city? What are the crown jewels and core collections of each museum? Which exhibits have major archaeological significance? Must provide specific artifact names and exhibition hall locations.
 
-**维度 C — 古建遗存**
-现存哪些重要古建筑和遗址？营造年代、建筑形制、结构特点。哪些是全国重点文物保护单位？看建筑时应关注什么细节（斗拱、彩画、碑刻等）？
+**Dimension C -- Ancient Architecture**
+What important ancient buildings and sites still exist? Construction period, architectural form, structural features. Which are national key cultural heritage protection units? What details should be observed when viewing the architecture (dougong brackets, color paintings, stone inscriptions, etc.)?
 
-**维度 D — 考古发现**
-该城市及周边有哪些重大考古发现？出土文物现藏于哪些博物馆？发掘过程中有什么重要故事？
+**Dimension D -- Archaeological Discoveries**
+What major archaeological discoveries have been made in and around this city? Which museums now house the unearthed artifacts? What important stories emerged during the excavations?
 
-**维度 E — 人文脉络**
-与该城市相关的重要历史人物、文学作品、文化传统。帮助理解这座城市的文化性格。
+**Dimension E -- Cultural Context**
+Important historical figures, literary works, and cultural traditions associated with this city. Helps understand the city's cultural character.
 
-**维度 F — 深度内容发现**
-搜索 B站（bilibili.com）、知乎（zhihu.com）、微信公众号（mp.weixin.qq.com）、抖音（douyin.com）、小红书（xiaohongshu.com）上关于该城市博物馆和古建的深度讲解内容。
-筛选标准：
-- 要：有知识增量的内容（讲背景、讲工艺、讲考古过程、讲建筑细节）
-- 不要：纯打卡拍照、纯推荐无分析、广告软文
-- B站视频优先 10 分钟以上的讲解类
-- 公众号文章优先有参考文献或明确作者身份的
-返回内容标题、URL、一句话摘要。
+**Dimension F -- Deep Content Discovery**
+Search for in-depth explanatory content about the city's museums and ancient architecture on Bilibili (bilibili.com), Zhihu (zhihu.com), WeChat public accounts (mp.weixin.qq.com), Douyin (douyin.com), and Xiaohongshu (xiaohongshu.com).
+Filtering criteria:
+- Include: content with knowledge value (background, craftsmanship, archaeological process, architectural details)
+- Exclude: pure check-in photo ops, recommendations without analysis, sponsored content
+- Bilibili videos: prioritize explanatory content over 10 minutes
+- WeChat articles: prioritize those with references or clear authorship
+Return content title, URL, and one-sentence summary.
 
-{如有聚焦主题：特别关注与「{聚焦主题}」相关的内容，其他维度作为背景补充。}
+{If focus topic specified: pay special attention to content related to 「{focus topic}」, with other dimensions as background context.}
 ```
 
-等待 Research 完成，获得全维度研究结果。
+Wait for Research to complete, obtain full-dimensional research results.
 
-### 3. 内容提炼（ContentAnalysis — 可选）
+### 3. Content Extraction (ContentAnalysis -- Optional)
 
-如果用户指定了 `-q` 快速模式，跳过此步。
+If the user specified `-q` quick mode, skip this step.
 
-从步骤 2 返回的结果中，提取所有有效 URL（文章链接、视频链接）。
+From the results returned in step 2, extract all valid URLs (article links, video links).
 
-**对每个 URL 并行启动 Agent subagent：**
+**Launch an Agent subagent for each URL in parallel:**
 
-每个 subagent 调用 Skill tool 执行 `ContentAnalysis`，传入 URL，使用 fast 深度级别，提取核心知识点。
+Each subagent invokes the Skill tool to execute `ContentAnalysis`, passing the URL, using the fast depth level, extracting key knowledge points.
 
-**降级规则：**
-- 如果 ContentAnalysis 对某个 URL 失败（无法访问、无字幕等），跳过该 URL，不阻塞
-- 如果所有 URL 都失败，流程不中断——步骤 2 的研究结果已经足够生成文档
-- ContentAnalysis 是增强层，不是必要层
+**Degradation rules:**
+- If ContentAnalysis fails for a URL (inaccessible, no subtitles, etc.), skip that URL without blocking
+- If all URLs fail, the workflow is not interrupted -- the research results from step 2 are sufficient to generate the document
+- ContentAnalysis is an enhancement layer, not a required layer
 
-收集所有成功提炼的内容摘要。
+Collect all successfully extracted content summaries.
 
-### 4. 合成 org-mode 文档
+### 4. Compose org-mode Document
 
-将步骤 2（研究结果）和步骤 3（内容提炼，如有）合成为一份结构化 org-mode 文档。
+Combine step 2 (research results) and step 3 (content extraction, if any) into a structured org-mode document.
 
-**文档结构：**
+**Document structure:**
 
 ```org
-#+title: {城市}旅行研究
-#+date: {当前日期}
+#+title: {City} Travel Research
+#+date: {current date}
 #+filetags: :travel:museum:architecture:
 
-* 城市概览
-  {城市}的文明坐标——为什么值得去，去了看什么。一段话勾勒这座城市在中国文明史中的位置。
+* City Overview
+  {City}'s civilizational coordinates -- why it's worth visiting, what to see there. One paragraph outlining the city's place in Chinese civilization history.
 
-* 历史分层
-** {时期1}（{年代范围}）
-   核心事件、遗留痕迹、对应可看的实物。
-** {时期2}
+* Historical Strata
+** {Period 1} ({time range})
+   Key events, remaining traces, corresponding physical objects to see.
+** {Period 2}
    ...
 
-* 博物馆指南
-** {博物馆1名称}
-   地址、开放时间、预约方式（如需要）。
-*** 镇馆之宝
-    - {文物名}：{为什么重要} | 看什么细节：{具体观察点}
-*** 重点展厅
-    - {展厅名}：{核心看点}
-*** 容易错过的
-    - {被忽视但值得看的内容}
-** {博物馆2名称}
+* Museum Guide
+** {Museum 1 Name}
+   Address, opening hours, reservation method (if needed).
+*** Crown Jewels
+    - {Artifact name}: {why it matters} | What to notice: {specific observation points}
+*** Key Exhibition Halls
+    - {Hall name}: {key highlights}
+*** Easy to Miss
+    - {overlooked but worthwhile content}
+** {Museum 2 Name}
    ...
 
-* 古建遗存
-** {古建1名称}（{朝代}，{保护级别}）
-   形制概述。
-*** 看什么
-    - {具体观察点1}：{为什么值得注意}
-    - {具体观察点2}
-** {古建2名称}
+* Ancient Architecture
+** {Building 1 Name} ({Dynasty}, {Protection Level})
+   Form overview.
+*** What to Look For
+    - {Specific observation point 1}: {why it's worth noting}
+    - {Specific observation point 2}
+** {Building 2 Name}
    ...
 
-* 考古发现
-** {遗址/发现1}
-   发现经过、意义、出土文物现藏地。如果有有趣的发掘故事，讲出来。
+* Archaeological Discoveries
+** {Site/Discovery 1}
+   Discovery process, significance, current location of unearthed artifacts. If there are interesting excavation stories, share them.
 
-* 参观路线
-** 路线一：{主题名}（{预计时间}）
-   适合谁：{描述}
-   1. {地点} → 重点看 {什么}（{停留建议时间}）
+* Suggested Routes
+** Route 1: {Theme Name} ({Estimated Time})
+   For whom: {description}
+   1. {location} -- focus on {what} ({suggested dwell time})
    2. ...
-** 路线二：{主题名}
+** Route 2: {Theme Name}
    ...
 
-* 深度内容推荐
-  从各平台发现的值得在出发前看的内容。
-** 视频
-   - [[{URL}][{标题}]] — {一句话摘要}
-** 文章
-   - [[{URL}][{标题}]] — {一句话摘要}
-** 书籍（如有推荐）
-   - {书名} — {为什么值得读}
+* Deep Content Recommendations
+  Content worth watching before departure, discovered across platforms.
+** Videos
+   - [[{URL}][{Title}]] -- {one-sentence summary}
+** Articles
+   - [[{URL}][{Title}]] -- {one-sentence summary}
+** Books (if any recommendations)
+   - {Book title} -- {why it's worth reading}
 ```
 
-**文件命名**：使用 denote naming schema，保存到 `~/Documents/notes/` 目录：
-`{YYYYMMDDTHHMMSS}==z--{城市}旅行研究.org`
+**File naming**: Use the denote naming schema, saved to `~/Documents/notes/` directory:
+`{YYYYMMDDTHHMMSS}==z--{city}-travel-research.org`
 
-**写作要求**：
-- 每个推荐必须有「为什么看」和「看什么细节」，不许空泛
-- 语气是给自己写的笔记，不是导游词
-- 有确切信息写确切的，没有的不编
+**Writing requirements**:
+- Every recommendation must include "why to see" and "what details to notice" -- no empty generalities
+- The tone is notes written for yourself, not a tour guide script
+- Write exact information when available; don't fabricate when it's not
 
-### 5. 铸造便携卡片（ljg-card）
+### 5. Cast Portable Cards (ljg-card)
 
-从步骤 4 的 org 文档中提取核心内容，铸造两张卡片，**并行执行**：
+Extract core content from the org document in step 4, cast two cards, **executed in parallel**:
 
-**卡片 A — 城市文明概览（信息图）：**
+**Card A -- City Civilization Overview (infograph):**
 
-调用 Skill tool 执行 `ljg-card -i`，输入内容为：城市历史分层 + 核心博物馆清单 + 必看古建清单的精华摘要。一张图看懂这座城市的文明骨架。
+Invoke Skill tool to execute `ljg-card -i`, with input: city historical strata + core museum list + must-see ancient architecture list essence summary. One image to understand the city's civilizational skeleton.
 
-**卡片 B — 参观路线速查（长图）：**
+**Card B -- Route Quick Reference (long image):**
 
-调用 Skill tool 执行 `ljg-card -l`，输入内容为：参观路线建议 + 每个地点的核心看点。手机上随时查看。
+Invoke Skill tool to execute `ljg-card -l`, with input: route suggestions + key highlights of each location. Convenient for checking on your phone.
 
-### 6. 汇总报告
+### 6. Summary Report
 
 ```
-════ 旅行研究完成 ═══════════════════════
-🏛️ 城市: {城市名}
-📝 知识文档: {org 文件路径}
-🖼️ 文明概览卡: {PNG 文件路径}
-🖼️ 路线速查卡: {PNG 文件路径}
-📊 研究覆盖: {N}个博物馆 | {M}座古建 | {K}处考古遗址
-📎 深度内容: {X}个视频 | {Y}篇文章
+════ Travel Research Complete ═══════════════════════
+  City: {city name}
+  Knowledge document: {org file path}
+  Civilization overview card: {PNG file path}
+  Route quick reference card: {PNG file path}
+  Research coverage: {N} museums | {M} ancient buildings | {K} archaeological sites
+  Deep content: {X} videos | {Y} articles
 ```
 
-## 关键约束
+## Key Constraints
 
-- 步骤 2 是核心——12 个 Agent 并行覆盖学术研究和平台内容，一次完成
-- 步骤 3（内容提炼）是增强层，失败不阻塞流程
-- 步骤 5 的两张卡片之间并行
-- org 文档是主产出，卡片是衍生产出——文档质量优先
-- 不产出泛泛的旅游攻略，每个推荐必须有「为什么看」和「看什么细节」
-- Research 搜索使用中英文双语关键词，扩大覆盖面
-- 没有确切信息时宁可留空，不编造
+- Step 2 is the core -- 12 Agents in parallel covering academic research and platform content, completed in one pass
+- Step 3 (content extraction) is an enhancement layer, failure doesn't block the workflow
+- The two cards in step 5 are parallelized
+- The org document is the primary output, cards are derivative -- document quality takes priority
+- Don't produce generic travel guides -- every recommendation must have "why to see" and "what details to notice"
+- Research uses bilingual Chinese-English keywords to expand coverage
+- Leave blanks rather than fabricate when there's no exact information
 
 ## Known Pitfalls
 
-（首次创建，暂无记录。使用中积累。）
+(First creation, no records yet. Accumulate through use.)

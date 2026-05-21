@@ -14,28 +14,28 @@ Assistant: [Calls ljg-explain-words with "Serendipity"]
 
 ## Instructions
 
-目标不是翻译，而是让用户掌握这个词的深层含义和用法。
+The goal is not translation, but to help the user master the word's deep meaning and usage.
 
-针对输入的 `word`（转换为小写，首字母大写），进行以下分析，直接在对话中用 Markdown 输出：
+For the input `word` (convert to lowercase, capitalize first letter), perform the following analysis and output directly in Markdown within the conversation:
 
-### 输出结构
+### Output Structure
 
-#### 1. 标题行
-
-```
-## {Word}  /{音标}/  {中文翻译}
-```
-
-#### 2. 核心语义
-
-- **原始画面**: 用一句话描述该词源头最物理的画面（例如 Incubate: 母鸡趴在蛋上）。
-- **核心意象**: 提炼公式（例如：温暖 + 时间 + 保护 = 孕育）。
-- **解释**: 用充满洞见的语言阐述其深层含义与现代用法。分段清晰，**加粗**关键词。要有穿透力，展现词源、多领域含义之间的内在联系。
-
-#### 3. 一语道破
-
-一句中英双语的金句，必须具有哲学高度，总结该词的灵魂。用引用格式：
+#### 1. Title Line
 
 ```
-> "English sentence. 中文金句。"
+## {Word}  /{phonetic}/  {Chinese translation}
+```
+
+#### 2. Core Semantics
+
+- **Original scene**: Describe the word's most physical source image in one sentence (e.g., Incubate: a hen sitting on eggs).
+- **Core imagery**: Extract a formula (e.g., warmth + time + protection = incubation).
+- **Explanation**: Elaborate on its deep meaning and modern usage with insightful language. Clear paragraphs, **bold** key terms. Be penetrating -- show the intrinsic connections between etymology and cross-domain meanings.
+
+#### 3. The One-Liner
+
+A bilingual Chinese-English golden sentence, must have philosophical depth, summarizing the soul of the word. Use the quote format:
+
+```
+> "English sentence. Chinese golden sentence."
 ```

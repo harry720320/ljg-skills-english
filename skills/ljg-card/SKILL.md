@@ -1,49 +1,49 @@
 ---
 name: ljg-card
-description: "Content caster (铸). Transforms content into PNG visuals. Seven molds: -l (default) long reading card, -i infograph, -m multi-card reading cards (1080x1440), -v editorial sketchnote (problem→failure→pivot→insight→naming, magazine + archive layout), -c comic (manga-style B&W), -w whiteboard (marker-style board layout), -b big-fonts attachment card (1080x1440, weathered 碑刻 style for 小红书). Output to ~/Downloads/. Use when user says '铸', 'cast', '做成图', '做成卡片', '做成信息图', '做成海报', '视觉笔记', 'sketchnote', '杂志', 'editorial', '漫画', 'comic', 'manga', '白板', 'whiteboard', '大字', '附件图', 'big fonts', '小红书卡片'. Replaces ljg-cards and ljg-infograph."
+description: "Content caster (铸). Transforms content into PNG visuals. Seven molds: -l (default) long reading card, -i infograph, -m multi-card reading cards (1080x1440), -v editorial sketchnote (problem→failure→pivot→insight→naming, magazine + archive layout), -c comic (manga-style B&W), -w whiteboard (marker-style board layout), -b big-fonts attachment card (1080x1440, weathered stele inscription style for Xiaohongshu). Output to ~/Downloads/. Use when user says '铸', 'cast', '做成图', '做成卡片', '做成信息图', '做成海报', '视觉笔记', 'sketchnote', '杂志', 'editorial', '漫画', 'comic', 'manga', '白板', 'whiteboard', '大字', '附件图', 'big fonts', '小红书卡片'. Replaces ljg-cards and ljg-infograph."
 user_invocable: true
 version: "2.3.0"
 ---
 
-# ljg-card: 铸
+# ljg-card: Cast
 
-将内容铸成可见的形态。内容进去，PNG 出来。模具决定形状。
+Cast content into visible form. Content goes in, PNG comes out. The mold determines the shape.
 
-## 参数
+## Parameters
 
-| 参数 | 模具 | 尺寸 | 说明 |
-|------|------|------|------|
-| `-l`（默认） | 长图 | 1080 x auto | 单张阅读卡，内容自动撑高 |
-| `-i` | 信息图 | 1080 x auto | 内容驱动的自适应视觉布局 |
-| `-m` | 多卡 | 1080 x 1440 | 自动切分为多张阅读卡片 |
-| `-v` | 视觉笔记 | 1080 x auto | 编辑式杂志专题：问题→失败→转折→顿悟→命名（6 layout 模具 / 4 字族对比 / 探案档案细节）|
-| `-c` | 漫画 | 1080 x auto | 日式黑白漫画风格，动态选择漫画家视觉语言 |
-| `-w` | 白板 | 1080 x auto | 白板马克笔风格，结构化框图+箭头+彩色标记 |
-| `-b` | 大字 | 1080 x 1440 | 碑刻大字 + 和紙 + 外阴影，小红书附件风格（单句/短段） |
+| Parameter | Mold | Dimensions | Description |
+|-----------|------|------------|-------------|
+| `-l` (default) | Long card | 1080 x auto | Single reading card, content auto-extends height |
+| `-i` | Infograph | 1080 x auto | Content-driven adaptive visual layout |
+| `-m` | Multi-card | 1080 x 1440 | Auto-split into multiple reading cards |
+| `-v` | Sketchnote | 1080 x auto | Editorial magazine feature: problem→failure→pivot→insight→naming (6 layout molds / 4 typeface contrasts / detective case-file details) |
+| `-c` | Comic | 1080 x auto | Japanese B&W manga style, dynamically selects manga artist visual language |
+| `-w` | Whiteboard | 1080 x auto | Whiteboard marker style, structured block diagrams + arrows + color markup |
+| `-b` | Big fonts | 1080 x 1440 | Stele inscription big characters + washi paper + outer shadow, Xiaohongshu attachment style (single sentence / short passage) |
 
-## 约束
+## Constraints
 
-本 skill 输出为视觉文件（PNG），不适用 L0 中的 Org-mode、Denote 和 ASCII-only 规范。
+This skill outputs visual files (PNG), not subject to the Org-mode, Denote, and ASCII-only conventions in L0.
 
-## 共享基础
+## Shared Foundation
 
-### 获取内容
+### Getting Content
 
-- URL --> WebFetch 获取
-- 粘贴文本 --> 直接使用
-- 文件路径 --> Read 获取
+- URL --> WebFetch to obtain
+- Pasted text --> use directly
+- File path --> Read to obtain
 
-### 文件命名
+### File Naming
 
-从内容提取标题或核心思想作为 `{name}`（中文直接用，去标点，≤ 20 字符）。
+Extract title or core idea from content as `{name}` (use directly in Chinese, remove punctuation, ≤ 20 characters).
 
-### 截图工具
+### Screenshot Tool
 
 ```bash
 node assets/capture.js <html> <png> <width> <height> [fullpage]
 ```
 
-从 skill 根目录运行。依赖 skill 根目录下的 `node_modules/` 中的 playwright。如报错：
+Run from the skill root directory. Requires playwright in `node_modules/` under skill root. If errors:
 
 ```bash
 npm install playwright && npx playwright install chromium
@@ -51,61 +51,61 @@ npm install playwright && npx playwright install chromium
 
 ### Footer
 
-- 左侧：logo + 李继刚（已硬编码在模板中）
-- 右侧：内容来源（可选）——有明确来源时显示（如作者名、arxiv ID、网站名等），无来源时留空。使用 `{{SOURCE_LINE}}` 变量：有来源时填 `<span class="info-source">来源文字</span>`，否则空字符串。适用于 `-l`、`-i`、`-v`、`-c`、`-w` 模具（`-m` 多卡无 footer，不适用）。
+- Left side: logo + 李继刚 (hardcoded in template)
+- Right side: content source (optional) — show when there's a clear source (author name, arxiv ID, website name, etc.), leave empty otherwise. Use `{{SOURCE_LINE}}` variable: when there's a source, fill `<span class="info-source">source text</span>`, otherwise empty string. Applies to `-l`, `-i`, `-v`, `-c`, `-w` molds (`-m` multi-card has no footer, not applicable).
 
-### 交付
+### Delivery
 
-1. 报告文件路径
+1. Report the file path
 
-## 品味准则
+## Taste Standards
 
-**所有模具共享**。执行任何模具前，先 Read `references/taste.md`，作为视觉质量底线贯穿全流程。
+**Shared across all molds.** Before executing any mold, first Read `references/taste.md`, as the visual quality baseline贯穿 the entire process.
 
-核心：反 AI 生成痕迹——禁 Inter 字体、禁纯黑、禁三等分卡片、禁居中 Hero、禁 AI 文案腔、禁假数据。
+Core principle: anti-AI-generated traces — no Inter font, no pure black, no three-column cards, no centered Hero, no AI copywriting tone, no fake data.
 
-## 执行
+## Execution
 
-根据参数选择模具，Read `references/taste.md` + 对应的 mode 文件，按步骤执行：
+Select the mold based on the parameter, Read `references/taste.md` + the corresponding mode file, then follow the steps:
 
-### -l（默认）：长图
+### -l (default): Long Card
 
-Read `references/mode-long.md`，按其步骤执行。
+Read `references/mode-long.md`, follow its steps.
 
-模板：`assets/long_template.html`
+Template: `assets/long_template.html`
 
-### -i：信息图
+### -i: Infograph
 
-Read `references/mode-infograph.md`，按其步骤执行。
+Read `references/mode-infograph.md`, follow its steps.
 
-模板：`assets/infograph_template.html`
+Template: `assets/infograph_template.html`
 
-### -m：多卡
+### -m: Multi-card
 
-Read `references/mode-poster.md`，按其步骤执行。
+Read `references/mode-poster.md`, follow its steps.
 
-模板：`assets/poster_template.html`
+Template: `assets/poster_template.html`
 
-### -v：视觉笔记
+### -v: Sketchnote
 
-Read `references/mode-sketchnote.md`，按其步骤执行。
+Read `references/mode-sketchnote.md`, follow its steps.
 
-模板：`assets/sketchnote_template.html`
+Template: `assets/sketchnote_template.html`
 
-### -c：漫画
+### -c: Comic
 
-Read `references/mode-comic.md`，按其步骤执行。
+Read `references/mode-comic.md`, follow its steps.
 
-模板：`assets/comic_template.html`
+Template: `assets/comic_template.html`
 
-### -w：白板
+### -w: Whiteboard
 
-Read `references/mode-whiteboard.md`，按其步骤执行。
+Read `references/mode-whiteboard.md`, follow its steps.
 
-模板：`assets/whiteboard_template.html`
+Template: `assets/whiteboard_template.html`
 
-### -b：大字
+### -b: Big Fonts
 
-Read `references/mode-big.md`，按其步骤执行。
+Read `references/mode-big.md`, follow its steps.
 
-模板：`assets/big_template.html`
+Template: `assets/big_template.html`

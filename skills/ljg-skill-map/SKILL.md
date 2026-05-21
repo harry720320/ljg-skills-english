@@ -1,67 +1,67 @@
 ---
 name: ljg-skill-map
-description: "Skill map viewer. Scans all installed skills and renders a visual overview — name, version, description, category at a glance. Use when user says 'skills', '技能', '技能地图', 'skill map', '我有哪些技能', '看看技能', '列出技能', 'list skills'. Also trigger when user asks what skills are available or installed."
+description: "Skill map viewer. Scans all installed skills and renders a visual overview -- name, version, description, category at a glance. Use when user says 'skills', '技能', '技能地图', 'skill map', '我有哪些技能', '看看技能', '列出技能', 'list skills'. Also trigger when user asks what skills are available or installed."
 user_invocable: true
 version: "1.0.0"
 ---
 
-# ljg-skill-map: 技能地图
+# ljg-skill-map: Skill Map
 
-扫描 `~/.claude/skills/` 下所有已安装技能，生成一目了然的可视化地图。
+Scans all installed skills under `~/.claude/skills/` and generates a visual map at a glance.
 
-## 执行
+## Execution
 
-### 1. 扫描
+### 1. Scan
 
-运行 `scripts/scan.sh`，获取所有技能的 JSON 数据（name, version, invocable, desc）。
+Run `scripts/scan.sh` to get JSON data for all skills (name, version, invocable, desc).
 
-### 2. 分类
+### 2. Categorize
 
-根据技能名称和描述，将技能自动归入以下类别：
+Based on skill name and description, automatically categorize skills as follows:
 
-| 类别 | 图标 | 含义 | 典型成员 |
-|------|------|------|----------|
-| 认知原子 | ◆ | 内容处理的原子操作 | ljg-plain, ljg-word, ljg-writes, ljg-paper |
-| 输出铸造 | ▲ | 将内容转化为可交付物 | ljg-card |
-| 联网触达 | ● | 与外部世界交互 | agent-reach |
-| 系统运维 | ■ | Agent 自身的维护和管理 | datetime-check, memory-review, save-conversation, skill-creator, ljg-skill-map |
-| 环境部署 | ★ | 一次性安装和配置 | Her-init |
+| Category | Icon | Meaning | Typical Members |
+|----------|------|---------|-----------------|
+| Cognitive Atoms | ◆ | Atomic operations for content processing | ljg-plain, ljg-word, ljg-writes, ljg-paper |
+| Output Casting | ▲ | Transform content into deliverables | ljg-card |
+| Network Reach | ● | Interact with the external world | agent-reach |
+| System Operations | ■ | Agent self-maintenance and management | datetime-check, memory-review, save-conversation, skill-creator, ljg-skill-map |
+| Environment Setup | ★ | One-time installation and configuration | Her-init |
 
-归类依据名称前缀和描述关键词判断。遇到新技能无法归类时，放入「未分类」。
+Categorization is based on name prefix and description keywords. New skills that cannot be categorized are placed under "Uncategorized".
 
-### 3. 渲染
+### 3. Render
 
-用 ASCII 方框图呈现，格式如下：
+Present in ASCII box-drawing format as follows:
 
 ```
 ╔══════════════════════════════════════════════════════════╗
 ║              SKILL MAP  ·  {N} skills installed         ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
-║  ◆ 认知原子                                              ║
+║  ◆  Cognitive Atoms                                      ║
 ║  +-----------------+----------------------------------+  ║
-║  | ljg-plain v4.0  | 白 — 好问题+类比让人 grok        |  ║
-║  | ljg-word  v1.0  | 英文单词深度拆解                  |  ║
-║  | ljg-writes v4.0 | 写作引擎                          |  ║
-║  | ljg-paper v2.0  | 论文阅读与分析                    |  ║
+║  | ljg-plain v4.0  | Plain -- great Q&A + analogies   |  ║
+║  | ljg-word  v1.0  | Deep English word deconstruction |  ║
+║  | ljg-writes v4.0 | Writing engine                   |  ║
+║  | ljg-paper v2.0  | Paper reading & analysis         |  ║
 ║  +-----------------+----------------------------------+  ║
 ║                                                          ║
-║  ▲ 输出铸造                                              ║
+║  ▲  Output Casting                                       ║
 ║  +-----------------+----------------------------------+  ║
-║  | ljg-card  v1.5  | 铸 — 内容转 PNG 可视化           |  ║
+║  | ljg-card  v1.5  | Cast -- content to PNG visuals   |  ║
 ║  +-----------------+----------------------------------+  ║
 ║                                                          ║
 ║  ...                                                     ║
 ╚══════════════════════════════════════════════════════════╝
 ```
 
-规则：
-- 每个类别一个区块，类别图标 + 中文名做标题
-- 技能名左对齐，版本号紧跟（无版本显示 `-`）
-- 描述截断到一行，保留核心语义
-- user_invocable 为 true 的技能名后加 `/` 标记（表示可直接 `/技能名` 调用）
-- 底部统计行：总数、可调用数、分类数
+Rules:
+- One block per category, category icon + name as title
+- Skill name left-aligned, version number immediately following (`-` if no version)
+- Description truncated to one line, preserving core meaning
+- Skills with `user_invocable: true` get a `/` suffix (indicating it can be invoked directly via `/skill-name`)
+- Bottom stats line: total count, invocable count, categorized count
 
-### 4. 输出
+### 4. Output
 
-直接在对话中渲染 ASCII 地图。不生成文件，不写入磁盘。
+Render the ASCII map directly in the conversation. No file is generated, nothing written to disk.

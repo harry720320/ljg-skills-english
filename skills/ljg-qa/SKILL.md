@@ -1,45 +1,45 @@
 ---
 name: ljg-qa
-description: 信息提问机。给一篇文章/论文/书，把核心观点抽成 Q-A 对——Question 切要害，不教科书；Answer 简洁清晰，有形式化收口，逻辑链完整。读者顺 Q 链走过，每个 A 砸下一枚钉子，复现作者整套推理。Use when user says '问答', 'Q&A', 'QA', '提问', '抽取问题', '/ljg-qa', or shares an article/paper/book and asks for Q-A extraction. Triggers when the user wants ideas extracted not as a summary but as a sequence of incisive questions with answered. NOT FOR FAQ generation, glossary creation, or comprehension quizzes — this is intellectual scaffolding, not study aids.
+description: Information Q-A machine. Takes an article/paper/book and extracts core ideas into Q-A pairs — Questions cut to the heart, not textbook-style; Answers are concise and clear, with formalized closure and complete logical chains. Readers follow the Q chain, each Answer driving in a nail, reconstructing the author's entire reasoning. Use when user says '问答', 'Q&A', 'QA', '提问', '抽取问题', '/ljg-qa', or shares an article/paper/book and asks for Q-A extraction. Triggers when the user wants ideas extracted not as a summary but as a sequence of incisive questions with answers. NOT FOR FAQ generation, glossary creation, or comprehension quizzes — this is intellectual scaffolding, not study aids.
 user_invocable: true
 ---
 
-# ljg-qa: 问答提取
+# ljg-qa: Q&A Extraction
 
-读一份东西，把它的思想拆成「为什么—怎么—边界」的问答链。
+Read a piece of content and dismantle its ideas into a "why — how — boundary" Q&A chain.
 
-读者顺着 Q 走过去，每个 A 砸下来一枚钉子。
+Readers follow the Q chain forward, each Answer driving in a nail.
 
-## 你不是
+## What You Are Not
 
-- 不是 FAQ 生成器（"什么是 X"——读者一看就跳过）
-- 不是摘要换皮（把段落拆成"问/答"两半还是摘要）
-- 不是知识点列表（孤立的事实碰撞不出洞察）
-- 不是阅读理解题（提问不是为了考读者，是为了切中作者）
+- Not a FAQ generator ("What is X" — readers skip on sight)
+- Not a summary in disguise (splitting paragraphs into Q/A halves is still a summary)
+- Not a list of isolated facts (disconnected facts can't collide into insight)
+- Not reading comprehension questions (questions aren't to test the reader, but to cut into the author)
 
-## 你是
+## What You Are
 
-把作者的论证骨架翻出来，每根骨头长成一个尖锐的问题。读者沿着 Q 链读，能复现作者的整套思路——而不是被告知结论。
+Turn the author's argument skeleton inside out, each bone growing into a sharp question. Readers following the Q chain can reconstruct the author's entire line of reasoning — rather than being told the conclusions.
 
-## 三条铁律
+## Three Iron Rules
 
-1. *Q 切要害* —— 问的是「为什么这个解法成立」「它跟另一种做法差在哪」「它的代价是什么」「它在哪里失效」，不是「它定义是什么」。一个 Q 必须能让答案承重，不能被一句话敷衍过去。
+1. *Q cuts to the heart* — ask "why this solution holds", "how it differs from another approach", "what is its cost", "where does it fail", not "what is its definition". A Q must make the answer load-bearing, not dismissible in one sentence.
 
-2. *A 有形式化收口* —— 每个 A 严格四段：*结论*（一句话）+ *形式化*（用文字 + 简单符号把思想压成一行可视关系，如 `A = B + C`、`旧: X → 新: Y`）+ *论证步*（怎么想到的）+ *边界*（不成立的条件）。形式化是"思想的几何"，让读者一眼看出关系。
+2. *A has formalized closure* — each A strictly in four parts: *Conclusion* (one sentence) + *Formalization* (compress the thought into one line of visible relationships using words + simple symbols, e.g. `A = B + C`, `Old: X → New: Y`) + *Reasoning steps* (how they arrived at it) + *Boundary* (conditions where it doesn't hold). Formalization is "the geometry of thought", letting readers see relationships at a glance.
 
-3. *Q 链有方向* —— Q 之间不是并列罗列，是「Q1 答完→Q2 自然冒出来」。读者读完整串 Q，相当于走了一遍作者的推理路径。
+3. *Q chain has direction* — Qs are not并列罗列, they follow "Q1 answered → Q2 naturally emerges". Reading the entire Q chain is equivalent to walking through the author's reasoning path.
 
-## 工作流
+## Workflow
 
-按 `Workflows/Extract.md` 的步骤执行。
+Follow the steps in `Workflows/Extract.md`.
 
-## 设计参考
+## Design Reference
 
-Q 怎么提、A 怎么收口的具体模式见 `References/QuestionDesign.md`。
+See `References/QuestionDesign.md` for specific patterns on how to formulate Qs and how to close As.
 
 ## Voice Notification
 
-执行 workflow 时：
+When executing the workflow:
 
 ```bash
 curl -s -X POST http://localhost:31337/notify \
@@ -48,17 +48,17 @@ curl -s -X POST http://localhost:31337/notify \
   > /dev/null 2>&1 &
 ```
 
-输出文本：
+Output text:
 
 ```
 Running **Extract** in **ljg-qa**...
 ```
 
-## 输出
+## Output
 
-- 格式：org-mode（`*bold*`，禁 markdown 语法）
-- 路径：`~/Documents/notes/`
-- denote 文件名：`{YYYYMMDDTHHMMSS}--qa-{核心主题 5-10 字}__qa.org`
+- Format: org-mode (`*bold*`, forbid markdown syntax)
+- Path: `~/Documents/notes/`
+- Denote filename: `{YYYYMMDDTHHMMSS}--qa-{core_topic_5-10_chars}__qa.org`
 
 ## Examples
 
@@ -66,33 +66,33 @@ Running **Extract** in **ljg-qa**...
 
 ```
 User: /ljg-qa https://example.com/article
-→ WebFetch 获取
-→ 找观点骨架 → 设计 Q 链 → 写 A 三段
-→ org-mode 输出到 ~/Downloads/
+→ WebFetch to obtain
+→ Find idea skeleton → design Q chain → write A in three parts
+→ org-mode output to ~/Downloads/
 ```
 
-*Example 2: 论文 PDF*
+*Example 2: Paper PDF*
 
 ```
 User: /ljg-qa ~/Downloads/paper.pdf
-→ Read PDF（注意 pages 参数）
-→ Q 抽出方法的「为什么」「代价」「边界」
-→ 输出 org-mode
+→ Read PDF (note pages parameter)
+→ Q extracts the method's "why" "cost" "boundary"
+→ Output org-mode
 ```
 
-*Example 3: 直接文本*
+*Example 3: Direct text*
 
 ```
-User: 把这段抽成 Q-A: [text]
-→ 跳过获取，直接抽
-→ 输出
+User: Extract this as Q-A: [text]
+→ Skip fetching, extract directly
+→ Output
 ```
 
 ## Gotchas
 
-- *AI 默认会写「什么是 X」型问题* —— 教科书腔。生成后扫一遍，凡是 Q 能用一句定义打发的，重写
-- *AI 默认会让 A 散掉* —— 没有结论句、没有边界、写成一段散文。每个 A 必须严格四段（结论 / 形式化 / 步骤 / 边界）
-- *AI 默认会把「形式化」写成数学公式* —— 不是。形式化是用文字 + → = ≠ + × 这类符号压一行可视的关系，比如 `通才 = 协调，专才 = 干活`。是"思想的几何"，不是"数学的形式"
-- *AI 默认按章节顺序提问* —— 这是抄目录，不是抽思想。Q 链应该按论证依赖关系排，不按出现顺序
-- *AI 默认会把 Q-A 理解成「问答游戏」* —— 不是。这里 Q 是凿子，A 是钉子。装饰性的轻问题禁止
-- *AI 默认会在 A 里堆术语保平安* —— 用术语不算回答。把术语翻译成具体动作和具体物件，否则 A 没承重
+- *AI defaults to writing "What is X" type questions* — textbook tone. After generation, scan: any Q answerable with a one-line definition → rewrite
+- *AI defaults to letting A scatter* — no conclusion sentence, no boundary, written as prose. Each A must strictly follow four parts (conclusion / formalization / steps / boundary)
+- *AI defaults to writing "formalization" as math formulas* — no. Formalization uses words + → = ≠ + × such symbols to compress into one line of visible relationships, e.g. `generalist = coordination, specialist = execution`. It's "geometry of thought", not "mathematical form"
+- *AI defaults to questioning in chapter order* — this is copying a table of contents, not extracting ideas. The Q chain should be ordered by argument dependency, not by appearance order
+- *AI defaults to understanding Q&A as a "quiz game"* — no. Here Q is the chisel, A is the nail. Decorative lightweight questions are forbidden
+- *AI defaults to piling jargon in A as a safety blanket* — using jargon is not answering. Translate jargon into concrete actions and specific objects, otherwise A has no load-bearing capacity
