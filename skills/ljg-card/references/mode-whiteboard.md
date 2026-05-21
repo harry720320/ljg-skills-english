@@ -1,139 +1,139 @@
-# 模具：白板（-w）
+# Mold: Whiteboard (-w)
 
-## 核心信条
+## Core Creed
 
-**推理过程的可见化——思路展开的痕迹，以日系余白为呼吸。**
+**Making the reasoning process visible -- the traces of thought unfolding, breathing through Japanese-style negative space.**
 
-神：概念用箭头串成链，关键词被标出，旁边有简笔图标。推进但不急——每一行是一步推理，每个留白是一次呼吸。不是排好版的结论，是思考展开的过程。
+Spirit: Concepts are strung into chains by arrows, keywords are highlighted, accompanied by simple sketched icons. It moves forward but not in a hurry -- each line is one step of reasoning, each blank space is a breath. It is not a polished conclusion, but a process of thinking unfolding.
 
-形随神动，不绑定任何特定载体（不是黑板，不是白板，不是纸）。漆面般的暖黑底只是让内容浮出来的最安静的背景。
+Form follows spirit, not bound to any specific medium (not a chalkboard, not a whiteboard, not paper). The lacquer-like warm black background is simply the quietest surface that lets content emerge.
 
-**审美三柱**：
-- 「余白」——空间不是剩余，是主角。内容四周、段落之间的留白是设计的一部分
-- 「枯」——色彩极度克制，靠亮度差和微温差说话。全局暖灰调，一抹微朱点睛
-- 「素」——无装饰。无边框、无噪点纹理、无拟物质感。干净到只剩内容和空气
+**Three Pillars of Aesthetics**:
+- "Ma (Negative Space)" -- Space is not leftover; it is the protagonist. The empty areas around content and between paragraphs are part of the design.
+- "Kare (Austerity)" -- Color is extremely restrained. Communicate through brightness contrast and subtle temperature shifts. Overall warm gray tone, with a touch of vermilion as the focal point.
+- "Suna (Purity)" -- No decoration. No borders, no noise textures, no simulated material textures. Clean to the point where only content and air remain.
 
-## 步骤 1：读取模板
+## Step 1: Read Template
 
 Read `assets/whiteboard_template.html`
 
-模板提供：
-- 书写字体加载（Permanent Marker + Kalam）
-- CSS 变量（`--bg`, `--board`, `--ink`, `--red`, `--yellow`, `--blue`, `--green`, `--orange`, `--marker-bg`）
-- 黑板底色 + 粉笔灰质感
-- 木质画框（`.board-frame`）
-- SVG 箭头 marker 定义（红 `arrow-r` / 白 `arrow-w` / 蓝 `arrow-b` / 绿 `arrow-g` / 黄 `arrow-y`）
-- `.colophon` 署名栏
-- `{{CUSTOM_CSS}}` 和 `{{CONTENT_HTML}}` 插槽
+The template provides:
+- Handwriting font loading (Permanent Marker + Kalam)
+- CSS variables (`--bg`, `--board`, `--ink`, `--red`, `--yellow`, `--blue`, `--green`, `--orange`, `--marker-bg`)
+- Chalkboard background + chalk dust texture
+- Wooden picture frame (`.board-frame`)
+- SVG arrow marker definitions (red `arrow-r` / white `arrow-w` / blue `arrow-b` / green `arrow-g` / yellow `arrow-y`)
+- `.colophon` credit section
+- `{{CUSTOM_CSS}}` and `{{CONTENT_HTML}}` slots
 
-## 步骤 2：理解内容，选择风格
+## Step 2: Understand Content, Choose Style
 
-### 2.1 提取结构
+### 2.1 Extract Structure
 
-从内容中提取：
-- **核心论点**：一句话总结
-- **推理链**：论点怎么一步步推出来的？识别 A → B → C 结构
-- **3-8 个关键概念**：可作为链条节点的概念
-- **分支点**：推理在哪里分岔、汇合、或转折
-- **可画的概念**：哪些概念能用简笔画快速表达
+Extract from the content:
+- **Core thesis**: Summarize in one sentence
+- **Reasoning chain**: How is the argument built step by step? Identify A → B → C structure
+- **3-8 key concepts**: Concepts that can serve as chain nodes
+- **Branching points**: Where does the reasoning diverge, converge, or turn?
+- **Drawable concepts**: Which concepts can be quickly expressed with simple sketches?
 
-### 2.2 选择风格路线
+### 2.2 Choose Style Path
 
-| 风格 | 视觉特征 | 触发信号 | 主色 |
-|------|---------|---------|------|
-| **逻辑链**（默认） | 横向推理链（→ 连接）+ 纵向层级 + 黄色关键词 + 内嵌简笔画 | 有因果/推理/论证/阐释结构 | `--red` 箭头 + `--yellow` 高亮 |
-| **脑暴墙** | 核心词居中 + 放射状分支 + 色块便签 + 关键词散落 | 发散型/多观点/创意/头脑风暴 | `--yellow` 主导 |
-| **时间线** | 纵向时间轴 + 节点 + 旁注 + 对比色 | 时间/阶段/进程/回顾类 | `--green` 主导 |
-| **矩阵分析** | 2x2 或多格矩阵 + 象限标签 + 要素散布 | 分类/对比/评估/决策框架 | `--blue` 主导 |
+| Style | Visual Features | Trigger Signals | Main Colors |
+|-------|----------------|-----------------|-------------|
+| **Logic Chain** (default) | Horizontal reasoning chain (→ connections) + vertical hierarchy + yellow keywords + embedded sketches | Has causal/reasoning/argumentation/exposition structure | `--red` arrows + `--yellow` highlights |
+| **Brainstorm Wall** | Core word centered + radial branches + color block sticky notes + scattered keywords | Divergent/multi-perspective/creative/brainstorming | `--yellow` dominant |
+| **Timeline** | Vertical timeline + nodes + side notes + contrasting colors | Time/stage/process/retrospective content | `--green` dominant |
+| **Matrix Analysis** | 2x2 or multi-cell matrix + quadrant labels + distributed elements | Classification/comparison/evaluation/decision framework | `--blue` dominant |
 
-**选择原则**：
-- 默认用「逻辑链」——最能体现黑板推演感
-- 内容有多个并列观点 → 脑暴墙
-- 内容有时间/阶段维度 → 时间线
-- 内容涉及分类/象限 → 矩阵分析
+**Selection Principles**:
+- Default to "Logic Chain" -- best captures the chalkboard reasoning feel
+- Content has multiple parallel viewpoints → Brainstorm Wall
+- Content has time/stage dimension → Timeline
+- Content involves classification/quadrants → Matrix Analysis
 
-### 2.3 色调——和紙奶白 + 朱砂
+### 2.3 Color Palette -- Washi Milk White + Vermilion
 
-日式极简。奶白底如手漉和紙，墨色文字如书道落笔，朱砂红如方印点睛。用结构和字重说话，不用颜色喊。
+Japanese minimalism. Milk-white base like handmade washi paper, ink-colored text like brush calligraphy strokes, vermilion red like a square seal focal point. Use structure and font weight to speak, not color.
 
-| 变量 | 色值 | 角色 |
-|------|------|------|
-| `--board` | `#F7F3EC` 和紙 | 奶白底，温暖的手漉和紙 |
-| `--ink` | `#2C2826` 墨 | 正文，温暖的近黑色如墨汁 |
-| `--ink-light` | `#8A8478` 灰墨 | 标注、旁白 |
-| `--yellow` | `#7A6B4E` 焙茶 | 高亮文字——焙茶色，在奶白底上沉稳可读 |
-| `--red` | `#A09888` 石 | 箭头——安静的石灰色，只引路 |
-| `--shu` | `#C03C28` 朱砂 | 点睛——真正的朱砂红，每张板 ≤ 3 处 |
+| Variable | Color Value | Role |
+|----------|------------|------|
+| `--board` | `#F7F3EC` Washi | Milk-white base, warm handmade washi |
+| `--ink` | `#2C2826` Ink | Body text, warm near-black like ink |
+| `--ink-light` | `#8A8478` Gray Ink | Annotations, asides |
+| `--yellow` | `#7A6B4E` Roasted Tea | Highlighted text -- roasted tea color, stable and readable on milk-white |
+| `--red` | `#A09888` Stone | Arrows -- quiet stone gray, guiding without competing |
+| `--shu` | `#C03C28` Vermilion | Focal point -- true vermilion red, no more than 3 per board |
 
-画框：`rgba(180,170,155,0.15)` 极淡暖灰线，几乎隐入背景。
+Frame: `rgba(180,170,155,0.15)` extremely faint warm gray line, almost invisible against background.
 
-**原则**：
-- 奶白底上靠**字重**和**焙茶色**建立层级
-- 墨色（ink）在和紙（board）上的对比是基础张力
-- 圈标、下划线统一用 `--yellow`（焙茶色）
-- 箭头用 `--red`（石灰），安静引路，不抢戏
-- `--shu`（朱砂）仅用于：结论框边线、核心论点圈标、署名旁的印章。每张板不超过 3 处
-- 朱砂是唯一的高饱和色，靠稀缺性发挥冲击力
+**Principles**:
+- On milk-white base, establish hierarchy through **font weight** and **roasted tea color**
+- The contrast of ink on washi is the fundamental tension
+- Circles and underlines uniformly use `--yellow` (roasted tea)
+- Arrows use `--red` (stone gray), quietly guiding, not competing
+- `--shu` (vermilion) only used for: conclusion box borders, core thesis circle marks, seal next to the credit. No more than 3 per board
+- Vermilion is the only high-saturation color; its scarcity gives it impact
 
-#### 内容驱动色温偏移
+#### Content-Driven Color Temperature Shift
 
-默认保持侘寂灰调。根据内容主题，允许极微妙的色温偏移——不加新色相，只调底色和高亮的冷暖倾向。
+Default maintains wabi-sabi gray tones. Based on content themes, allow extremely subtle color temperature shifts -- no new hues, only adjust the cool/warm tendency of the base color and highlights.
 
-**检测**：扫描内容关键词，匹配主导类型。跨类时取篇幅最大的主题。
+**Detection**: Scan content keywords, match the dominant type. When crossing categories, use the theme with the largest scope.
 
-| 类型 | 触发词 | `--board` | `--yellow` | 光暈色调 |
-|------|--------|-----------|------------|---------|
-| 默认（和紙） | 无匹配 | `#F7F3EC` | `#7A6B4E` | 暖朱 |
-| 技术 | AI、算法、模型、代码、架构、系统、API、数据、工程、网络 | `#F3F4F7` | `#5A6878` | 冷蓝 |
-| 人文 | 哲学、认知、意义、伦理、存在、美学、叙事、历史、文学、心理 | `#F7F0E5` | `#8A6A3E` | 深暖 |
-| 商业 | 投资、商业、增长、市场、估值、融资、战略、竞争、利润、ROI | `#F4F5F0` | `#5A7054` | 中性绿 |
+| Type | Trigger Words | `--board` | `--yellow` | Halo Hue |
+|------|--------------|-----------|------------|----------|
+| Default (Washi) | No match | `#F7F3EC` | `#7A6B4E` | Warm Vermilion |
+| Technical | AI, algorithm, model, code, architecture, system, API, data, engineering, network | `#F3F4F7` | `#5A6878` | Cool Blue |
+| Humanities | Philosophy, cognition, meaning, ethics, existence, aesthetics, narrative, history, literature, psychology | `#F7F0E5` | `#8A6A3E` | Deep Warm |
+| Business | Investment, business, growth, market, valuation, financing, strategy, competition, profit, ROI | `#F4F5F0` | `#5A7054` | Neutral Green |
 
-**实现**：匹配非默认类型时，在 `{{CUSTOM_CSS}}` 顶部添加变量覆盖 + 表面光暈覆盖。默认类型不覆盖。
+**Implementation**: When matching a non-default type, add variable overrides + surface halo override at the top of `{{CUSTOM_CSS}}`. Default type does not override.
 
-技术：
+Technical:
 ```css
 :root { --board: #F3F4F7; --yellow: #5A6878; }
 .board > .surface { background: radial-gradient(ellipse at 25% 20%, rgba(120,140,170,0.05) 0%, transparent 50%), radial-gradient(ellipse at 75% 55%, rgba(150,165,190,0.03) 0%, transparent 45%); }
 ```
 
-人文：
+Humanities:
 ```css
 :root { --board: #F7F0E5; --yellow: #8A6A3E; }
 .board > .surface { background: radial-gradient(ellipse at 25% 20%, rgba(190,160,120,0.05) 0%, transparent 50%), radial-gradient(ellipse at 75% 55%, rgba(210,180,140,0.03) 0%, transparent 45%); }
 ```
 
-商业：
+Business:
 ```css
 :root { --board: #F4F5F0; --yellow: #5A7054; }
 .board > .surface { background: radial-gradient(ellipse at 25% 20%, rgba(130,160,130,0.05) 0%, transparent 50%), radial-gradient(ellipse at 75% 55%, rgba(160,185,155,0.03) 0%, transparent 45%); }
 ```
 
-**原则**：
-- 只覆盖 `--board`、`--yellow` 和表面光暈，其他变量一律不动
-- 偏移极其微妙——不并排对比看不出差异，但整体氛围不同
-- `--ink`、`--red`、`--shu` 不随内容变化——微朱仍然是唯一的色彩锚点
+**Principles**:
+- Only override `--board`, `--yellow`, and the surface halo; all other variables remain untouched
+- The shift is extremely subtle -- not noticeable without side-by-side comparison, but the overall atmosphere is different
+- `--ink`, `--red`, `--shu` do not change with content -- vermilion remains the sole color anchor
 
-### 2.4 标题设计
+### 2.4 Title Design
 
-标题是整张黑板的第一眼。
+The title is the first impression of the entire board.
 
-**必须做到**：
-- 标题是一句**完整的判断/结论**，不是一个词。如果原文标题只是概念名，从内容中提炼出核心论断作为主标题，概念名作为副标题
-- 主标题中 1-2 个关键词用 `--yellow` 标出，其余白色
-- 主标题下方用粉笔横线收束（SVG wavy path，opacity 0.3）
+**Must achieve**:
+- The title is a **complete judgment/conclusion**, not a word. If the original title is just a concept name, extract the core thesis from the content as the main title, with the concept name as the subtitle
+- In the main title, highlight 1-2 keywords with `--yellow`, rest in white
+- Below the main title, use a chalk horizontal line as closure (SVG wavy path, opacity 0.3)
 
-**标题结构**：
+**Title Structure**:
 ```html
 <div class="board-title">
-  <div class="board-title-sub">副标题或引导语（较小，ink-light）</div>
-  <h1 class="board-title-main">白色文字<span class="y">黄色关键词</span>白色文字</h1>
+  <div class="board-title-sub">Subtitle or guide text (smaller, ink-light)</div>
+  <h1 class="board-title-main">White text<span class="y">Yellow keyword</span>white text</h1>
   <svg class="title-line" width="600" height="8">
     <path d="M0,4 Q150,0 300,4 T600,4" stroke="var(--yellow)" fill="none" stroke-width="2" opacity="0.3"/>
   </svg>
 </div>
 ```
 
-**标题 CSS 参考**：
+**Title CSS Reference**:
 ```css
 .board-title { text-align: center; padding: 56px 48px 16px; }
 .board-title-sub { font: 500 34px/1.4 var(--hand); color: var(--ink-light); margin-bottom: 4px; }
@@ -142,28 +142,28 @@ Read `assets/whiteboard_template.html`
 .title-line { display: block; margin: 0 auto; }
 ```
 
-## 步骤 3：设计画面
+## Step 3: Design the Visual
 
-### 3.1 黑板元素工具箱
+### 3.1 Chalkboard Element Toolbox
 
-**所有视觉元素用 CSS + SVG 实现，不用外部图片。**
+**All visual elements implemented with CSS + SVG, no external images.**
 
-#### 文字层级
+#### Text Hierarchy
 
-| 层级 | 字体 | 字号 | 颜色 | 用途 |
-|------|------|------|------|------|
-| 主标题 | `--marker` | 64-80px | `--ink` 白 | 黑板顶部大标题，关键词嵌黄色 |
-| 链条文字 | `--hand` 700 | 34-40px | `--ink` 白 | 逻辑链中的概念和说明 |
-| 关键词 | `--hand` 700 | 34-42px | `--yellow` | 链条中需要强调的概念 |
-| 标注 | `--hand` 400 | 24-28px | `--ink-light` | 旁注、补充、小字 |
-| 大号数字 | `--marker` | 72-120px | `--yellow` 或 `--red` | 数据亮点 |
+| Level | Font | Size | Color | Usage |
+|-------|------|------|-------|-------|
+| Main Title | `--marker` | 64-80px | `--ink` | Large title at the top of the board, keywords in yellow |
+| Chain Text | `--hand` 700 | 34-40px | `--ink` | Concepts and explanations in the logic chain |
+| Keywords | `--hand` 700 | 34-42px | `--yellow` | Concepts needing emphasis in the chain |
+| Annotation | `--hand` 400 | 24-28px | `--ink-light` | Side notes, supplements, small text |
+| Large Numbers | `--marker` | 72-120px | `--yellow` or `--red` | Data highlights |
 
-**中文处理**：Permanent Marker 和 Kalam 对中文无效，回退到 PingFang SC。中文文字通过颜色（黄/红）和装饰（下划线、圈标）维持粉笔感。
+**Chinese text handling**: Permanent Marker and Kalam have no effect on Chinese characters, falling back to PingFang SC. Chinese text maintains the chalk feel through color (yellow/red) and decoration (underline, circle marks).
 
-#### 粉笔效果（CSS）
+#### Chalk Effects (CSS)
 
 ```css
-/* 红色链条箭头 — 逻辑推进的视觉线索 */
+/* Red chain arrow -- visual clue for logical progression */
 .chain-arrow {
   color: var(--red);
   font: 700 34px var(--hand);
@@ -171,13 +171,13 @@ Read `assets/whiteboard_template.html`
   display: inline;
 }
 
-/* 黄色粉笔高亮 */
+/* Yellow chalk highlight */
 .chalk-yellow {
   color: var(--yellow);
   font-weight: 700;
 }
 
-/* 粉笔圈标 */
+/* Chalk circle mark */
 .chalk-circled {
   border: 2.5px solid var(--yellow);
   border-radius: 45% 55% 50% 48%;
@@ -185,13 +185,13 @@ Read `assets/whiteboard_template.html`
   display: inline-block;
 }
 
-/* 红色粉笔下划线 */
+/* Red chalk underline */
 .chalk-underline {
   border-bottom: 3px solid var(--red);
   padding-bottom: 2px;
 }
 
-/* 粉笔方框（重要结论） */
+/* Chalk box (important conclusion) */
 .chalk-box {
   border: 2.5px solid var(--ink);
   border-radius: 3px;
@@ -202,14 +202,14 @@ Read `assets/whiteboard_template.html`
 .chalk-box-yellow { border-color: var(--yellow); }
 .chalk-box-shu { border-color: var(--shu); }
 
-/* 虚线框 */
+/* Dashed box */
 .chalk-dashed {
   border: 2px dashed var(--ink-light);
   border-radius: 3px;
   padding: 14px 18px;
 }
 
-/* 编号标记 */
+/* Numbered mark */
 .chalk-num {
   display: inline-flex;
   align-items: center;
@@ -222,7 +222,7 @@ Read `assets/whiteboard_template.html`
   margin-right: 8px;
 }
 
-/* 问号/感叹号标记 */
+/* Question/exclamation mark */
 .chalk-question {
   display: inline-flex;
   align-items: center;
@@ -234,7 +234,7 @@ Read `assets/whiteboard_template.html`
   font: 700 28px var(--hand);
 }
 
-/* 微朱点睛 — 极少量使用，每张板 ≤ 3 处 */
+/* Vermilion focal point -- used sparingly, no more than 3 per board */
 .shu-circle {
   border: 2.5px solid var(--shu);
   border-radius: 45% 55% 50% 48%;
@@ -242,7 +242,7 @@ Read `assets/whiteboard_template.html`
   display: inline-block;
 }
 
-/* 朱印 — 结论旁的方印，侘寂点睛 */
+/* Vermilion stamp -- seal next to conclusion, wabi-sabi focal point */
 .shu-stamp {
   display: inline-block;
   border: 2px solid var(--shu);
@@ -254,145 +254,145 @@ Read `assets/whiteboard_template.html`
 }
 ```
 
-#### 简笔粉笔画（SVG inline）
+#### Simple Chalk Sketches (Inline SVG)
 
-用简单 SVG path 画概念图标。stroke 用 `var(--ink)` 或 `var(--yellow)`，stroke-width: 2-3px，只用 stroke 不用 fill（粉笔线条风格）。每个图标 3-5 个 path。
+Use simple SVG paths to draw concept icons. Stroke uses `var(--ink)` or `var(--yellow)`, stroke-width: 2-3px, use stroke only, no fill (chalk line style). Each icon uses 3-5 paths.
 
-常用：人（圆头+线身+四肢）、问号、趋势图（折线）、房子（三角+方）、动物（极简轮廓）、灯泡、闪电。
+Common: person (circle head + line body + limbs), question mark, trend chart (polyline), house (triangle + square), animal (minimal outline), lightbulb, lightning.
 
-**粉笔质感**：线条不要完美平直，path 可以有微小抖动。
+**Chalk texture**: Lines should not be perfectly straight; paths can have subtle micro-jitter.
 
-### 3.2 布局原则
+### 3.2 Layout Principles
 
-**黑板是链式的**——主体是横向逻辑链，纵向分层递进。
+**The chalkboard is chain-based** -- the main body is a horizontal logic chain, with vertical hierarchical progression.
 
-核心规则：
-- **链式流动**：每行一条推理链，概念用红色 → 连接，从左到右
-- **纵向层级**：每层是推理的下一步，上下层用缩进或间距关联
-- **内嵌图标**：简笔画和文字混排在同一行，不单独占区
-- **黄色高亮**：重要概念用黄色，在白色文字中一目了然
-- **红色驱动**：→ 箭头统一红色，是逻辑推进的视觉节拍
-- **疏密有致**：核心推理链紧凑（行间距 1.8 倍），话题转换处留出呼吸（間）
-- **留白即内容**：不追求写满。关键转折前后留大间距，让读者的思维有落脚处
-- **自然不对齐**：链条不需要严格左对齐，像真正手写时的自然缩进
+Core rules:
+- **Chain flow**: One reasoning chain per line, concepts connected by red →, left to right
+- **Vertical hierarchy**: Each level is the next step of reasoning, related between levels using indentation or spacing
+- **Embedded icons**: Simple drawings and text mixed on the same line, not occupying separate areas
+- **Yellow highlights**: Important concepts in yellow, standing out against white text
+- **Red driven**: → arrows are uniformly red, the visual beat of logical progression
+- **Rhythm**: Core reasoning chains compact (line-height 1.8x), topic transitions leave breathing room (Ma)
+- **Whitespace is content**: Don't strive to fill every space. Leave large spacing before and after key transitions, giving the reader's mind a place to rest
+- **Natural non-alignment**: Chains don't need strict left alignment, like natural indentation in real handwriting
 
-#### 间距层级（区域分隔）
+#### Spacing Hierarchy (Section Separation)
 
-**用间距说话，不用线说话。** 黑板上没有横线——只有写得紧和写得松。
+**Use spacing to communicate, not lines.** There are no horizontal lines on the chalkboard -- only tight writing and loose writing.
 
-| 层级 | 间距 | 用途 | CSS |
-|------|------|------|-----|
-| 零距 | 0-4px | 同一条链的续行 | `.cl + .cl { margin-top: 2px; }` |
-| 小距 | 14-20px | 同一话题内的不同链 | `margin-top: 16px` |
-| 中距 | 32-44px | 不同话题之间（間） | `margin-top: 36px` |
-| 大距 | 52-72px | 大转折/新章节（大間） | `margin-top: 60px`，可加粉笔波浪线 |
+| Level | Spacing | Usage | CSS |
+|-------|---------|-------|-----|
+| Zero | 0-4px | Continuation of the same chain | `.cl + .cl { margin-top: 2px; }` |
+| Small | 14-20px | Different chains within the same topic | `margin-top: 16px` |
+| Medium | 32-44px | Between different topics (Ma) | `margin-top: 36px` |
+| Large | 52-72px | Major turn / new section (Large Ma) | `margin-top: 60px`, optionally with chalk wavy line |
 
-**禁止**：
-- `border-top` 直线分隔——黑板上不画直线分区
-- ↓ 箭头泛滥——只在明确的"因此/所以"递进时用，每张黑板 ≤ 3 个
-- 等间距排布——间距不等才像手写
+**Forbidden**:
+- `border-top` straight line separators -- no straight lines dividing areas on the chalkboard
+- Overuse of ↓ arrows -- only use for explicit "therefore/so" progression, no more than 3 per board
+- Uniform spacing -- uneven spacing looks more like handwriting
 
-**粉笔波浪线**（仅用于大距分隔，可选）：
+**Chalk wavy line** (only for large spacing separation, optional):
 ```html
 <svg width="800" height="8" style="display:block;margin:0 auto;opacity:0.15;">
   <path d="M0,4 Q100,0 200,4 T400,4 T600,4 T800,4" stroke="var(--ink)" fill="none" stroke-width="1.5"/>
 </svg>
 ```
 
-### 3.3 画面构成（按风格）
+### 3.3 Visual Composition (By Style)
 
-#### 逻辑链（默认）
+#### Logic Chain (Default)
 ```
-[大标题 — 白色, 居中, 关键词嵌黄色]
+[Large Title -- White, centered, yellow keywords]
 
-红→ 概念A → 不是因为X → 也不是Y → 而是Z → 结论1
-                                                  ↓
-红→ 展开结论1 → [简笔画] → 补充说明 → 推出概念B
-                                                  ↓
-    概念B → 举例... → 但有一个问题 → [?]
-                                                  ↓
-红→ 解答... → 因此 → [最终结论 — 红框]
+Red→ Concept A → Not because of X → Not Y either → But Z → Conclusion 1
+                                                                  ↓
+Red→ Expand conclusion 1 → [Simple drawing] → Supplementary explanation → Derive concept B
+                                                                                   ↓
+    Concept B → Example... → But there's a problem → [?]
+                                                      ↓
+Red→ Answer... → Therefore → [Final conclusion -- Red box]
 ```
-- 每行一条推理链。行与行之间用 ↓ 连接
-- 红色 → 开头的行是主干推理，无红色 → 的行是补充
-- 链条自然流动，像在黑板上从左往右写
-- 适当穿插简笔画打破纯文字的单调
+- One reasoning chain per line. Lines connected by ↓
+- Lines starting with red → are main reasoning, lines without red → are supplements
+- The chain flows naturally, like writing left to right on a chalkboard
+- Intersperse simple drawings appropriately to break the monotony of pure text
 
-#### 脑暴墙
+#### Brainstorm Wall
 ```
-       [色块1]   [色块2]
+       [Color block 1]   [Color block 2]
             \     /
-     [色块3] → [核心词] ← [色块4]
+     [Color block 3] → [Core word] ← [Color block 4]
             /     \
-       [色块5]   [色块6]
+       [Color block 5]   [Color block 6]
 
-  底部：关键结论，红色下划线
+  Bottom: Key conclusion, red underline
 ```
 
-#### 时间线
+#### Timeline
 ```
-  [标题]
+  [Title]
 
   ●──────●──────●──────●──────●
-  阶段1   阶段2   阶段3   阶段4   阶段5
+  Stage 1  Stage 2  Stage 3  Stage 4  Stage 5
   │       │       │       │       │
-  注释    注释    注释    注释    注释
+  Note    Note    Note    Note    Note
 ```
 
-#### 矩阵分析
+#### Matrix Analysis
 ```
-  [标题]
-            │ 维度A高
+  [Title]
+            │ Dimension A High
     ────────┼────────
-    象限1   │ 象限2
+    Quadrant 1  │ Quadrant 2
             │
     ────────┼────────
-    象限3   │ 象限4
-            │ 维度A低
-   维度B低       维度B高
+    Quadrant 3  │ Quadrant 4
+            │ Dimension A Low
+   Dimension B Low    Dimension B High
 ```
 
-## 步骤 4：写 CSS + HTML
+## Step 4: Write CSS + HTML
 
-所有 CSS 写入 `{{CUSTOM_CSS}}`。所有 HTML 写入 `{{CONTENT_HTML}}`。
+All CSS goes into `{{CUSTOM_CSS}}`. All HTML goes into `{{CONTENT_HTML}}`.
 
-**CSS 从零写**——class 名反映内容语义（`.premise-chain`、`.conclusion-box`），不用通用名。
+**CSS written from scratch** -- class names reflect content semantics (`.premise-chain`, `.conclusion-box`), not generic names.
 
-**色调变量**：默认侘寂色调直接使用模板值。如内容匹配技术/人文/商业类型（见「内容驱动色温偏移」），在 CUSTOM_CSS 顶部覆盖 `--board`、`--yellow` 和 `.board > .surface`。
+**Color variables**: Default wabi-sabi tones use template values directly. If content matches Technical/Humanities/Business types (see "Content-Driven Color Temperature Shift"), override `--board`, `--yellow`, and `.board > .surface` at the top of `{{CUSTOM_CSS}}`.
 
-**逻辑链布局技巧**：
-- 每条链用 `display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 6px;` 实现自然换行
-- 箭头用 `<span class="chain-arrow">→</span>` 内嵌文字流
-- 黄色关键词用 `<span class="chalk-yellow">关键词</span>`
-- 简笔画 SVG 用 `display: inline-block; vertical-align: middle;` 嵌入行内
-- 行间距不等——同一论点的行紧凑（`margin-top: 12px`），新话题换大间距（`margin-top: 28px`）
-- 红色 → 开头的行可加 `padding-left` 缩进，形成层次
+**Logic chain layout techniques**:
+- Each chain uses `display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 6px;` for natural wrapping
+- Arrows use `<span class="chain-arrow">→</span>` embedded in text flow
+- Yellow keywords use `<span class="chalk-yellow">keyword</span>`
+- Simple drawing SVGs use `display: inline-block; vertical-align: middle;` embedded inline
+- Line spacing is uneven -- lines of the same argument compact (`margin-top: 12px`), new topics with larger spacing (`margin-top: 28px`)
+- Lines starting with red → can add `padding-left` indentation for hierarchy
 
-替换变量：
+Variable Substitutions:
 
-| 变量 | 内容 |
-|------|------|
-| `{{CUSTOM_CSS}}` | 全部自定义 CSS |
-| `{{CONTENT_HTML}}` | 全部内容 HTML |
-| `{{SOURCE_LINE}}` | 内容来源（可选）：`<span class="info-source">来源文字</span>`，无来源时空字符串 |
+| Variable | Content |
+|----------|---------|
+| `{{CUSTOM_CSS}}` | All custom CSS |
+| `{{CONTENT_HTML}}` | All content HTML |
+| `{{SOURCE_LINE}}` | Content source (optional): `<span class="info-source">source text</span>`, empty string when no source |
 
-写入：`/tmp/ljg_cast_whiteboard_{name}.html`
+Write to: `/tmp/ljg_cast_whiteboard_{name}.html`
 
-## 步骤 5：自检
+## Step 5: Self-Check
 
-- [ ] 底色 + 暖灰文字，看着舒适不刺眼？
-- [ ] 如内容匹配技术/人文/商业类型，色温偏移（--board、--yellow、光暈）已应用？
-- [ ] 灰调为主，微朱（--shu）≤ 3 处？
-- [ ] 标题是完整判断句？高亮词用生成色（--yellow）？
-- [ ] 标题够大够粗（≥ 64px）？
-- [ ] 余白充足——四周留白 ≥ 72px，段间留白有呼吸感？
-- [ ] 链条文字 ≥ 34px？标注 ≥ 24px？
-- [ ] 区域分隔用间距层级，无 border-top 直线？
-- [ ] 至少 2 个简笔图标（SVG），线条用 ink 色？
-- [ ] 无拟物装饰（无噪点纹理、无木框、无粉笔质感）？
-- [ ] 整体干净、安静、暖？
+- [ ] Is the background + warm gray text comfortable and not harsh on the eyes?
+- [ ] If content matches Technical/Humanities/Business type, has the color temperature shift (--board, --yellow, halo) been applied?
+- [ ] Gray tones dominant, vermilion (--shu) ≤ 3 places?
+- [ ] Is the title a complete judgment sentence? Highlighted words in generated color (--yellow)?
+- [ ] Is the title large and bold enough (≥ 64px)?
+- [ ] Is the negative space ample -- margins ≥ 72px, breathing room between paragraphs?
+- [ ] Chain text ≥ 34px? Annotations ≥ 24px?
+- [ ] Section separation uses spacing hierarchy, no border-top straight lines?
+- [ ] At least 2 simple drawing icons (SVG), lines using ink color?
+- [ ] No skeuomorphic decoration (no noise textures, no wooden frame, no chalk texture)?
+- [ ] Overall clean, quiet, warm?
 
-## 步骤 6：截图
+## Step 6: Screenshot
 
 ```bash
 node assets/capture.js /tmp/ljg_cast_whiteboard_{name}.html ~/Downloads/{name}.png 1080 800 fullpage

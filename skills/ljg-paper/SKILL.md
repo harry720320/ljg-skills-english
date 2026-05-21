@@ -14,7 +14,7 @@ Reading papers isn't doing academia — it's hunting ideas. Deconstruct others' 
 After reading the notes, a **smart person unfamiliar with the field** should be able to recount:
 1. What problem the paper solves (concrete to one example)
 2. What approach the author used to solve it (mechanism + rationale for design choices)
-3. What the core findings are (including the most counter-intuitive副发现, often the most fascinating part)
+3. What the core findings are (including the most counter-intuitive secondary finding, often the most fascinating part)
 4. What insight you (the reader) can take away
 
 If the output causes an outsider to stumble on any of these points, it's a failure. **Concision is only pursued in the title; the body should expand where needed** — the goal isn't shortness, it's taking someone from not understanding to understanding.
@@ -93,7 +93,7 @@ Any answer is No → go back and rewrite, don't ship a compromise.
 Post the title alone, show it to someone who hasn't read the paper, ask: "What do you think this paper is roughly about?" — they don't need an exact answer, but should have directional sense.
 
 If they can guess the direction → title passes.
-If they can't guess at all → must use a subtitle兜底.
+If they can't guess at all → must use a subtitle as a fallback.
 
 Report path after writing.
 
@@ -150,7 +150,7 @@ Judgment criterion: this diagram lets someone grasp what the paper is doing at a
 
 Not describing the problem — making the reader *experience* it. Open with a concrete example — a specific scenario, an input-output pair, a failure screenshot, a user story — let the reader see the dilemma in this example.
 
-Three-part narrative,贯穿 with the same example:
+Three-part narrative, with the same example running through:
 
 1. *Experience* — pull the reader into the scene of the dilemma. The example should be simple enough to describe in a sentence or two
 2. *Old Path* — what did previous researchers do on this example? Why didn't it work? Expose the shortcomings using the same example, let the reader see "ah, this road is indeed blocked"
@@ -175,7 +175,7 @@ Subheadings organized by content need, not fixed.
 
 1. *Load-bearing analogy* — not just decoration, must map onto key method components
 2. *Three or more sets of concrete numbers* — baseline / improvement / key ablation. Let the outsider feel "oh the gap is that large"
-3. *One counter-intuitive副发现* — the most "wow" section in the paper, presented as its own section. Must keep if present, don't cut for concision; if none, say "this paper has none", don't force one
+3. *One counter-intuitive secondary finding* — the most "wow" section in the paper, presented as its own section. Must keep if present, don't cut for concision; if none, say "this paper has none", don't force one
 4. *No raw formulas* — formulas are useless to outsiders. Either translate into words, or leave as optional appendix section. **No LaTeX/MathJax-style formulas in the main text**
 
 ### 4. Core Concepts: Unlock on the Same Example
@@ -230,16 +230,16 @@ Get timestamp per Denote conventions, read `references/template.org`, write to `
 
 - *Problem makes people experience*: opens with a concrete example, reader encounters the dilemma in that example; old solutions' shortcomings exposed on the same example
 - *Translation direct to essentials*: doesn't restate the problem, focus is "how to do it" — method, mechanism, key insight
-- *Same example贯穿*: translation and core concepts all unfold on the "Problem" example, reader stays in the same problem domain
+- *Same example runs through*: translation and core concepts all unfold on the "Problem" example, reader stays in the same problem domain
 - *Sense of exploration*: every paragraph gives the reader a new perspective, "ah, I see" mini-revelations accumulate into deep understanding of the example
 - *Has an anchor*: translation section anchor describes "what the method looks like on that example", subsequent concepts grow around it
 - *Brings the reader along*: reader can feel the process of "figuring it out step by step", not receiving packaged conclusions
 - *Outsider can follow*: a smart person unfamiliar with the field can retell the core line of reasoning after reading
-- *Advisor sounds like an advisor*: has judgment and分寸, final sentence is a verdict
+- *Advisor sounds like an advisor*: has judgment and measured judgment, final sentence is a verdict
 - *Inspiration is actionable*: inspiration section lands on "you can ___", not "worth thinking about ___"
 - *Zero fragmentation*: after reading, it feels like one person telling you "I read a paper, found something interesting"
-- *Outsider can retell four things*: problem (concrete to one example) / solution (mechanism + design rationale) / core findings (including counter-intuitive副发现) / insight (something take-away). Any one makes an outsider stumble → failure
+- *Outsider can retell four things*: problem (concrete to one example) / solution (mechanism + design rationale) / core findings (including counter-intuitive secondary finding) / insight (something take-away). Any one makes an outsider stumble → failure
 - *Title passes both tests*: concision self-check three questions + distinguishability test both pass
-- *Translation section has all four*: load-bearing analogy / three sets of numbers / counter-intuitive副发现 / no raw formulas
+- *Translation section has all four*: load-bearing analogy / three sets of numbers / counter-intuitive secondary finding / no raw formulas
 - *Core concepts ≥ 3*: includes one "design choice" concept (not just "component")
 - *Advisor review sees assumptions*: method maturity section identifies at least one undiscussed fundamental assumption/implicit concern

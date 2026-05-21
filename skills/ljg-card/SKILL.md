@@ -51,7 +51,7 @@ npm install playwright && npx playwright install chromium
 
 ### Footer
 
-- Left side: logo + 李继刚 (hardcoded in template)
+- Left side: logo + Li Jigang (hardcoded in template)
 - Right side: content source (optional) — show when there's a clear source (author name, arxiv ID, website name, etc.), leave empty otherwise. Use `{{SOURCE_LINE}}` variable: when there's a source, fill `<span class="info-source">source text</span>`, otherwise empty string. Applies to `-l`, `-i`, `-v`, `-c`, `-w` molds (`-m` multi-card has no footer, not applicable).
 
 ### Delivery
@@ -60,7 +60,7 @@ npm install playwright && npx playwright install chromium
 
 ## Taste Standards
 
-**Shared across all molds.** Before executing any mold, first Read `references/taste.md`, as the visual quality baseline贯穿 the entire process.
+**Shared across all molds.** Before executing any mold, first Read `references/taste.md`, as the visual quality baseline runs through the entire process.
 
 Core principle: anti-AI-generated traces — no Inter font, no pure black, no three-column cards, no centered Hero, no AI copywriting tone, no fake data.
 

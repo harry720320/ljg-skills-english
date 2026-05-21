@@ -50,9 +50,9 @@ The only allowed "touch" is: **physical pagination** (splitting one long section
 
 | Org Element | Page |
 |---|---|
-| `* Level-1 heading` |独占 **emphasis** cover page (accent background) |
-| `** Level-2 heading` |独占 **theme** page (large title独占 one page) |
-| `*** Level-3 heading`+ |独占 theme page (font size one step down) |
+| `* Level-1 heading` |Exclusively occupies **emphasis** cover page (accent background) |
+| `** Level-2 heading` |Exclusively occupies **theme** page (large title occupies one page) |
+| `*** Level-3 heading`+ |Exclusively occupies theme page (font size one step down) |
 
 ### Content Elements
 
@@ -66,8 +66,8 @@ The only allowed "touch" is: **physical pagination** (splitting one long section
 | `*emphasis*` | Auto `hl: true` |
 | `~code~` or `=verbatim=` | Auto `hl: true` |
 | Quoted `> ...` | Theme page, indent 1 display |
-| Separator `-----` |独立 emphasis rest page (no content, pure color block) |
-| `#+begin_example` block |独立 pre page (monospace rendered ASCII art) |
+| Separator `-----` |Standalone emphasis rest page (no content, pure color block) |
+| `#+begin_example` block |Standalone pre page (monospace rendered ASCII art) |
 
 ### File-level Metadata
 
@@ -230,12 +230,12 @@ Multi-line pages auto-drop one tier.
 3. **Infer theme**: explicit param > `#+filetags:` > default black
 4. **Apply mapping rules** to generate slides array:
    - `*` heading → emphasis cover
-   - `**`+ heading → theme独占 page
+   - `**`+ heading → theme-exclusive page
    - Paragraph → theme page (per pagination rules)
    - List → theme page (staggered indent + pagination rules)
    - Table → theme page (preserve structure + pagination rules)
    - Emphasis → auto hl
-   - Example block →独立 pre page
+   - Example block → Standalone pre page
 5. **Read** `assets/slogan_template.html` (cyber theme needs additional CRT scan line/HUD/cursor CSS injected on top of template)
 6. **Replace placeholders**:
    - `{{TITLE}}` → file `#+title:` or explicit parameter
@@ -249,7 +249,7 @@ Multi-line pages auto-drop one tier.
 
 - **Outline is truth** — don't change words, don't extract, don't rewrite, don't reorder
 - **Level-1 heading = emphasis cover** — natural section break, automatic rhythm
-- **Level-2 heading =独占 theme page** — give headings their due weight
+- **Level-2 heading = exclusively occupies theme page** — give headings their due weight
 - **List staggering** — indent 0/1/2 reflects outline nesting depth
 - **`*emphasis*` auto hl** — respect the author's markup intent
 - **Consistent pagination** — same logical block gets consistent visual treatment (font tier / indent / background)
@@ -265,8 +265,8 @@ Multi-line pages auto-drop one tier.
 - **Don't put images/icons** — color blocks are the graphics (except cyber theme's HUD/scan lines, which are part of the theme)
 - **Don't use transition animations** — hard cuts
 - **Don't use inline hl on emphasis pages** — emphasis pages are already highlights, adding more hl creates chaos
-- **Don't mix multiple themes** — one气质 per piece, no switching
-- **Don't make subtitle font too large** — footer 13px, the气场 can't compete with the main title
+- **Don't mix multiple themes** — one character per piece, no switching
+- **Don't make subtitle font too large** — footer 13px, the presence can't compete with the main title
 - **Don't add emphasis arbitrarily** — only level-1 headings, first/last page, `-----` are emphasis, nothing else
 
 ## Default Language

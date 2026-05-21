@@ -1,69 +1,69 @@
-# 模具：大字（-b）
+# Mold: Big Text (-b)
 
-## 核心信条
+## Core Tenets
 
-**一句话砸在纸上——碑刻于和紙，悬空如附件。**
+**A single sentence strikes the paper — inscribed on washi, suspended like an attachment.**
 
-神：一句话要有份量。字足够大，让读者一眼被砸中。纸足够旧，像从某本古籍中揭下的一页。阴影足够深，让这张纸像独立的、悬在暗处的附件。
+Spirit: A sentence must carry weight. The characters are large enough to strike the reader at a single glance. The paper is aged enough to feel like a page torn from an ancient book. The shadow is deep enough to make the paper feel like an independent attachment suspended in darkness.
 
-形：和紙奶白为底，墨色碑刻大字为体，左下一印一名为签。外有暗框如夜里托案，内有云晕如水渍未干。字不规整——有刀刻的毛边、水浸的斑驳——那是岁月，不是装饰。
+Form: Cream-white washi as the base, ink-black stele-carved large characters as the body, with a seal and name at the bottom left as the signature. An outer dark frame like a tray in the night, inner cloud halos like water stains not yet dry. The characters are irregular — with chiseled rough edges and water-soaked mottling — that is time, not decoration.
 
-**审美三柱**：
-- 「重」——字号大到每行 2-5 字，一眼就能看完；每一笔都有墨迹的厚重
-- 「旧」——纸有云晕、字有毛边；不是 Photoshop 的做旧滤镜，是实际的 SVG 湍流位移
-- 「悬」——卡片有暗底外框、深层阴影、薄层内晕；像悬在空气中的一片纸
+**Three Pillars of Aesthetics**:
+- **Heavy** — Font size large enough for 2-5 characters per line, readable at a glance; every stroke carries the weight of ink
+- **Aged** — Paper has cloud halos, characters have rough edges; not a Photoshop aging filter, but actual SVG turbulence displacement
+- **Suspended** — The card has a dark outer frame, deep shadow, thin inner glow; like a piece of paper suspended in mid-air
 
-## 步骤 1：读取模板
+## Step 1: Read the Template
 
 Read `assets/big_template.html`
 
-模板提供：
-- 1080x1440 固定画布（小红书 3:4 HD 规范）
-- 外层暗底 `--bg-dark` 自动创造阴影边框（22px 内缩）
-- 和紙卡片 1036x1396 + 多重 radial-gradient 云晕 + SVG noise 纸张颗粒
-- `<filter id="weathered">` feTurbulence + feDisplacementMap 做旧滤镜（已配置 baseFrequency=0.82, scale=1.8）
-- `.main-text` 默认衬线碑刻字（Noto Serif SC 900 + 刻痕 text-shadow）
-- `.signature` 左下署名栏（logo + 李继刚）
-- 模板变量：`{{FONT_SIZE}}` `{{MAIN_TEXT}}` `{{SOURCE_LINE}}` `{{CUSTOM_CSS}}`
+The template provides:
+- 1080x1440 fixed canvas (Xiaohongshu 3:4 HD standard)
+- Outer dark background `--bg-dark` automatically creates shadow border (22px inset)
+- Washi card 1036x1396 + multiple radial-gradient cloud halos + SVG noise paper grain
+- `<filter id="weathered">` feTurbulence + feDisplacementMap aging filter (preconfigured with baseFrequency=0.82, scale=1.8)
+- `.main-text` default serif stele-carved characters (Noto Serif SC 900 + engraved text-shadow)
+- `.signature` bottom-left signature area (logo + Li Jigang)
+- Template variables: `{{FONT_SIZE}}` `{{MAIN_TEXT}}` `{{SOURCE_LINE}}` `{{CUSTOM_CSS}}`
 
-## 步骤 2：理解内容
+## Step 2: Understand the Content
 
-### 2.1 内容形态
+### 2.1 Content Form
 
-`-b` 模具专用于**单句/短段**输出，不适合长文。典型输入：
-- 一句观点/判断（15-30 字）
-- 一个反问（10-20 字）
-- 一条金句/标语（8-25 字）
-- 最多两句（总 30-60 字）
+The `-b` mold is dedicated to **single-sentence/short-paragraph** output, not suitable for long text. Typical input:
+- A single opinion/judgment (15-30 characters)
+- A rhetorical question (10-20 characters)
+- A golden quote/slogan (8-25 characters)
+- At most two sentences (30-60 characters total)
 
-如输入超过 60 字，提醒用户：内容过长，-b 模具失效，建议用 `-l` 长图或 `-m` 多卡。
+If input exceeds 60 characters, remind the user: content too long, the -b mold is unsuitable. Recommend using `-l` long image or `-m` multi-card.
 
-### 2.2 计算字号
+### 2.2 Calculate Font Size
 
-字符数 n（计入中文、英文、标点、空格，全角/半角各算 1）：
+Character count n (counting Chinese characters, English letters, punctuation, spaces — fullwidth and halfwidth each count as 1):
 
-| 字符数 | `{{FONT_SIZE}}` | 每行字数参考 |
-|--------|-----------------|-------------|
-| ≤ 10   | 220             | 3-4         |
-| 11-16  | 190             | 4-5         |
-| 17-24  | 160             | 5-6         |
-| 25-34  | 135             | 6-7         |
-| 35-46  | 115             | 7-9         |
-| 47-60  | 98              | 8-10        |
+| Character Count | `{{FONT_SIZE}}` | Characters Per Line (approx) |
+|----------------|-----------------|-----------------------------|
+| ≤ 10           | 220             | 3-4                         |
+| 11-16          | 190             | 4-5                         |
+| 17-24          | 160             | 5-6                         |
+| 25-34          | 135             | 6-7                         |
+| 35-46          | 115             | 7-9                         |
+| 47-60          | 98              | 8-10                        |
 
-这是**基线**——根据断行实际效果可上下浮动 10-15%。
+This is the **baseline** — can be adjusted up or down by 10-15% based on actual line break results.
 
-### 2.3 手动断行（关键）
+### 2.3 Manual Line Breaks (Critical)
 
-**不要依赖浏览器自动换行**。通过在 `{{MAIN_TEXT}}` 中插入 `<br>` 控制每行的语义。
+**Do not rely on the browser's automatic word wrapping.** Control the semantics of each line by inserting `<br>` in `{{MAIN_TEXT}}`.
 
-断行原则：
-- 按语义单元切，不在词中切
-- 每行字数相近（差异 ≤ 2 字），视觉稳定
-- 标点放在行末，不起新行
-- 关键词/反问词起新行能加强冲击
+Line break principles:
+- Break on semantic units, not in the middle of a word
+- Each line should have a similar character count (difference ≤ 2 characters) for visual stability
+- Place punctuation at the end of a line, not starting a new line
+- Starting a new line for keywords/rhetorical questions can enhance impact
 
-参考图断行示例（"人人拥有「寫輪眼」的时代，稀缺性在哪里？"）：
+Reference image line break example ("人人拥有「寫輪眼」的时代，稀缺性在哪里？"):
 ```
 人人拥有
 「寫輪眼」
@@ -71,15 +71,15 @@ Read `assets/big_template.html`
 稀缺性在
 哪里？
 ```
-每行 3-4 字，最后两行构成反问高潮。
+3-4 characters per line, with the last two lines forming the rhetorical climax.
 
-### 2.4 高亮（可选）
+### 2.4 Highlighting (Optional)
 
-如需强调某个词/短语：用 `<span class="shu">关键词</span>` 染朱砂红。**每张图 ≤ 1 处**。用于结论句或反问重点。
+To emphasize a word/phrase: use `<span class="shu">keyword</span>` to color it vermilion red. **≤ 1 instance per image.** Used for concluding statements or rhetorical highlights.
 
-## 步骤 3：写 HTML
+## Step 3: Write the HTML
 
-### 3.1 主文本
+### 3.1 Main Text
 
 ```html
 第一行文字<br>
@@ -88,11 +88,11 @@ Read `assets/big_template.html`
 第四行
 ```
 
-繁简混排原样保留（如参考图「寫輪眼」保繁体）。
+Mixed traditional/simplified Chinese is preserved as-is (e.g., the reference image retains traditional script for「寫輪眼」).
 
-### 3.2 可选：副标题/小字
+### 3.2 Optional: Subtitle/Small Text
 
-如需在主文下方加一行小注（来源/作者/上下文），用 `.sub` 类：
+To add a small annotation below the main text (source/author/context), use the `.sub` class:
 
 ```html
 <div class="main-text">
@@ -102,43 +102,43 @@ Read `assets/big_template.html`
 </div>
 ```
 
-`.sub` 自动缩小到主字号的 42%，颜色变柔，不应用做旧滤镜（保持小字可读）。
+`.sub` automatically reduces to 42% of the main font size, softens the color, and does not apply the aging filter (maintains readability for small text).
 
-### 3.3 来源线（可选）
+### 3.3 Source Line (Optional)
 
-如有来源，填充 `{{SOURCE_LINE}}`：
+If there is a source, fill in `{{SOURCE_LINE}}`:
 
 ```html
 <div class="source-line">来源于《某某某》</div>
 ```
 
-无来源时留空字符串。
+Leave as an empty string if there is no source.
 
-### 3.4 替换变量汇总
+### 3.4 Variable Summary
 
-| 变量 | 内容 |
-|------|------|
-| `{{FONT_SIZE}}` | 字号数值（不带 px），如 `160` |
-| `{{MAIN_TEXT}}` | 主文 HTML（含 `<br>` 断行） |
-| `{{SOURCE_LINE}}` | 来源线 HTML 或空 |
-| `{{CUSTOM_CSS}}` | 额外自定义 CSS（一般留空，模板已足够） |
+| Variable | Content |
+|----------|---------|
+| `{{FONT_SIZE}}` | Font size value (without px), e.g., `160` |
+| `{{MAIN_TEXT}}` | Main text HTML (including `<br>` line breaks) |
+| `{{SOURCE_LINE}}` | Source line HTML or empty |
+| `{{CUSTOM_CSS}}` | Additional custom CSS (generally left empty; the template is sufficient) |
 
-写入：`/tmp/ljg_cast_big_{name}.html`
+Write to: `/tmp/ljg_cast_big_{name}.html`
 
-## 步骤 4：自检
+## Step 4: Self-Check
 
-- [ ] 字号选择匹配字符数，每行 2-10 字？
-- [ ] 断行在语义单元上，不在词中间切？
-- [ ] 主文应用了 `filter: url(#weathered)` 做旧？
-- [ ] 字体是 Noto Serif SC 900（不是 Inter、不是 PingFang 默认）？
-- [ ] 颜色是 `--ink` (#2C2826) 墨色，不是纯黑？
-- [ ] 和紙底色 `--paper` (#F4EFE6)，有云晕纹理？
-- [ ] 外层暗底 22px 创造阴影边框？
-- [ ] 左下署名栏存在（logo + 李继刚）？
-- [ ] 朱砂高亮 ≤ 1 处？
-- [ ] 整体视觉：重、旧、悬 三感齐备？
+- [ ] Does the font size selection match the character count, with 2-10 characters per line?
+- [ ] Are line breaks at semantic units, not in the middle of words?
+- [ ] Is the main text applying `filter: url(#weathered)` for aging?
+- [ ] Is the font Noto Serif SC 900 (not Inter, not PingFang default)?
+- [ ] Is the color `--ink` (#2C2826) ink-black, not pure black?
+- [ ] Is the washi background color `--paper` (#F4EFE6), with cloud halo texture?
+- [ ] Does the outer dark background create a 22px shadow border?
+- [ ] Does the bottom-left signature area exist (logo + Li Jigang)?
+- [ ] Is vermilion highlighting ≤ 1 instance?
+- [ ] Does the overall visual have all three qualities: Heavy, Aged, Suspended?
 
-## 步骤 5：截图
+## Step 5: Screenshot
 
 ```bash
 node assets/capture.js \
@@ -147,17 +147,17 @@ node assets/capture.js \
   1080 1440
 ```
 
-**不用 fullpage**——`-b` 模具是固定画布 1080x1440。
+**No fullpage** — the `-b` mold uses a fixed canvas of 1080x1440.
 
-## 步骤 6：交付
+## Step 6: Delivery
 
-报告文件路径。一句话说明断行和字号决策。
+Report the file path. Provide a one-sentence explanation of the line break and font size decisions.
 
-## 禁忌
+## Prohibitions
 
-- 禁：超过 60 字的输入（改用 -l 或 -m）
-- 禁：默认浏览器换行（必须手动 `<br>`）
-- 禁：字号 < 90px（失去"大字"意义）
-- 禁：朱砂高亮 > 1 处（失去点睛价值）
-- 禁：移除做旧滤镜（失去碑刻感）
-- 禁：改画布尺寸（1080x1440 是小红书规范，不可偏离）
+- Do not: Input exceeding 60 characters (use -l or -m instead)
+- Do not: Rely on default browser line wrapping (must use manual `<br>`)
+- Do not: Font size < 90px (loses the "big text" meaning)
+- Do not: Vermilion highlighting > 1 instance (loses its accent value)
+- Do not: Remove the aging filter (loses the stele-carved feel)
+- Do not: Change the canvas size (1080x1440 is the Xiaohongshu standard; deviation is not allowed)

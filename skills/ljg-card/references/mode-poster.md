@@ -1,114 +1,114 @@
-# 模具：多卡（-c）
+# Mold: Multi-card (-m)
 
-## 步骤 1：读取模板
+## Step 1: Read Template
 
 Read `assets/poster_template.html`
 
-## 步骤 1.5：色调感知
+## Step 1.5: Hue Perception
 
-与长图模具共享同一套色调系统。根据内容气质选择 `{{BG_COLOR}}` 和 `{{ACCENT_COLOR}}`：
+Shares the same hue system with the long card mold. Select `{{BG_COLOR}}` and `{{ACCENT_COLOR}}` based on content temperament:
 
-| 内容气质 | `{{BG_COLOR}}` | `{{ACCENT_COLOR}}` | 触发信号 |
+| Content Temperament | `{{BG_COLOR}}` | `{{ACCENT_COLOR}}` | Trigger Signals |
 |----------|---------------|-------------------|----------|
-| 思辨/哲学 | `#FAF8F4` | `#7C6853` | 认知、思维、本质、意义、哲学 |
-| 技术/工程 | `#F5F7FA` | `#3D5A80` | 架构、模型、算法、系统、代码 |
-| 文学/叙事 | `#FBF9F1` | `#6B4E3D` | 故事、人物、写作、文字、诗 |
-| 科学/研究 | `#F4F8F6` | `#2D6A4F` | 实验、数据、发现、论文、研究 |
-| 默认 | `#FAFAF8` | `#4A4A4A` | 无法归类时 |
+| Philosophical | `#FAF8F4` | `#7C6853` | cognition, thought, essence, meaning, philosophy |
+| Technical/Engineering | `#F5F7FA` | `#3D5A80` | architecture, model, algorithm, system, code |
+| Literary/Narrative | `#FBF9F1` | `#6B4E3D` | story, character, writing, prose, poetry |
+| Science/Research | `#F4F8F6` | `#2D6A4F` | experiment, data, discovery, paper, research |
+| Default | `#FAFAF8` | `#4A4A4A` | when unable to classify |
 
-## 步骤 2：内容预处理
+## Step 2: Content Preprocessing
 
-- 识别标题行（`#`/`##`/`###` 开头，或独立短行）
-- 识别引用块（`>` 开头）
-- 识别加粗（`**text**`）
-- **识别金句**：独立成段的短句（通常 < 25 字），承载核心洞察，用 `.highlight` 渲染
-- 按空行分割为段落列表
+- Identify heading lines (starting with `#`/`##`/`###`, or short standalone lines)
+- Identify blockquotes (starting with `>`)
+- Identify bold (`**text**`)
+- **Identify golden lines**: standalone short sentences (usually < 25 chars), carrying core insights, rendered with `.highlight`
+- Split into paragraph list by blank lines
 
-## 步骤 3：计算视觉重量
+## Step 3: Calculate Visual Weight
 
-模板在 1080x1440 全分辨率渲染，正文 36px，行高 1.7。
+Template renders at 1080x1440 full resolution, body text 36px, line-height 1.7.
 
-- 普通段落：字符数 × 1.4
-- 标题行（h1 首卡 84px）：字符数 × 6.0
-- 金句（`.highlight` 40px + 左边框 + 上下留白）：字符数 × 3.0
-- `.item` 条目组（label + 正文）：字符数 × 1.8
-- 引用块：字符数 × 1.7
-- 分割线（divider）：固定 60 权重
-- 代码块：字符数 × 2.2
-- Running title（续页头部）：固定 70 权重
+- Regular paragraphs: character count × 1.4
+- Heading lines (h1 first card 84px): character count × 6.0
+- Golden lines (`.highlight` 40px + left border + top/bottom whitespace): character count × 3.0
+- `.item` groups (label + body): character count × 1.8
+- Blockquotes: character count × 1.7
+- Dividers: fixed 60 weight
+- Code blocks: character count × 2.2
+- Running title (continuation page header): fixed 70 weight
 
-## 步骤 4：贪心切分
+## Step 4: Greedy Splitting
 
-- 阈值：每卡约 **380** 字符等价视觉重量
-- 逐段累加，超过阈值时在当前段之前切分
-- **切分规则**：
-  - 绝不在句子中间切
-  - 优先在段落/条目/章节边界切
-  - 标题不落单（必须跟至少一个内容元素在同一卡）
-  - 超长单段在句号处强制切
-  - 一个章节（h2 + 3 items）通常刚好一卡
+- Threshold: approximately **380** character equivalent visual weight per card
+- Accumulate paragraph by paragraph, split before the current paragraph when threshold exceeded
+- **Split rules**:
+  - Never split mid-sentence
+  - Prefer splitting at paragraph/item/section boundaries
+  - Headings must not stand alone (must be accompanied by at least one content element on the same card)
+  - Extra-long single paragraphs force-split at sentence terminators
+  - One section (h2 + 3 items) typically fits exactly one card
 
-**特殊情况**：
-- 只有一张卡：不显示页码
-- 多张卡：显示 `1 / N` 格式页码
+**Special cases**:
+- Single card: don't display page number
+- Multiple cards: display `1 / N` format page number
 
-## 步骤 5：格式化为 HTML
+## Step 5: Format as HTML
 
-**基础元素：**
-- 普通段落 → `<p>文本</p>`
-- 章节标题（##/### 级别） → `<h2>标题</h2>`
-- 引用 → `<blockquote><p>引用</p></blockquote>`
-- 加粗 → `<strong>文本</strong>`
-- 列表 → `<ul><li>...</li></ul>`
+**Basic elements:**
+- Regular paragraphs → `<p>text</p>`
+- Section headings (##/### level) → `<h2>heading</h2>`
+- Blockquotes → `<blockquote><p>quote</p></blockquote>`
+- Bold → `<strong>text</strong>`
+- Lists → `<ul><li>...</li></ul>`
 
-**金句（独立成段的核心洞察短句，视觉突出）：**
+**Golden lines (standalone core insight short sentences, visually prominent):**
 ```html
-<p class="highlight">金句文本</p>
+<p class="highlight">golden line text</p>
 ```
-判断标准：独立成段、< 25 字、承载关键洞察。用 `.highlight` 而非 `<p><strong>`。
+Judgment criteria: standalone paragraph, < 25 chars, carries key insight. Use `.highlight` not `<p><strong>`.
 
-**条目组（有标题+正文的并列条目）：**
+**Item groups (并列 items with heading + body):**
 ```html
 <div class="item">
-  <p class="label">条目标题</p>
-  <p>条目正文</p>
+  <p class="label">item heading</p>
+  <p>item body</p>
 </div>
 ```
 
-**副标题标签：**
+**Subtitle label:**
 ```html
-<p class="subtitle">标签文字</p>
+<p class="subtitle">label text</p>
 ```
 
-**分割线（章节之间）：**
+**Divider (between sections):**
 ```html
 <div class="divider"></div>
 ```
 
-## 步骤 6：渲染模板
+## Step 6: Render Template
 
-对每张卡片，替换模板变量：
+For each card, replace template variables:
 
-| 变量 | 规则 |
+| Variable | Rule |
 |------|------|
-| `{{BG_COLOR}}` | 步骤 1.5 确定的背景底色 |
-| `{{ACCENT_COLOR}}` | 步骤 1.5 确定的强调色 |
-| `{{HEADER_BLOCK}}` | 续页卡：`<div class="header"><span class="running-title">文章标题</span></div>`；首卡或单卡：空字符串 |
-| `{{TITLE_BLOCK}}` | 首卡有标题时：`<div class="title-area"><h1>标题</h1></div>`；续页卡或无标题时：空字符串 |
-| `{{BODY_HTML}}` | 步骤 5 生成的 HTML |
-| `{{SOURCE_LINE}}` | 内容来源（可选）：`<span class="info-source">来源文字</span>`，无来源时空字符串 |
-| `{{PAGE_INFO}}` | 多卡时 `1 / 3`，单卡时空字符串 |
+| `{{BG_COLOR}}` | Background color determined in step 1.5 |
+| `{{ACCENT_COLOR}}` | Accent color determined in step 1.5 |
+| `{{HEADER_BLOCK}}` | Continuation cards: `<div class="header"><span class="running-title">article title</span></div>`; first card or single card: empty string |
+| `{{TITLE_BLOCK}}` | First card with title: `<div class="title-area"><h1>title</h1></div>`; continuation cards or no title: empty string |
+| `{{BODY_HTML}}` | HTML generated in step 5 |
+| `{{SOURCE_LINE}}` | Content source (optional): `<span class="info-source">source text</span>`, empty string when no source |
+| `{{PAGE_INFO}}` | Multiple cards: `1 / 3`, single card: empty string |
 
-**结尾标记**：仅在最后一张卡的 `{{BODY_HTML}}` 末尾追加 `<p style="text-align:right;font-size:16px;color:#ACACB0;margin-top:40px;">∎</p>`。非末页不加。
+**End marker**: only append `<p style="text-align:right;font-size:16px;color:#ACACB0;margin-top:40px;">∎</p>` at the end of `{{BODY_HTML}}` on the final card. Not on non-final pages.
 
-写入：`/tmp/ljg_cast_poster_{name}_{N}.html`
+Write to: `/tmp/ljg_cast_poster_{name}_{N}.html`
 
-## 步骤 7：截图
+## Step 7: Screenshot
 
 ```bash
 node assets/capture.js /tmp/ljg_cast_poster_{name}_{N}.html ~/Downloads/{name}_{N}.png 1080 1440
 ```
 
-多张卡片可并行截图。
+Multiple cards can be screenshotted in parallel.
 
-交付时报告卡片数量 + 每张摘要（前 30 字）。
+On delivery, report card count + summary of each (first 30 characters).

@@ -27,7 +27,7 @@ Turn the author's argument skeleton inside out, each bone growing into a sharp q
 
 2. *A has formalized closure* — each A strictly in four parts: *Conclusion* (one sentence) + *Formalization* (compress the thought into one line of visible relationships using words + simple symbols, e.g. `A = B + C`, `Old: X → New: Y`) + *Reasoning steps* (how they arrived at it) + *Boundary* (conditions where it doesn't hold). Formalization is "the geometry of thought", letting readers see relationships at a glance.
 
-3. *Q chain has direction* — Qs are not并列罗列, they follow "Q1 answered → Q2 naturally emerges". Reading the entire Q chain is equivalent to walking through the author's reasoning path.
+3. *Q chain has direction* — Qs are not a parallel listing, they follow "Q1 answered → Q2 naturally emerges". Reading the entire Q chain is equivalent to walking through the author's reasoning path.
 
 ## Workflow
 

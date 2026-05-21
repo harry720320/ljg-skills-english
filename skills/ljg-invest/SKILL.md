@@ -36,7 +36,7 @@ A table + a custom market-segment definition.
 | Financing | Amount / Valuation / Terms (fill if known, mark if not) |
 | Data Snapshot | Key operational metrics |
 
-Segment definition must pierce through surface labels. "Search engine company" is隔着 — "monopoly operator of human cognitive infrastructure" is不隔着 — the latter tells you what it's really doing.
+Segment definition must pierce through surface labels. "Search engine company" is keeping it at arm's length — "monopoly operator of human cognitive infrastructure" is getting inside — the latter tells you what it's really doing.
 
 ### II. Order-Creating Machine Assessment
 

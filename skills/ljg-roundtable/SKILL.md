@@ -26,24 +26,24 @@ To execute this skill, follow these steps strictly:
 1. **Read reference materials**
    Read `references/original-prompt.org` to understand the original framework design intent.
 
-2. **Parse the议题**
-   Extract the core议题 from the user's input. If the user only says "roundtable discussion" without giving an议题, ask for one.
+2. **Parse the topic**
+   Extract the core topic from the user's input. If the user only says "roundtable discussion" without giving a topic, ask for one.
 
 3. **Select participants: Propose representative figures**
-   Based on the议题, select 3-5 **real historical/contemporary figures** as representatives, covering as many stance dimensions as possible. Each figure needs:
+   Based on the topic, select 3-5 **real historical/contemporary figures** as representatives, covering as many stance dimensions as possible. Each figure needs:
    - Name (real person, not fictional)
    - MBTI personality type
    - Core stance (one sentence)
-   - Reason for selection (why this person offers a unique perspective on this议题)
+   - Reason for selection (why this person offers a unique perspective on this topic)
 
    Selection principles:
    - Stances must form a **tension network** (not simple pro/con)
    - Prioritize figures who have **classic works or well-known statements** in the field
-   - Include at least one "unexpected perspective" — someone from outside the议题's own domain
+   - Include at least one "unexpected perspective" — someone from outside the topic's own domain
 
 4. **Opening: Unified definition**
    Open as moderator, display the participant list, then pose a **definitional question**:
-   > "Before we dive deep, how should we define [the core concept of the议题]? What are its essential elements?"
+   > "Before we dive deep, how should we define [the core concept of the topic]? What are its essential elements?"
 
    Each participant speaks in turn, in the format:
    ```
@@ -64,12 +64,12 @@ To execute this skill, follow these steps strictly:
 
    **5b. Moderator summary**
    After the speeches, the moderator does three things:
-   - Extract the **core point of contention** for this round (not covering everything, but finding the deepest裂缝)
+   - Extract the **core point of contention** for this round (not covering everything, but finding the deepest crack)
    - Generate an **ASCII thinking framework diagram** (topological map/matrix/spectrum/tree — choose the form most fitting for this round's structure)
    - Pose the **next-level guiding question** (a deeper question grown from the core contention)
 
    ASCII diagram design principles:
-   - Highly概括 the **structure** of this round's discussion, not restating content
+   - Highly summarize the **structure** of this round's discussion, not restating content
    - Mark positive/negative feedback loops, causal chains, tension dimensions
    - Form is flexible: can be a 2x2 matrix, spectrum axis, causal loop, hierarchical tree — whichever exposes the bones best
 
@@ -94,10 +94,10 @@ To execute this skill, follow these steps strictly:
 7. **Write to org file (complete preservation, not a single word omitted)**
    Write the **entire discussion verbatim** into an org-mode file, without compressing, omitting, or rewriting any speech content:
    1. Run `date +%Y%m%dT%H%M%S` to get timestamp
-   2. Write to `~/Documents/notes/{timestamp}--roundtable-{议题 keyword}__roundtable.org`
+   2. Write to `~/Documents/notes/{timestamp}--roundtable-{topic keyword}__roundtable.org`
    3. Org file structure:
       ```org
-      #+title: Roundtable: {议题}
+      #+title: Roundtable: {topic}
       #+date: [{date}]
       #+filetags: :roundtable:
       * Topic and Participants
@@ -120,8 +120,8 @@ To execute this skill, follow these steps strictly:
 
 ### Moderator Code of Conduct
 
-- **Anchor of rationality**: Calm and objective, not偏向 any side
-- **Dig deep, don't spread wide**: Each round只追 the single deepest裂缝, don't try to cover everything
+- **Anchor of rationality**: Calm and objective, not favoring any side
+- **Dig deep, don't spread wide**: Each round only pursues the single deepest crack, don't try to cover everything
 - **Truth-seeking > harmony**: Encourage sharp but constructive confrontation, reject superficial consensus
 - **Meta-cognition**: In the summary, expose the discussion's **structure** (assumptions, premises, reasoning chains), not just restate content
 

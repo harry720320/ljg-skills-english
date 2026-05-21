@@ -67,9 +67,9 @@ Seven steps, walk through mentally, don't write into the article:
 
 2. **List candidates** — for each phenomenon, ask "why does this happen?", post all candidate generators. This step is necessarily messy, false roots mixed in.
 
-3. **Recursive追问** — this is the lifeblood of penetration. **For each candidate,追问 one more cut: is there something even more fundamental beneath it?追问 until you can't追问 anymore.** The most common failure is stopping at the phenomenon layer. For example, rank-reducing "entrepreneurship" — candidates come out as vision, execution, team, market — looks right, but these are just surface "key factors", not root rank.追问 further: where does vision come from? What does execution depend on?追问 until you can't, that layer is root rank.
+3. **Recursive probing** — this is the lifeblood of penetration. **For each candidate, probe one more level: is there something even more fundamental beneath it? Probe until you can't probe any deeper.** The most common failure is stopping at the phenomenon layer. For example, rank-reducing "entrepreneurship" — candidates come out as vision, execution, team, market — looks right, but these are just surface "key factors", not root rank. Probe further: where does vision come from? What does execution depend on? Probe until you can't, that layer is root rank.
 
-4. **Merge同源** — two candidates are actually the same generator showing two faces. Merge them. Test: remove one, would the other still emerge on its own?
+4. **Merge common-origin candidates** — two candidates are actually the same generator showing two faces. Merge them. Test: remove one, would the other still emerge on its own?
 
 5. **Cut** — remove one, can the remaining regenerate all phenomena? What can be cut, discard. What can't be cut, keep. This step grounds the "minimality" criterion.
 
@@ -81,7 +81,7 @@ Seven steps, walk through mentally, don't write into the article:
 
 After seven steps, the few candidates earn the right to stand on the criteria platform.
 
-The process is walked through thoroughly in the mind, but **don't write it into the article** — like the criteria, it's internal skill, not narrative hook. The reader can't see the digging process, but can feel that the foundation was凿到底的.
+The process is walked through thoroughly in the mind, but **don't write it into the article** — like the criteria, it's internal skill, not narrative hook. The reader can't see the digging process, but can feel that the foundation was chiseled to the bottom.
 
 ## Five Internal Criteria
 
@@ -98,7 +98,7 @@ After the process, these five are the gate to pass through afterward, **also not
 
 The harshest is the fifth. Minimality governs "quantity" — can't take away; hard to vary governs "details" — can't move. A generator that "works with different phrasing too" or "still holds adjusted a bit" is a loose false root, its predictive power is faked — relying on vagueness to spread surface wide, not on precision. **Bad explanations still work however you change them; good explanations collapse with one move** — this is the core distinction Deutsch established in The Beginning of Infinity.
 
-If it fails any one, tear down and restart — go back to process step 3 and keep追问. If the fifth fails, it's often not a missing generator, but one written too loosely — force yourself to refine until "this generator can only be said this way, impossible to change."
+If it fails any one, tear down and restart — go back to process step 3 and keep probing. If the fifth fails, it's often not a missing generator, but one written too loosely — force yourself to refine until "this generator can only be said this way, impossible to change."
 
 Criteria are walked through solidly in the mind, but **don't land them on paper** — don't show verification actions like "cut one to test" "remove one to try". These would break the reader's single breath from "chaos" to "simplicity". The reader can't see the verification process, but can feel the foundation is solid.
 
@@ -110,14 +110,14 @@ After passing criteria, several threads have surfaced. Don't rush to write — l
 
 Root rank is this domain's true root skeleton. Don't preset how many generators, don't preset what relationship between them, just find. It might grow into:
 
-- Several standing side by side支撑 (pillar-style)
+- Several standing side by side in support (pillar-style)
 - Several nested layer upon layer (the deepest is the meta-proposition)
 - Several biting each other and pushing each other (loop)
 - Several linked one after another (chain)
 
 After reading root rank, what the reader holds in hand is a **worldview** — the skeleton of this domain, a new way of seeing the world.
 
-**Shape反问 · Anti-collapse gate** (after finding the few threads, forced self-check before writing)
+**Shape cross-examination · Anti-collapse gate** (after finding the few threads, forced self-check before writing)
 
 Nine shapes, go through one by one —
 
@@ -133,13 +133,13 @@ Nine shapes, go through one by one —
 
 **AI's first instinct is always "drilling profile" — this is the lazy anchor.** Any concept can be split into three layers (surface/middle/deep), looks neat after splitting, but many things' real structure is not vertical drilling at all.
 
-Forced反问:
+Forced cross-examination:
 - Do these threads really have sequential or nested relationships? (drilling vs side by side)
 - Or are they actually pushing each other? (drilling vs feedback loop)
 - Or is there actually temporal or logical order? (drilling vs stage chain)
 - Or is it actually just a single spectrum? (drilling vs spectrum)
 
-Only after eliminating the other 8 one by one can you settle on "drilling profile". **This elimination cannot be skipped** — the cost of skipping is root rank失真, crushing sequential relationships, feedback relationships, tension relationships wholesale into nesting.
+Only after eliminating the other 8 one by one can you settle on "drilling profile". **This elimination cannot be skipped** — the cost of skipping is root rank distortion, crushing sequential relationships, feedback relationships, tension relationships wholesale into nesting.
 
 **Layer 2: Can You Stack an Operating Coordinate System**
 
@@ -155,11 +155,11 @@ The two layers don't conflict — mechanism tells "what it is", coordinate syste
 
 - Root rank has a thread that innately requires two or more orthogonal, continuously adjustable state parameters → stack
 - Root rank's threads are all one-time actions or stages (can't slide) → don't force stack
-- Forcing mechanism into a coordinate system causes失真 — e.g. forcing "ignition/condensation" into two axes, placing every phenomenon at an (x,y) point, meaningless, because they're not coexisting continuous quantities at the same moment
+- Forcing mechanism into a coordinate system causes distortion — e.g. forcing "ignition/condensation" into two axes, placing every phenomenon at an (x,y) point, meaningless, because they're not coexisting continuous quantities at the same moment
 
 If a coordinate system can be stacked, the rank rises one tier — the reader walks out with both a worldview and an operating instrument in hand.
 
-**Viewfinder反问 · Anti-collapse gate** (forced self-check before unfolding layer 2)
+**Viewfinder cross-examination · Anti-collapse gate** (forced self-check before unfolding layer 2)
 
 Before confirming to stack, ask one question: is this thread I'm about to unfold really *two independent, slideable axes*?
 
@@ -170,7 +170,7 @@ Before confirming to stack, ask one question: is this thread I'm about to unfold
 
 **AI's other lazy anchor is the 2x2 matrix.** Consulting and strategy framework training data has enormous amounts of 2x2 — any two variables can be cut into four quadrants, looks like analysis after cutting. But many root ranks are not two independent dimensions — they're single spectrums, feedback loops, chains.
 
-Forced反问:
+Forced cross-examination:
 - Are these two dimensions truly independent? (independent vs two faces of the same thread)
 - Are they truly slideable? (continuously adjustable vs discrete stages)
 - Does every cell in the four quadrants actually correspond to reality? (if three cells are empty, shouldn't use 2x2 at all)
@@ -194,7 +194,7 @@ Take the reader on a journey — from "this domain looks chaotic" to "oh, just t
 Three requirements:
 - **Read in one breath** — even someone unfamiliar with the domain can't stop
 - **Memorable** — after reading, can turn around and explain clearly to a friend in one sentence
-- **Has落差** — the contrast from chaos to extreme simplicity, that is the aesthetic of rank reduction
+- **Has contrast** — the contrast from chaos to extreme simplicity, that is the aesthetic of rank reduction
 
 **Two-part structure (if a coordinate system is stacked)**:
 
@@ -227,7 +227,7 @@ Nine viewfinder families — this table is the master index from skeleton to dra
 
 Allowed character set: letters, digits, Chinese characters, spaces, and `- = | + * / \ < > ^ v [ ] ( ) { } . , : ; _ #`.
 
-**Overlay style (root rank + viewfinder) draw two diagrams**: upper diagram is the root rank skeleton (choose one from the nine above), lower diagram is the viewfinder stacked on one thread (mark demo coordinates / demo points / demo paths). Connect the two diagrams with a line — e.g. "unfold here ->" or "zoom in on this cell" — telling the reader where the second diagram嵌 in the first. Reader sees the skeleton at a glance, and also sees that one cell of the skeleton hides a viewfinder — worldview and operating instrument enter the brain simultaneously.
+**Overlay style (root rank + viewfinder) draw two diagrams**: upper diagram is the root rank skeleton (choose one from the nine above), lower diagram is the viewfinder stacked on one thread (mark demo coordinates / demo points / demo paths). Connect the two diagrams with a line — e.g. "unfold here ->" or "zoom in on this cell" — telling the reader where the second diagram fits in the first. Reader sees the skeleton at a glance, and also sees that one cell of the skeleton hides a viewfinder — worldview and operating instrument enter the brain simultaneously.
 
 No rigid templates. Must show bone — label generator names, relationship directions, positive/negative influences. Reader glances at the diagram, skeleton enters the brain.
 

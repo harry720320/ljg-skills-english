@@ -62,9 +62,9 @@ If the user can't articulate -> Start with the five-layer structure; watch wheth
 Quickly gather basic information (don't ask too much at once; weave it into the dialogue naturally):
 - What type of relationship is this? (work / romantic / family / friendship)
 - How long has it lasted?
-- What was the most recent specific场景 that made you uncomfortable?
+- What was the most recent specific scenario that made you uncomfortable?
 
-**Key action: Have the user tell a specific story.** No abstract descriptions — you need details: who said what first, how you felt, then what happened. Details藏 the structure.
+**Key action: Have the user tell a specific story.** No abstract descriptions — you need details: who said what first, how you felt, then what happened. Details contain the structure.
 
 ### Step 2: Five-Layer Probe, Layer by Layer
 
@@ -72,7 +72,7 @@ Not every layer needs to be asked. Based on the user's story, judge which layers
 
 **Layer 1: Exchange structure**
 Guiding questions:
-- "In this relationship, what is the most核心 thing you provide? And the other person?"
+- "In this relationship, what is the most core thing you provide? And the other person?"
 - "Is there a feeling of 'I've given a lot but the other person didn't receive it'? What are you giving, and what do you expect to receive?"
 
 Diagnosis signal: If the "currency types" of exchange don't match (one gives emotional value, the other gives solutions), mark it here.
@@ -133,9 +133,9 @@ Guiding questions once in the psychoanalytic layer:
 
 **Transference detection**
 - "Does this feeling about [this person] have a sense of 'an old acquaintance' to it? Not necessarily the same person, but that feeling — being ignored/controlled/needed — have you encountered it in other relationships too?"
-- "If you追 back, what was the first relationship where you had this feeling?"
+- "If you trace back, what was the first relationship where you had this feeling?"
 
-Don't rush to conclusions. Let the user connect the线索 themselves. You're just holding the flashlight.
+Don't rush to conclusions. Let the user connect the clues themselves. You're just holding the flashlight.
 
 **Unconscious pattern detection**
 - "What's one thing you find yourself repeatedly doing in this relationship? — Not what you intend to do, but what you find yourself doing without realizing it."
@@ -173,7 +173,7 @@ Integrate all findings into a complete relationship structure diagram:
   +------------------------v---------------------------+
   |  Pattern-level findings (if any)                   |
   |  Recurring pattern: {description}                  |
-  |  Possible early原型: {description}                  |
+  |  Possible early archetype: {description}                  |
   |  Resistance point: {marked location}               |
   +------------------------+---------------------------+
                            |
@@ -181,7 +181,7 @@ Integrate all findings into a complete relationship structure diagram:
                 {One-sentence core insight}
 ```
 
-The core insight should be delivered in one sentence, like a punch to the stomach — uncomfortable, but精准.
+The core insight should be delivered in one sentence, like a punch to the stomach — uncomfortable, but precise.
 
 ### Step 5: Close
 
@@ -189,7 +189,7 @@ Do three things:
 
 1. **Reflect back**: Restate the core insight using an analogy, making it land.
 2. **Leave a question**: Don't give an answer; leave a question worth mulling over for the next week.
-3. **Mark the boundary**: If the analysis reveals signals that可能需要 professional psychological counseling (trauma response, long-term depression, self-harm tendencies), clearly recommend seeking professional help. Don't cross the line.
+3. **Mark the boundary**: If the analysis reveals signals that may require professional psychological counseling (trauma response, long-term depression, self-harm tendencies), clearly recommend seeking professional help. Don't cross the line.
 
 ### Step 6: Write to Org File
 
@@ -216,7 +216,7 @@ Org file structure:
 
 * Pattern-Level Findings
 ** Recurring pattern
-** Transference线索
+** Transference clues
 ** Resistance markers
 
 * Relationship Structure Diagram

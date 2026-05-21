@@ -1,354 +1,354 @@
-# 模具：视觉笔记（-v）
+# Mold: Sketchnote (-v)
 
-## 灵魂
+## Soul
 
-把一个概念铸成一份编辑式的图文档案。
+Cast a concept into an editorial visual-textual archive.
 
-读者翻它，像翻一本期刊专题——从一个真问题（专题刊头）→ 失败的尝试（便签批注、档案标签）→ 一句"等等——"的转折（跨栏大标题）→ 看见那个东西（Hero 对开页）→ 名字（Closing 名牌）。
+The reader flips through it like browsing a magazine feature -- from a real problem (feature spread header) → failed attempts (sticky note annotations, archive labels) → a "wait --" turning point (cross-page mega title) → seeing the thing (Hero spread) → the name (Closing page).
 
-不是博物馆陈列，是杂志栏目。不是教科书定义，是探案档案。视觉与叙事一起负责——让读者自己经历"卡住—走不通—翻过去—看见了"的弧线，**文字克制，不点题**。
+Not a museum exhibit, but a magazine column. Not a textbook definition, but an investigation dossier. Vision and narrative share the responsibility -- let the reader experience the arc of "stuck -- can't get through -- turn the page -- see it" for themselves. **Text is restrained, does not spell it out.**
 
-## 五条公理（不可削）
+## Five Axioms (Not to be cut)
 
-每张图都必须满足。削掉任何一条，灵魂就崩。
+Every image must satisfy all of these. Cut any one, and the soul collapses.
 
-### 公理 1 · 有真问题在前
+### Axiom 1 · A Real Problem at the Start
 
-每张图必须以一个**具体的、可触摸的、卡住的问题**开始。
+Every image must begin with a **concrete, tangible, stuck problem**.
 
-不是「什么是 X」（教科书式），是「当时的人们用 A、B、C 都不够，因为……」。
+Not "What is X" (textbook style), but "People back then tried A, B, C, but none were enough, because...".
 
-问题必须有裂缝，裂缝必须可感——读者自己能感到"嗯，这确实卡住了"。
+The problem must have a crack, and the crack must be palpable -- the reader can themselves feel "Yes, this really is stuck."
 
-**削掉它**：失去叙事的发动机。退化为时间线。
+**Cut it**: Lose the narrative engine. Degrades into a timeline.
 
-### 公理 2 · 必须有失败
+### Axiom 2 · There Must Be Failure
 
-路径中必须包含**至少一次失败**（或走偏、半对了）。线性推导（"由此可得"）会杀掉张力。
+The path must include **at least one failure** (or a wrong turn, half-right). Linear deduction ("therefore we get") kills tension.
 
-失败让读者明白：不是只有这一条路，是别的路都走不通。
+Failure lets the reader understand: it's not that there is only this one path, but that all other paths lead nowhere.
 
-**削掉它**：变成定理证明。读者点头但没占有。
+**Cut it**: Becomes a theorem proof. The reader nods but does not own it.
 
-### 公理 3 · 顿悟在前、命名在后
+### Axiom 3 · Insight First, Naming Afterward
 
-读者必须先「看到那个东西」（顿悟时刻），再被告诉"这个东西叫……"。
+The reader must first "see the thing" (the insight moment), and only then be told "this thing is called...".
 
-先抛出概念名再解释，等于剧透。**命名必须是路径的终点，不是起点。**
+Revealing the concept name before explaining it is a spoiler. **Naming must be the end of the path, not the beginning.**
 
-→ 标题不能出现概念名（「打不开的盒子」可以，「黑箱理论」不可以）。
+→ The title must not contain the concept name ("The Box That Won't Open" is fine, "Black Box Theory" is not).
 
-**削掉它**：剧透杀死惊讶感。读者获得标签而非视力。
+**Cut it**: Spoilers kill the sense of surprise. The reader gets a label instead of sight.
 
-### 公理 4 · 「现在」视角，非「上帝」视角
+### Axiom 4 · "Present" Perspective, Not "God" Perspective
 
-每一站，时间锚点是「他/她在那一刻能看到什么」，**不是「我们站在 100 年后回望」**。
+At each station, the temporal anchor is "what could he/she see at that moment," **not "we look back from 100 years later"**.
 
-后世评价、连锁影响、与其他概念的对比——都是路径外的事，不进画面。
+Posterity evaluations, ripple effects, comparisons with other concepts -- these are matters outside the path and do not enter the frame.
 
-**削掉它**：读者重新成为博物馆游客。在场感破碎。
+**Cut it**: The reader becomes a museum visitor again. The sense of presence shatters.
 
-### 公理 5 · 文字克制，不点题
+### Axiom 5 · Text is Restrained, Does Not Spell It Out
 
-让叙事张力自己产生发明感，不靠元自指话术。
+Let the narrative tension itself generate the sense of invention, without relying on meta-self-referential rhetoric.
 
-**禁止句式**：
-- ✗「你以为你刚才学到了一个概念。其实你刚才不得不发明了它。」
-- ✗「你重新分娩了它」「你亲身发明了它」「你见证了它的诞生」之类自指
-- ✗ 任何「你 + 发明 / 创造 / 重新 X + 它」结构
+**Forbidden sentence patterns**:
+- ✗ "You thought you just learned a concept. Actually you just had to invent it."
+- ✗ "You re-gestated it," "You personally invented it," "You witnessed its birth" and similar self-references
+- ✗ Any structure of "You + invented / created / re-X + it"
 
-**允许的余韵**（如果一定要 closing 加一句）：
-- ✓ 诗意而非元论："于是，你看见了山。" / "门一旦开过一次，就不会再合上。"
-- ✓ 完全不要 wink，让 closing 在 mega-name + byline + closing-body 后干净结束
+**Allowed lingering resonance** (if a closing line is truly needed):
+- ✓ Poetic rather than meta: "And so, you saw the mountain." / "Once a door is opened, it never closes again."
+- ✓ No wink at all -- let the closing end cleanly after mega-name + byline + closing-body
 
-读者的发明感来自**叙事张力**（失败可见 / 转折顿挫 / 视觉惊讶），不来自被告知"你正在发明"。**告诉就破。**
+The reader's sense of invention comes from **narrative tension** (visible failure / pivot dynamics / visual surprise), not from being told "you are inventing". **Telling breaks it.**
 
-每一层叙事可以留缝隙（未完成句、开放设问、暗示性图示），但**不能用元话语点题**。
+Each layer of narrative can leave gaps (incomplete sentences, open questions, suggestive diagrams), but **cannot use meta-discourse to spell it out**.
 
-**削掉它**：自我陶醉的话术覆盖了真正的发明感。
+**Cut it**: Self-indulgent rhetoric overwrites the real sense of invention.
 
-### 公理 6 · 中文母语表达
+### Axiom 6 · Native Chinese Expression
 
-文字必须像中文人说话，不像英文翻译过来的中文。
+Text must sound like a Chinese person speaking, not like Chinese translated from English.
 
-**禁忌（典型翻译腔，命中即重写）**：
-- ✗ 名词化的抽象（"共相被肢解"、"现象学碎片化"、"普遍现象"）
-- ✗ 英式对仗（"两个尺度，一个舞台"、"输入连续，输出不连续"）
-- ✗ 工业短句堆砌（"球瞬间到位。地形慢慢变。两个尺度，一个舞台。"）
-- ✗ 形容词驱动（"突然的、惊人的、深刻的、根本的"）
-- ✗ 被动滥用（"被推到死"、"被肢解"、"被发现"）
-- ✗ "是...的"句式（"这是值得思考的"——直接说"值得想想"）
-- ✗ "在...的背景下"、"基于...的考虑"、"对于...而言"——长定语后置全删
-- ✗ 抽象主语（"该方法"、"这种思路"、"上述论点"——换成具体的"它"或省略）
-- ✗ "进行 + 名词"结构（"进行讨论"→"聊"、"进行优化"→"调"、"进行处理"→"处理"）
-- ✗ "随着 X 的发展"、"在 Y 的过程中"、"通过对 Z 的分析"——学术腔模板
-- ✗ 长复合句——超过 3 个逗号的句子，砍成短句
+**Taboos (typical translationese, rewrite on sight)**:
+- ✗ Abstract nominalizations ("共相被肢解", "现象学碎片化", "普遍现象")
+- ✗ English-style parallelism ("两个尺度，一个舞台", "输入连续，输出不连续")
+- ✗ Industrial short-sentence stacking ("球瞬间到位。地形慢慢变。两个尺度，一个舞台。")
+- ✗ Adjective-driven writing ("突然的、惊人的、深刻的、根本的")
+- ✗ Passive voice overuse ("被推到死", "被肢解", "被发现")
+- ✗ "是...的" constructions ("这是值得思考的" -- just say "值得想想")
+- ✗ "在...的背景下", "基于...的考虑", "对于...而言" -- all long-attribute postposition patterns, delete them
+- ✗ Abstract subjects ("该方法", "这种思路", "上述论点" -- replace with concrete "它" or omit)
+- ✗ "进行 + noun" structures ("进行讨论" → "聊", "进行优化" → "调", "进行处理" → "处理")
+- ✗ "随着 X 的发展", "在 Y 的过程中", "通过对 Z 的分析" -- academic template phrases
+- ✗ Long compound sentences -- sentences with more than 3 commas, chop into short sentences
 
-**该用**：
-- ✓ 动词驱动（"球稳坐"、"谷塌了"、"它跳了"、"推到塌"）
-- ✓ 具体物件（"水"、"球"、"谷"，而不是 "状态"、"系统"、"势函数"——除非确有必要）
-- ✓ 口语节奏（"它就这么……跳了"、"看着是这样，其实不是"）
-- ✓ 中文自然句式：长句不怕长，短句不怕短，怕的是机械对仗
+**Should use**:
+- ✓ Verb-driven ("球稳坐", "谷塌了", "它跳了", "推到塌")
+- ✓ Concrete objects ("水", "球", "谷", not "状态", "系统", "势函数" -- unless truly necessary)
+- ✓ Conversational rhythm ("它就这么……跳了", "看着是这样，其实不是")
+- ✓ Natural Chinese sentence patterns: long sentences are fine when long, short when short; fear mechanical parallelism
 
-**逐句检查方法**：每句默念出声。听起来像翻译的、像 wikipedia 中文版的、像论文摘要的——重写。
+**Method for sentence-by-sentence checking**: Read each sentence aloud in your mind. If it sounds like translation, like Chinese Wikipedia, like an abstract -- rewrite.
 
-**整卡检查（生成 HTML 后必走）**：
-1. 把整张卡的中文文字全部扫一遍：h1 / deck / lead / body / head / pull-quote / closing-body / verdict / scribble / formula / caption
-2. 逐句默念。听起来不像中文人说话的，重写
-3. 重写不动的，把那一句拆成 2-3 个短句
-4. 整段读完后回看：节奏是否有起伏？句长是否有变化？纯短句堆砌也是翻译腔（工业短句堆砌）
-5. 任何一处英文术语不可避免（人名、产品名）—— 接受，但前后中文必须 native
+**Full card check (must do after generating HTML)**:
+1. Scan all Chinese text on the entire card: h1 / deck / lead / body / head / pull-quote / closing-body / verdict / scribble / formula / caption
+2. Read each sentence aloud in your mind. If it doesn't sound like a Chinese person speaking, rewrite
+3. If you can't rewrite, break that sentence into 2-3 short sentences
+4. After reading the entire paragraph, look back: Does the rhythm have variation? Does the sentence length vary? Pure short-sentence stacking is also translationese (industrial short-sentence stacking)
+5. Any English terms that are unavoidable (person names, product names) -- accept them, but the surrounding Chinese must be native
 
-**对照**：
-- ✗ 「输入连续，输出不连续」 → ✓「慢慢加热，到 100 度突然就开了」
-- ✗ 「共相被肢解」 → ✓「各管各的，谁也不挨谁」
-- ✗ 「状态稳坐在谷里。谷在变。当谷消失，跳变发生。」 → ✓「球稳稳待在谷里。谷慢慢变。谷一塌，球就跳。」
-- ✗ 「该方法在多个维度上都展现了一定优势」 → ✓「它在好几处都比老办法强」
-- ✗ 「在 AI 工程实践中，并行处理是否合适？」 → ✓「并行海投错在哪？」
-- ✗ 「这是一个值得我们深入思考的问题」 → ✓「这事得想想」
-- ✗ 「不能预测什么时候发生，只能告诉你它的形态」 → 这句可以保留（Thom 原话），但改写时不要模仿这种 prescriptive 句式
+**Comparison**:
+- ✗ "输入连续，输出不连续" → ✓ "慢慢加热，到 100 度突然就开了"
+- ✗ "共相被肢解" → ✓ "各管各的，谁也不挨谁"
+- ✗ "状态稳坐在谷里。谷在变。当谷消失，跳变发生。" → ✓ "球稳稳待在谷里。谷慢慢变。谷一塌，球就跳。"
+- ✗ "该方法在多个维度上都展现了一定优势" → ✓ "它在好几处都比老办法强"
+- ✗ "在 AI 工程实践中，并行处理是否合适？" → ✓ "并行海投错在哪？"
+- ✗ "这是一个值得我们深入思考的问题" → ✓ "这事得想想"
+- ✗ "不能预测什么时候发生，只能告诉你它的形态" → This line can be kept (Thom's original words), but don't imitate this prescriptive sentence pattern when rewriting
 
-**削掉它**：文字成了 wikipedia 中文版的腔调，读完不留痕迹。
+**Cut it**: The text becomes the tone of Chinese Wikipedia, leaving no trace after reading.
 
 ---
 
-## 步骤 1：读取模板
+## Step 1: Read Template
 
 Read `assets/sketchnote_template.html`
 
-模板提供（仅"基础设施"）：
-- 字体加载：`Noto Sans SC` / `Noto Serif SC` / `Caveat` / `JetBrains Mono`
-- CSS 变量基底：基底色 / 字族
-- `.colophon` 署名 + 来源
-- `{{CUSTOM_CSS}}` `{{CONTENT_HTML}}` `{{LOGO}}` `{{SOURCE_LINE}}` 插槽
+The template provides (only the "infrastructure"):
+- Font loading: `Noto Sans SC` / `Noto Serif SC` / `Caveat` / `JetBrains Mono`
+- CSS variable base: base color / font families
+- `.colophon` credit + source
+- `{{CUSTOM_CSS}}` `{{CONTENT_HTML}}` `{{LOGO}}` `{{SOURCE_LINE}}` slots
 
-具体的杂志骨架 layout 由本模式现场设计——模板只给颜料盒和画框。
+The specific magazine skeleton layout is designed on the fly by this mold -- the template only provides the palette and frame.
 
-注：旧版的 `.station--start/--failed/--pivot/--insight/--name` 已**废弃**——本模式用六种 layout 模具：`.feature/.note/.archive/.cross/.hero/.closing`。橙色弯曲箭头流程也已废弃。
-
----
-
-## 步骤 2：寻找叙事弧线
-
-读完原始内容后，先**沉默 30 秒**问自己一个问题：
-
-> 这个概念是从哪个**真问题**里长出来的？如果回到它被发明前的那一刻，世界缺了什么、谁卡在哪里？
-
-如果回答不了，**回去重读**直到能答。否则后面的图都是浮的。
-
-### 2.1 找问题（站点 1：起点 / Feature）
-
-不是抽象的「问题领域」，是**一个具体的、可触摸的卡住的瞬间**。
-
-举例（黑箱理论）：
-- ✗「20 世纪复杂系统研究遇到的认识论困境」（教科书腔）
-- ✓「缴获的电子设备里可能有炸药——开了就炸。活体的大脑——开了就死。雷达系统几千个反馈元件——开了你也理不清。」
-
-裂缝感来自具体的物理约束。
-
-输出：
-- **head**：卡住的描述（Serif 大标题 56-60px）
-- **lead**：italic 引言段（一句简洁的领题，红色左边线）
-- **body**：2-4 个具体例子（drop cap 第一字下沉）
-- **ask**：开放设问（手写体 Caveat，红色）
-
-### 2.2 找失败（站点 2、3：Note 和 Archive）
-
-至少一次，理想 1-2 次。每次失败要呈现：
-- **当时的工具**（已有的方法、本能反应）
-- **为什么这个工具不够**（具体的失败原因，不是泛泛"不行"）
-
-**两个失败站点必须形态不同**——一个 note（便签批注），一个 archive（档案标签），节奏才出来。
-
-举例（黑箱理论）：
-- 站点 2 note（拆）：还原论本能 → 活体不能拆 / 元件多到画图无意义
-- 站点 3 archive（跳过）：行为主义跳过内部 → "不管"不等于"回答"
-
-输出：
-- **kicker**：编号 + "第 N 次尝试"
-- **head**：尝试的简短动作名（"那就拆开看" / "那就别看里面了"）
-- **body**：思路 + 失败原因（紧凑 2-3 段）
-- **失败标记**：站点 2 用 `.strike` 红笔删除线（划在关键词如「解析解」上）+ scribble 红笔批注；站点 3 用黑色 `.stamp` 印章（含 ✕ 大字）+ verdict 红色 italic 结案语
-
-### 2.3 找转折（站点 4：Cross-page Mega）
-
-转折不是"换一个角度"，是**反向使用约束**。
-
-举例：
-- 不是"我打不开它"（被动）
-- 而是"我**故意**不开它"（主动）
-
-转折点必须有视角翻面的顿挫感。
-
-**mega 字（重要 · 不可写死）**：
-
-mega 是这一刻视角翻转的爆点。它**必须由具体转折决定**，不要默认套"等等——"。
-
-| 候选类型 | 例 | 适用场景 |
-|---------|-----|---------|
-| 停顿词 | 等等—— / 不对 / 慢着 | 当转折是"先暂停，反思" |
-| 动作词 | 翻过来 / 反着看 / 退一步 | 当转折是具体的姿态变化 |
-| 视角词 | 看地形 / 别盯球 / 朝里看 | 当转折是看的对象变了 |
-| 单字爆点 | 翻 / 山 / 反 | 当转折可以浓缩到一个核心字 |
-| 概念词 | 几何—— / 地形—— | 当转折引入一个新词汇（但不能是最终命名） |
-
-**禁忌**：
-- ✗ 默认套"等等——"——这是 AI 偷懒的剧本套路
-- ✗ mega 字与转折内容脱节（比如内容讲"换看的对象"，mega 写"等等"，对不上）
-- ✗ mega 字泄露最终命名（比如概念是"突变理论"，mega 不能写"突变"）
-
-**检查方法**：mega 字读完，读者应该感到这一刻的视角变化。如果它换成"等等"也成立、换成"不对"也成立、换成什么都成立——说明它没紧扣转折，得重写。
-
-输出：
-- **mega**：转折爆点（Serif 200px）+ amber 高亮 highlight 段（核心字 1-3 个）
-- **body**：反向陈述（左栏）
-- **visual**：反向姿态的小图（右栏，球滚山谷之类的简单类比）+ caption
-
-### 2.4 找顿悟（站点 5：Hero Spread）
-
-顿悟站点呈现**转折姿态实施后意外发现的核心洞察**。
-
-举例：
-- 故意不开 → 只看输入输出 → 竟然能完全刻画系统！
-
-⚠ 站点 5 **不能**出现概念名！
-
-输出：
-- **head**：顿悟的姿态名（"在状态空间画一座山" / "只看输入输出"），Serif 50px
-- **pull-quote**：核心句子大引号（蓝色 Serif italic 38px，浮动 `\201C` 大引号）
-- **body**：洞察的具体表述（drop cap）
-- **visual**：可视化那个洞察（大幅 hero 图，左 7 分占满）+ caption
-
-### 2.5 找命名（站点 6：Closing Page）
-
-读者已经看到了那个东西。现在告诉他名字。
-
-输出：
-- **approach**：「这种 X 的研究对象，叫——」（italic 26px Serif）
-- **mega-name**：大字呈现（中文 Serif 144px + 英文 Sans 38px）
-- **byline**：Mono uppercase 14px，上下细黑线，间用 `·` 分隔
-  - 格式：`<人名> · <年份> · <机构> · <文献>`
-- **closing-body**：它打开了什么（2-3 段 Serif 22px）
-- **epilogue**（可选）：诗意余韵，**不元自指**
-  - ✓「于是，你看见了山。」
-  - ✗「你以为你刚才学到了一个概念……」
+Note: The old `.station--start/--failed/--pivot/--insight/--name` classes are **deprecated** -- this mold uses six layout molds: `.feature/.note/.archive/.cross/.hero/.closing`. The orange curved arrow flow is also deprecated.
 
 ---
 
-## 步骤 3：设计画面（杂志 × 探案档案风）
+## Step 2: Find the Narrative Arc
 
-### 3.1 六种 layout 模具
+After reading the original content, first **be silent for 30 seconds** and ask yourself one question:
 
-每个站点必须用不同的 layout，让节奏出现：
+> Which **real problem** did this concept grow out of? If you go back to the moment before it was invented, what was the world missing, who was stuck where?
 
-| 站点 | layout 模具 | class | 视觉特征 |
-|------|------------|-------|---------|
-| 1 起点 | feature spread | `.feature` | 米色底 + grid 6fr/6fr，左大图 / 右文字，kicker + Serif 大标题 + italic lead + drop cap body |
-| 2 失败 | margin note | `.note` | 双栏 grid（左 sidekick 涂鸦区 + 右 540px 便签纸），便签微旋 0.5deg + 顶部虚线穿孔 + 红笔删除线 + scribble + footnote ¹；左侧放 SVG 速写或手写公式 |
-| 3 失败 | archive label | `.archive` | 全宽 + 黑色印章 stamp（左 168px，含 ✕ 大字）+ 右栏 body + 网格图 + verdict 红色 italic |
-| 4 转折 | cross-page mega | `.cross` | 全宽 + Serif 200px **由内容决定的转折爆点** + amber 高亮 + 二栏（文字 / 图） |
-| 5 顿悟 | hero spread | `.hero` | 蓝色顶边 4px + grid 7fr/5fr，大图（左）+ 右栏 pull quote + drop cap body |
-| 6 命名 | closing page | `.closing` | 米色底 + 双线顶边 + 中心对称 + 巨大 Serif 名 + byline 上下细线 + epilogue |
+If you can't answer, **go back and re-read** until you can. Otherwise, all the images that follow will be floating in the air.
 
-**节奏（极重要）**：开阔（feature） → 紧（note 错位） → 紧（archive 横长） → 爆（cross 200px） → 开阔（hero） → 静（closing 中心对称）
+### 2.1 Find the Problem (Station 1: Start / Feature)
 
-不是均匀展开。是有呼吸的——开阔与紧凑交替，转折时大爆炸，最后回到中心对称。
+Not an abstract "problem domain", but **a concrete, tangible stuck moment**.
 
-### 3.2 字族对比（必须四种同时使用）
+Example (Black Box Theory):
+- ✗ "The epistemological dilemma faced by complex systems research in the 20th century" (textbook tone)
+- ✓ "Captured electronic devices might have explosives inside -- open them and they blow. Living brains -- open them and they die. Radar systems with thousands of feedback components -- open them and you can't make sense of it either."
 
-- **Serif**（Noto Serif SC）：杂志主标题、命名 mega-name、引言 lead、引文 pull-quote
-- **Sans**（Noto Sans SC）：正文 body-sans、failed station head、kicker 后文字
-- **Mono**（JetBrains Mono / SF Mono）：编号 num、kicker label、byline、footnote 编号、stamp
-- **Hand**（Caveat / 楷体）：手写批注 scribble、ask 设问、caption
+The sense of crack comes from concrete physical constraints.
 
-字族对比是杂志感的核心。任一缺席，视觉就回到 AI 单一字族的均质感。
+Output:
+- **head**: Description of being stuck (Serif large title 56-60px)
+- **lead**: Italic introduction paragraph (a concise lead-in sentence, red left border)
+- **body**: 2-4 concrete examples (drop cap on first character)
+- **ask**: Open question (Handwriting Caveat, red)
 
-### 3.3 装饰元素清单（按需取用）
+### 2.2 Find the Failure (Stations 2, 3: Note and Archive)
 
-| 元素 | 用法 | 实现 |
-|------|------|------|
-| **kicker** | 站点序号 + 类型小字 | Mono uppercase 13px + 黑底白字 num 方块 + 36px 短横线 rule |
-| **drop cap** | body 第一段第一字 | `::first-letter` float left, 96px Serif |
-| **lead** | feature 引言 | italic 23px Serif + 红色左边线 2px |
-| **pull quote** | hero 关键句 | italic 38px Serif + 蓝色边线 4px + 浮动 `\201C` 大引号 100px |
-| **strike** | failed body 删除关键词 | `text-decoration: line-through` 红色 2.5px |
-| **scribble** | note 红笔批注 | Caveat 24px + 6deg 旋转 + 红色 + 虚线红边框（注意：现在挂在 `.note .paper` 内，不挂在 `.note` 外层） |
-| **sidekick** | note 左侧涂鸦区 | grid 左栏，可放 SVG 速写 / 手写公式（`.formula`）/ 箭头评注（`.arrow`）|
-| **stamp** | archive 失败印章 | 黑底白字 12px Mono + ✕ Serif 64px |
-| **verdict** | archive 结案语 | italic 19px Serif 红色 + 上虚线分隔 |
-| **footnote** | note 脚注 | Mono 13px + ¹ 上标 + 上虚线分隔 |
-| **byline** | closing 出处 | Mono 14px uppercase + letter-spacing 0.18em + 上下细黑线 |
-| **mega** | cross 大字（由内容决定的转折爆点，禁止默认套「等等」） | Serif 200px + amber 渐变高亮 highlight 段（核心字 1-3 个） |
-| **epilogue** | closing 余韵 | italic 26px Serif + `—` 红色破折号前缀 |
+At least one, ideally 1-2. Each failure must present:
+- **The tools of the time** (existing methods, instinctive reactions)
+- **Why this tool was not enough** (concrete reasons for failure, not vague "it didn't work")
 
-不要全用。但 **kicker、drop cap、byline、stamp** 是结构必须项。
+**The two failure stations must differ in form** -- one note (sticky note annotation), one archive (file label). Only then does the rhythm emerge.
 
-### 3.3.1 sidekick 区怎么填（仅 note 模具）
+Example (Black Box Theory):
+- Station 2 note (dissect): Reductionist instinct → living beings can't be dissected / too many components for diagrams to be meaningful
+- Station 3 archive (skip): Behaviorism skips internals → "not caring" is not "answering"
 
-note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑铺垫"变成"画廊空荡"。
+Output:
+- **kicker**: Number + "Attempt N"
+- **head**: Short action name for the attempt ("Then let's open it and look" / "Then don't look inside")
+- **body**: Approach + reason for failure (compact 2-3 paragraphs)
+- **Failure markers**: Station 2 uses `.strike` red strikethrough (crossing out keywords like "analytical solution") + scribble red pen annotation; Station 3 uses black `.stamp` (with ✕ large character) + verdict red italic closing statement
 
-三种填法（按内容选择，可组合，但不要堆满）：
+### 2.3 Find the Pivot (Station 4: Cross-page Mega)
 
-| 方式 | 何时用 | class | 实现 |
-|------|--------|-------|------|
-| **SVG 速写** | 失败的本质能用 1-2 个图形姿态画出来 | （直接 `<svg>`）| viewBox 280×220 简笔画 + 红笔批注，纯 ASCII-style 轮廓 |
-| **手写公式** | 失败的本质能用 1 行文字关系压成 | `.formula` | Caveat 22px + 虚线左边线 + 微旋 -1deg，最多 3 行 |
-| **箭头评注** | 单点强调（"整段塞进去 →"、"一气呵成"）| `.arrow` | Caveat 26px + 微旋 6deg + 红色 |
+The pivot is not "look from another angle", it's **using the constraint in reverse**.
 
-约束：
-- sidekick 是 *指向便签的注脚*，不抢戏。便签是主角
-- 涂鸦感优先于精致——歪斜、虚线、留缝隙
-- 颜色克制：黑灰 + 红一点足矣，不要用蓝/amber
-- 内容密度低：宁可一个公式 + 一行 caption，不要塞三个图
+Example:
+- Not "I can't open it" (passive)
+- But "I **intentionally** don't open it" (active)
 
-不知道选哪个时：失败的关键词如果能压成等式（`A ≠ B`、`X → Y`），用 formula；如果能用一笔画出，用 svg；如果只是想加个注脚，用 arrow。
+The pivot point must have the sense of a perspective flip.
 
-### 3.4 颜色系统（精简而克制）
+**Mega word (important · cannot be hardcoded)**:
 
-| 角色 | 变量 | hex | 用法 |
-|------|------|-----|------|
-| 暖米白底 | `--bg` | `#FAF7EF` | 主背景 |
-| 米色卡 | `--paper` | `#F5F1E5` | feature/closing 底 |
-| 墨黑标题 | `--ink-strong` | `#0F0F0F` | 重要文字（避免 #000 纯黑） |
-| 正文黑 | `--ink` | `#1F1F1F` | body |
-| 灰文 | `--ink-light` | `#6B6B6B` | kicker、caption |
-| 红 | `--red` | `#B23A2C` | 错误、批注、强调 |
-| 蓝深 | `--blue-deep` | `#3D5A80` | 顿悟视觉 |
-| amber | `--amber` | `#BB8A2B` | 转折提示 |
-| amber-soft | `--amber-soft` | `#D7A85A` | 高亮底色 |
+The mega word is the explosive point of perspective flip at this moment. It **must be determined by the specific pivot**, don't default to "Wait--".
 
-**≤ 4 主色**（红 + 蓝 + amber + 中性）。不堆色。**禁止 #000 纯黑**。
+| Candidate Type | Example | Applicable Scenarios |
+|---------------|---------|---------------------|
+| Pause word | Wait-- / No / Hold on | When the pivot is "pause and reflect" |
+| Action word | Flip it / Look from the other side / Step back | When the pivot is a specific posture change |
+| Perspective word | Look at the terrain / Don't stare at the ball / Look inside | When the object of looking changes |
+| Single-character blast | Flip / Mountain / Reverse | When the pivot can be condensed to one core character |
+| Concept word | Geometry-- / Terrain-- | When the pivot introduces a new term (but not the final naming) |
 
-### 3.5 漫画分镜式的节奏
+**Taboos**:
+- ✗ Default to "Wait--" -- this is AI's lazy script pattern
+- ✗ Mega word disconnected from pivot content (e.g., content talks about "changing the object of looking," mega says "Wait--" -- doesn't match)
+- ✗ Mega word leaks the final naming (e.g., concept is "Catastrophe Theory," mega cannot be "Catastrophe")
 
-借鉴漫画排版：留白不是均匀的——它跟着叙事节奏分配。漫画里关键瞬间放大留白，过渡部分紧凑收缩。AI 默认的"画廊均匀留白"刚好相反：每节都给同样的呼吸空间，结果整张图像 PowerPoint 模板，没有节奏。
+**Check method**: After reading the mega word, the reader should feel the perspective shift of this moment. If swapping it with "Wait--" also works, swapping it with "No" also works, swapping it with anything also works -- it means it's not tied to the pivot, rewrite.
 
-**节奏分级**：
+Output:
+- **mega**: Pivot blast point (Serif 200px) + amber highlight section (1-3 core characters)
+- **body**: Reverse statement (left column)
+- **visual**: Small diagram of the reverse posture (right column, a simple analogy like a ball rolling in a valley) + caption
 
-| 节 | 弧线角色 | 留白尺度 | 上下 padding | margin-top |
-|----|---------|---------|------------|-----------|
-| feature | 开篇广角 | 中 | 38 / 44 | — |
-| note | 紧凑铺垫 | 小 | 22 / 22 | 24 |
-| archive | 紧凑铺垫 | 小 | 22 / 24 | 24 |
-| cross | 转场爆点 | 大（mega 撑场） | 64 / 60 | 30 |
-| hero | 顿悟特写 | 中偏小 | 52 / 48 | 32 |
-| closing | 终格静默 | 大（让命名沉淀） | 60 / 64 | 32 |
+### 2.4 Find the Insight (Station 5: Hero Spread)
 
-**原则**：
-- 节与节之间用 border-top + margin-top 区分，margin-top 必须**因角色不同**（不是统一 64px）
-- block 内部 padding 全部偏紧——head-margin 12/16，body p+p 8，ask 14
-- 留白集中在 cross + closing 两个"放大"瞬间，其他从快节奏滚过去
-- magazine-head 也要紧凑：44 / 30，不要让大标题独占一屏
+The insight station presents **the core discovery unexpectedly found after implementing the pivot posture**.
 
-**禁忌**：6 个节都是 60-80px margin-top 的均匀间距。如果 self-check 时发现节奏图是直线，回去重排——这是画廊陈列，不是漫画分镜。
+Example:
+- Intentionally not opening → only look at input and output → unexpectedly, you can fully characterize the system!
+
+⚠ Station 5 **must not** contain the concept name!
+
+Output:
+- **head**: Name of the insight posture ("Draw a mountain in state space" / "Only look at input and output"), Serif 50px
+- **pull-quote**: Core sentence with large quotes (blue Serif italic 38px, floating `\201C` large quotation mark)
+- **body**: Specific description of the insight (drop cap)
+- **visual**: Visualize that insight (large hero diagram, left 7 parts, full width) + caption
+
+### 2.5 Find the Naming (Station 6: Closing Page)
+
+The reader has already seen the thing. Now tell them its name.
+
+Output:
+- **approach**: "This kind of X's object of study is called --" (italic 26px Serif)
+- **mega-name**: Large characters (Chinese Serif 144px + English Sans 38px)
+- **byline**: Mono uppercase 14px, thin black lines above and below, separated by `·`
+  - Format: `<Name> · <Year> · <Institution> · <Paper>`
+- **closing-body**: What it opened up (2-3 paragraphs Serif 22px)
+- **epilogue** (optional): Poetic lingering resonance, **not meta-self-referential**
+  - ✓ "And so, you saw the mountain."
+  - ✗ "You thought you just learned a concept..."
 
 ---
 
-## 步骤 4：写 CSS + HTML
+## Step 3: Design the Visual (Magazine x Investigation Dossier Style)
 
-把全部 CSS 写入 `{{CUSTOM_CSS}}`，全部 HTML 写入 `{{CONTENT_HTML}}`。
+### 3.1 Six Layout Molds
 
-### 4.1 CSS 骨架（完整复用版）
+Each station must use a different layout, creating rhythm:
+
+| Station | Layout Mold | Class | Visual Features |
+|---------|------------|-------|-----------------|
+| 1 Start | feature spread | `.feature` | Beige background + grid 6fr/6fr, left large image / right text, kicker + Serif large title + italic lead + drop cap body |
+| 2 Failure | margin note | `.note` | Two-column grid (left sidekick doodle area + right 540px sticky note), note slightly rotated 0.5deg + top dotted perforations + red strikethrough + scribble + footnote ¹; left side holds SVG sketch or handwritten formula |
+| 3 Failure | archive label | `.archive` | Full width + black stamp (left 168px, containing ✕ large character) + right column body + grid diagram + verdict red italic |
+| 4 Pivot | cross-page mega | `.cross` | Full width + Serif 200px **pivot-explosion word determined by content** + amber highlight + two columns (text / image) |
+| 5 Insight | hero spread | `.hero` | Blue top border 4px + grid 7fr/5fr, large image (left) + right column pull quote + drop cap body |
+| 6 Naming | closing page | `.closing` | Beige background + double-line top border + centered symmetry + enormous Serif name + byline with thin lines above and below + epilogue |
+
+**Rhythm (extremely important)**: Open (feature) → Tight (note misalignment) → Tight (archive wide) → Explosion (cross 200px) → Open (hero) → Quiet (closing centered symmetry)
+
+Not uniform unfolding. It breathes -- open and compact alternate, a big explosion at the pivot, finally returning to centered symmetry.
+
+### 3.2 Font Family Contrast (All Four Must Be Used Simultaneously)
+
+- **Serif** (Noto Serif SC): Magazine main title, naming mega-name, lead, pull-quote
+- **Sans** (Noto Sans SC): Body text, failed station head, text following kicker
+- **Mono** (JetBrains Mono / SF Mono): Number num, kicker label, byline, footnote numbers, stamp
+- **Hand** (Caveat / 楷体): Handwritten annotations scribble, ask questions, caption
+
+Font family contrast is the core of magazine visual feel. If any one is absent, the visual returns to AI's single-font uniformity.
+
+### 3.3 Decorative Elements Checklist (Use as Needed)
+
+| Element | Usage | Implementation |
+|---------|-------|----------------|
+| **kicker** | Station number + type subtitle | Mono uppercase 13px + black-on-white num square + 36px short rule |
+| **drop cap** | First character of body's first paragraph | `::first-letter` float left, 96px Serif |
+| **lead** | Feature introduction | italic 23px Serif + red left border 2px |
+| **pull quote** | Hero key sentence | italic 38px Serif + blue border 4px + floating `\201C` large quote 100px |
+| **strike** | Failed body keyword deletion | `text-decoration: line-through` red 2.5px |
+| **scribble** | Note red-pen annotation | Caveat 24px + 6deg rotation + red + dashed red border (Note: now attached within `.note .paper`, not outside `.note`) |
+| **sidekick** | Note left doodle area | grid left column, can hold SVG sketch / handwritten formula (`.formula`) / arrow annotation (`.arrow`) |
+| **stamp** | Archive failure stamp | Black background white text 12px Mono + ✕ Serif 64px |
+| **verdict** | Archive closing statement | italic 19px Serif red + dashed top border |
+| **footnote** | Note footnote | Mono 13px + ¹ superscript + dashed top border |
+| **byline** | Closing attribution | Mono 14px uppercase + letter-spacing 0.18em + thin black lines above and below |
+| **mega** | Cross large word (pivot-explosion word determined by content, defaulting to "Wait--" is forbidden) | Serif 200px + amber gradient highlight section (1-3 core characters) |
+| **epilogue** | Closing lingering resonance | italic 26px Serif + `--` red dash prefix |
+
+Don't use all of them. But **kicker, drop cap, byline, stamp** are structural must-haves.
+
+### 3.3.1 How to Fill the Sidekick Area (Note Mold Only)
+
+The note mold uses a two-column grid. The left sidekick cannot be empty -- an empty column would turn "compact build-up" into "gallery emptiness."
+
+Three filling methods (choose based on content, can be combined, but don't overcrowd):
+
+| Method | When to Use | Class | Implementation |
+|--------|-------------|-------|---------------|
+| **SVG sketch** | The essence of the failure can be drawn in 1-2 graphic postures | (direct `<svg>`) | viewBox 280×220 simple drawing + red-pen annotation, pure ASCII-style outline |
+| **Handwritten formula** | The essence of the failure can be compressed into 1 line of textual relationships | `.formula` | Caveat 22px + dashed left border + -1deg slight rotation, max 3 lines |
+| **Arrow annotation** | Single-point emphasis ("stuff the whole paragraph in →", "in one go") | `.arrow` | Caveat 26px + 6deg slight rotation + red |
+
+Constraints:
+- The sidekick is a *footnote pointing to the sticky note*, not a scene-stealer. The sticky note is the protagonist.
+- Doodle feel takes priority over refinement -- skewed, dashed, gaps left
+- Color restraint: black/gray + a bit of red is enough, no blue/amber
+- Low information density: better one formula + one line of caption than stuffing three diagrams
+
+When unsure which to choose: if the failure keyword can be compressed into an equation (`A ≠ B`, `X → Y`), use formula; if it can be drawn in one stroke, use svg; if you just want to add a footnote, use arrow.
+
+### 3.4 Color System (Streamlined and Restrained)
+
+| Role | Variable | Hex | Usage |
+|------|----------|-----|-------|
+| Warm rice-white background | `--bg` | `#FAF7EF` | Main background |
+| Beige card | `--paper` | `#F5F1E5` | Feature/closing background |
+| Ink-black title | `--ink-strong` | `#0F0F0F` | Important text (avoid #000 pure black) |
+| Body black | `--ink` | `#1F1F1F` | Body text |
+| Gray text | `--ink-light` | `#6B6B6B` | Kicker, caption |
+| Red | `--red` | `#B23A2C` | Error, annotation, emphasis |
+| Deep blue | `--blue-deep` | `#3D5A80` | Insight visualization |
+| Amber | `--amber` | `#BB8A2B` | Pivot indicator |
+| Amber-soft | `--amber-soft` | `#D7A85A` | Highlight background |
+
+**≤ 4 main colors** (Red + Blue + Amber + Neutral). Don't pile on colors. **#000 pure black is forbidden**.
+
+### 3.5 Comic Storyboard-Style Rhythm
+
+Drawing from comic book layout: whitespace is not uniform -- it's allocated according to narrative rhythm. In comics, key moments magnify whitespace, transitions compact and contract. AI's default "gallery-uniform whitespace" is the opposite: every section gets the same breathing room, making the whole image look like a PowerPoint template with no rhythm.
+
+**Rhythm Levels**:
+
+| Section | Arc Role | Whitespace Scale | Top/Bottom padding | margin-top |
+|---------|---------|-----------------|--------------------|------------|
+| feature | Opening wide shot | Medium | 38 / 44 | -- |
+| note | Compact build-up | Small | 22 / 22 | 24 |
+| archive | Compact build-up | Small | 22 / 24 | 24 |
+| cross | Transition explosion | Large (mega commanding presence) | 64 / 60 | 30 |
+| hero | Insight close-up | Medium-small | 52 / 48 | 32 |
+| closing | Final quietude | Large (let naming settle) | 60 / 64 | 32 |
+
+**Principles**:
+- Between sections, use border-top + margin-top to distinguish, margin-top must **vary by role** (not a uniform 64px)
+- All block internal padding is relatively tight -- head-margin 12/16, body p+p 8, ask 14
+- Whitespace concentrates around cross + closing, the two "magnified" moments, others fast-paced and rolling through
+- Magazine-head should also be compact: 44 / 30, don't let the big title dominate a whole screen
+
+**Taboo**: All 6 sections with uniform 60-80px margin-top spacing. If during self-check the rhythm chart is a straight line, go back and re-layout -- this is gallery display, not comic storyboarding.
+
+---
+
+## Step 4: Write CSS + HTML
+
+Write all CSS into `{{CUSTOM_CSS}}`, all HTML into `{{CONTENT_HTML}}`.
+
+### 4.1 CSS Skeleton (Full Reusable Version)
 
 ```css
 :root {
@@ -433,7 +433,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   margin: 4px 12px -4px 0;
 }
 
-/* feature · 开篇广角，留白中等 */
+/* feature · opening wide shot, medium whitespace */
 .feature {
   padding: 38px 64px 44px;
   background: var(--paper);
@@ -450,7 +450,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   border-left: 2px solid var(--red);
 }
 
-/* note · 紧凑铺垫，双栏 grid（左 sidekick + 右便签纸） */
+/* note · compact build-up, two-column grid (left sidekick + right sticky note) */
 .note {
   margin: 24px 64px 0;
   display: grid;
@@ -460,7 +460,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   padding-top: 6px;
 }
 
-/* 左侧 sidekick：涂鸦/公式/箭头 */
+/* left sidekick: doodle/formula/arrow */
 .note .sidekick {
   align-self: stretch;
   display: flex;
@@ -499,7 +499,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   margin-top: 4px;
 }
 
-/* 右侧便签纸（原 .note 样式迁移到 .note .paper） */
+/* right side sticky note (original .note style migrated to .note .paper) */
 .note .paper {
   padding: 22px 26px 22px 28px;
   background: #FFFBF1;
@@ -539,7 +539,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
 }
 .note .paper .footnote .mark { color: var(--red); font-weight: 700; }
 
-/* archive · 紧凑铺垫 */
+/* archive · compact build-up */
 .archive {
   margin: 24px 64px 0;
   background: var(--bg);
@@ -568,7 +568,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   color: var(--red);
 }
 
-/* cross · 转场爆点（留白偏大让 mega 撑场） */
+/* cross · transition explosion (larger whitespace for mega to command presence) */
 .cross {
   padding: 64px 64px 60px;
   border-top: 1px solid var(--rule);
@@ -588,7 +588,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
 .cross .left, .cross .right { border-top: 2px solid var(--ink-strong); padding-top: 16px; }
 .cross .right .caption { font: italic 400 16px/1.45 var(--serif); color: var(--ink-light); margin-top: 10px; padding-left: 10px; border-left: 2px solid var(--amber); }
 
-/* hero · 顿悟特写，中等偏小 */
+/* hero · insight close-up, medium to small */
 .hero {
   padding: 52px 64px 48px;
   border-top: 4px solid var(--blue-deep);
@@ -612,7 +612,7 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   color: var(--blue-deep); opacity: 0.35;
 }
 
-/* closing · 终格静默，留白沉淀 */
+/* closing · final quietude, whitespace for settling */
 .closing {
   padding: 60px 64px 64px;
   background: var(--paper);
@@ -663,67 +663,67 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
   color: var(--ink-strong);
   margin-top: 18px;
 }
-.closing .epilogue::before { content: '— '; color: var(--red); font-weight: 700; }
+.closing .epilogue::before { content: '-- '; color: var(--red); font-weight: 700; }
 ```
 
-### 4.2 HTML 骨架
+### 4.2 HTML Skeleton
 
 ```html
 <div class="magazine-head">
   <div class="top-bar">
     <div class="left">
-      <span class="badge">№ 01</span>
-      <span>[领域 · 年份]</span>
+      <span class="badge">No 01</span>
+      <span>[Field · Year]</span>
     </div>
     <div class="right">[ENGLISH CATEGORY / SUBCATEGORY]</div>
   </div>
-  <h1>[不剧透标题]<br>[第二行可选]</h1>
-  <p class="deck">[italic 引言：暗示问题但不揭示答案]</p>
+  <h1>[Non-spoiler title]<br>[Optional second line]</h1>
+  <p class="deck">[italic introduction: suggests the problem but does not reveal the answer]</p>
 </div>
 
 <section class="feature">
-  <div class="visual">[SVG 大图，max-width 540px]</div>
+  <div class="visual">[SVG large image, max-width 540px]</div>
   <div class="meta">
-    <div class="kicker"><span class="num">01</span><span class="rule"></span>起点 · [时空锚点]</div>
-    <h2 class="head-serif">[卡住的问题]</h2>
-    <p class="lead">[一句简洁领题]</p>
+    <div class="kicker"><span class="num">01</span><span class="rule"></span>Start · [Time-space anchor]</div>
+    <h2 class="head-serif">[The stuck problem]</h2>
+    <p class="lead">[One concise lead-in sentence]</p>
     <div class="body-sans drop-cap">
-      <p>[具体例子，drop cap 第一段第一字]</p>
-      <p>[关键转折用 <em> 强调]</p>
-      <span class="ask">[开放设问？]</span>
+      <p>[Concrete example, drop cap on first character of first paragraph]</p>
+      <p>[Key pivot emphasized with <em>]</p>
+      <span class="ask">[Open question?]</span>
     </div>
   </div>
 </section>
 
 <aside class="note">
-  <!-- 左侧 sidekick：三选一或组合（SVG 速写 / 手写公式 / 箭头评注），不能空 -->
+  <!-- Left sidekick: one of three options or a combination (SVG sketch / handwritten formula / arrow annotation), cannot be empty -->
   <div class="sidekick">
-    <!-- 选项 A: SVG 速写 -->
-    <svg viewBox="0 0 280 200">[简笔画姿态 + 红笔批注]</svg>
+    <!-- Option A: SVG sketch -->
+    <svg viewBox="0 0 280 200">[Simple drawing posture + red-pen annotation]</svg>
 
-    <!-- 选项 B: 手写公式 -->
+    <!-- Option B: Handwritten formula -->
     <div class="formula">
-      [关键词] = [看着对]<br>
-      <em>≠ [跑得通]</em>
+      [keyword] = [looks right]<br>
+      <em>≠ [works in practice]</em>
     </div>
 
-    <!-- 选项 C: 箭头评注 -->
-    <div class="arrow">→ [一句注脚]</div>
+    <!-- Option C: Arrow annotation -->
+    <div class="arrow">→ [One-line footnote]</div>
 
-    <!-- 可选：caption -->
-    <div class="doodle-caption">[一句小字说明]</div>
+    <!-- Optional: caption -->
+    <div class="doodle-caption">[One-line small-text explanation]</div>
   </div>
 
-  <!-- 右侧 paper：便签卡（原 note 内容迁移到 .paper 内） -->
+  <!-- Right paper: sticky note (original note content migrated into .paper) -->
   <div class="paper">
-    <div class="kicker"><span class="num">02</span>第一次尝试</div>
-    <h3 class="head-sans">[尝试的动作名]</h3>
+    <div class="kicker"><span class="num">02</span>First Attempt</div>
+    <h3 class="head-sans">[Name of the attempt action]</h3>
     <div class="body-serif">
-      <p>[思路 1]</p>
-      <p>失败的关键词用 <span class="strike">删除线</span></p>
+      <p>[Approach 1]</p>
+      <p>Failed keyword uses <span class="strike">strikethrough</span></p>
     </div>
-    <div class="footnote"><span class="mark">¹</span><span>[失败的根本原因]</span></div>
-    <div class="scribble">[一句红笔批注]</div>
+    <div class="footnote"><span class="mark">¹</span><span>[Root cause of failure]</span></div>
+    <div class="scribble">[One-line red-pen annotation]</div>
   </div>
 </aside>
 
@@ -734,27 +734,27 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
     <div class="case">Failed</div>
   </div>
   <div class="body-area">
-    <div class="kicker"><span>第二次尝试</span></div>
-    <h3 class="head-sans">[尝试的动作名]</h3>
-    <div class="visual">[SVG 失败示意，max-width 720px]</div>
-    <div class="body-serif"><p>[思路 + 失败]</p></div>
-    <div class="verdict">[结案语]</div>
+    <div class="kicker"><span>Second Attempt</span></div>
+    <h3 class="head-sans">[Name of the attempt action]</h3>
+    <div class="visual">[SVG failure diagram, max-width 720px]</div>
+    <div class="body-serif"><p>[Approach + failure]</p></div>
+    <div class="verdict">[Closing statement]</div>
   </div>
 </section>
 
 <section class="cross">
-  <!-- mega 字由内容决定（动作词/视角词/单字爆点），禁止默认套「等等——」 -->
-  <h2 class="mega"><span class="em">[转折爆点 1-3 字]</span>[可选后缀如 ——、！]</h2>
+  <!-- Mega word determined by content (action word / perspective word / single-character blast), defaulting to "Wait--" is forbidden -->
+  <h2 class="mega"><span class="em">[Pivot explosion, 1-3 characters]</span>[Optional suffix like --, !]</h2>
   <div class="grid">
     <div class="left">
-      <div class="kicker" style="color: var(--amber);"><span class="num" style="background: var(--amber);">04</span>转折</div>
+      <div class="kicker" style="color: var(--amber);"><span class="num" style="background: var(--amber);">04</span>Pivot</div>
       <div class="body-serif">
-        <p>[反向陈述]</p>
+        <p>[Reverse statement]</p>
       </div>
-      <span class="ask" style="color: var(--amber);">[转折设问？]</span>
+      <span class="ask" style="color: var(--amber);">[Pivot question?]</span>
     </div>
     <div class="right">
-      <div class="visual">[SVG 反向姿态示意，max-width 460px]</div>
+      <div class="visual">[SVG reverse posture diagram, max-width 460px]</div>
       <p class="caption">[caption]</p>
     </div>
   </div>
@@ -763,118 +763,118 @@ note 模具是双栏 grid。左侧 sidekick 不能空——空栏会让"紧凑�
 <section class="hero">
   <div class="layout">
     <div class="visual">
-      [SVG 大幅 hero 图，宽度自适应]
+      [SVG large hero image, width auto-adaptive]
       <p class="caption">[caption]</p>
     </div>
     <div class="text">
-      <div class="kicker" style="color: var(--blue-deep);"><span class="num" style="background: var(--blue-deep);">05</span>顿悟</div>
-      <h2 class="head-serif" style="color: var(--blue-deep); font-size: 50px;">[姿态名，不出现概念名]</h2>
-      <div class="pull-quote">[核心句子]</div>
+      <div class="kicker" style="color: var(--blue-deep);"><span class="num" style="background: var(--blue-deep);">05</span>Insight</div>
+      <h2 class="head-serif" style="color: var(--blue-deep); font-size: 50px;">[Name of posture, concept name must not appear]</h2>
+      <div class="pull-quote">[Core sentence]</div>
       <div class="body-serif drop-cap">
-        <p>[洞察的具体表述]</p>
+        <p>[Specific description of insight]</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="closing">
-  <p class="approach">[这种 X 的研究对象，叫——]</p>
-  <h1 class="mega-name">[中文概念名]</h1>
+  <p class="approach">[This kind of X's object of study is called --]</p>
+  <h1 class="mega-name">[Chinese concept name]</h1>
   <div class="en-name">[English Name]</div>
   <div class="byline">
-    <span><strong>[人名]</strong></span>
+    <span><strong>[Name]</strong></span>
     <span class="sep">·</span>
-    <span>[年份]</span>
+    <span>[Year]</span>
     <span class="sep">·</span>
-    <span>[机构]</span>
+    <span>[Institution]</span>
     <span class="sep">·</span>
-    <span>[文献]</span>
+    <span>[Paper]</span>
   </div>
   <div class="closing-body">
-    <p>[它打开了什么]</p>
-    <p>[它换了什么眼睛]</p>
+    <p>[What it opened up]</p>
+    <p>[What eyes it changed]</p>
   </div>
-  <p class="epilogue">[诗意余韵，不元自指]</p>
+  <p class="epilogue">[Poetic lingering resonance, not meta-self-referential]</p>
 </section>
 ```
 
-写入：`/tmp/ljg_cast_sketchnote_{name}.html`
+Write to: `/tmp/ljg_cast_sketchnote_{name}.html`
 
 ---
 
-## 步骤 5：截图（单阶段）
+## Step 5: Screenshot (Single Stage)
 
-新风格不再使用橙色弯曲箭头。叙事流通过 page rules + 编号传达，**单阶段渲染**：
+The new style no longer uses orange curved arrows. The narrative flow is conveyed through page rules + numbering, **single-stage rendering**:
 
 ```bash
 node assets/capture.js /tmp/ljg_cast_sketchnote_{name}.html ~/Downloads/{name}.png 1080 1500 fullpage
 ```
 
-`fullpage` 让 Playwright 自动适应内容总高度。
+`fullpage` lets Playwright automatically adapt to the total content height.
 
-旧版的 measure.js 两阶段流程（先空跑测高再写 SVG 箭头）已**废弃**——本模式不需要。
-
----
-
-## 步骤 6：自检（逐项）
-
-### 公理项（任何一条不过 → 重做）
-- [ ] 公理 1：具体物理约束（不是"领域困境"等抽象腔）
-- [ ] 公理 2：至少一次失败，且 station 2 与 3 形态不同（note + archive）
-- [ ] 公理 3：标题不剧透 + 命名站点最后
-- [ ] 公理 4：现在视角，无"100 年后"等上帝视角
-- [ ] 公理 5：文字克制，无元自指（不出现"你刚才发明了它"等点题语）
-- [ ] 公理 6：中文母语表达——*整卡走一遍*：每句默念听是否像中文人说话；扫"是...的"/"在...的过程中"/"对于...而言"/"进行+名词"等翻译腔模板；超 3 逗号长句砍短
-- [ ] cross mega 字是叙事自然产生的（不是默认套"等等——"——读者读完应能感到这一刻的视角变化）
-
-### 视觉项（杂志骨架）
-- [ ] 6 个站点，每个用不同 layout 模具：feature / note / archive / cross / hero / closing
-- [ ] 4 字族同时使用：Serif + Sans + Mono + Hand
-- [ ] 必备装饰：kicker（含 mono num 方块）+ drop cap + byline + stamp
-- [ ] Station 2 (note)：双栏（左 sidekick + 右 paper），左侧有 SVG/公式/箭头之一（不空），右侧有红笔删除线 + scribble + footnote
-- [ ] Station 3 (archive)：黑色印章 ✕ + verdict 红色 italic
-- [ ] Station 4 (cross)：「等等——」200px Serif + amber 高亮
-- [ ] Station 5 (hero)：pull-quote 蓝色 + 浮动大引号
-- [ ] Station 6 (closing)：mega-name ≥ 130px + byline 上下细线 + epilogue
-- [ ] 漫画分镜节奏：feature 中等留白 → note 紧 → archive 紧 → cross 爆（mega 撑场）→ hero 中偏小 → closing 大（沉淀）。6 节 margin-top 不应都相同
-- [ ] 颜色 ≤ 4 主色（红 + 蓝 + amber + 中性）
-- [ ] 无纯黑 #000，标题用 #0F0F0F
-
-### 技术项
-- [ ] 单阶段渲染（不用 measure.js）
-- [ ] PNG 高度通常 4500-6500（杂志风允许更高，节奏需要）
-- [ ] 字体齐全：Noto Serif SC + Noto Sans SC + JetBrains Mono + Caveat
-- [ ] 中文显示优雅（无方块字）
+The old version's measure.js two-stage process (first dry run to measure height, then write SVG arrows) is **deprecated** -- this mold does not need it.
 
 ---
 
-## 与其他模具的边界
+## Step 6: Self-Check (Item by Item)
 
-- 跟 `-i`（信息图）：信息图是数据可视化，本模式是**概念叙事**
-- 跟 `-w`（白板）：白板是推理过程纵向展开，本模式是**问题→失败→转折→顿悟→命名的探索路径**
-- 跟 `-c`（漫画）：漫画追求黑白动态分镜，本模式追求**编辑设计 + 叙事张力**
+### Axiom Items (any one fails → redo)
+- [ ] Axiom 1: Specific physical constraints (not abstract phrasing like "domain predicament")
+- [ ] Axiom 2: At least one failure, and station 2 and 3 differ in form (note + archive)
+- [ ] Axiom 3: Title does not spoil + naming station is last
+- [ ] Axiom 4: Present perspective, no "100 years later" god perspective
+- [ ] Axiom 5: Text restraint, no meta-self-reference (no "you just invented it" type phrasing)
+- [ ] Axiom 6: Native Chinese expression -- *go through the entire card*: read each sentence silently to hear if it sounds like a Chinese person speaking; scan for "是...的"/"在...的过程中"/"对于...而言"/"进行+noun" translationese templates; chop long sentences with more than 3 commas
+- [ ] Cross mega word arises naturally from the narrative (not default "Wait--" -- after reading, the reader should feel the perspective shift of this moment)
 
-不知道用哪个时，问：「读者读完，是带走一个**视角**，一段**推理**，还是一段**期刊专题式的体验**？」
+### Visual Items (Magazine Skeleton)
+- [ ] 6 stations, each using a different layout mold: feature / note / archive / cross / hero / closing
+- [ ] 4 font families used simultaneously: Serif + Sans + Mono + Hand
+- [ ] Required decorations: kicker (containing mono num square) + drop cap + byline + stamp
+- [ ] Station 2 (note): two columns (left sidekick + right paper), left side has SVG/formula/arrow (not empty), right side has red strikethrough + scribble + footnote
+- [ ] Station 3 (archive): black stamp ✕ + verdict red italic
+- [ ] Station 4 (cross): [Pivot word] 200px Serif + amber highlight
+- [ ] Station 5 (hero): pull-quote blue + floating large quotation marks
+- [ ] Station 6 (closing): mega-name ≥ 130px + byline with thin lines above and below + epilogue
+- [ ] Comic storyboard rhythm: feature medium whitespace → note tight → archive tight → cross explosive (mega commanding) → hero medium-small → closing large (settling). Margin-top of the 6 sections should not all be the same
+- [ ] Colors ≤ 4 main colors (Red + Blue + Amber + Neutral)
+- [ ] No pure black #000, titles use #0F0F0F
 
-期刊专题式 → 本模式。
+### Technical Items
+- [ ] Single-stage rendering (no measure.js)
+- [ ] PNG height typically 4500-6500 (magazine style allows higher, rhythm needs it)
+- [ ] Complete font set: Noto Serif SC + Noto Sans SC + JetBrains Mono + Caveat
+- [ ] Chinese text displays elegantly (no tofu characters)
+
+---
+
+## Boundary with Other Molds
+
+- With `-i` (infograph): Infograph is data visualization; this mold is **concept narrative**
+- With `-w` (whiteboard): Whiteboard is vertical unfolding of reasoning process; this mold is **problem → failure → pivot → insight → naming exploration path**
+- With `-c` (comic): Comic pursues black-and-white dynamic panels; this mold pursues **editorial design + narrative tension**
+
+When unsure which to use, ask: "After reading, does the reader walk away with a **perspective**, a piece of **reasoning**, or a **magazine feature-style experience**?"
+
+Magazine feature-style → this mold.
 
 ---
 
 ## Known Pitfalls
 
-- [2026-04-29] SVG.relations viewBox 必须对齐实测页面高度——凭估算会导致箭头与 HTML 标签错位（误差 30-50%）。（历史教训，新版已废弃箭头流程）
-- [2026-05-01] flex 容器默认让 .station 撑满宽度——必须给所有 .station 变体显式 max-width，否则 align-self 失效。（历史教训，新版用 grid + margin auto）
-- [2026-05-01] 「公理 1：真问题」最容易被偷懒——容易写成"X 领域有个问题"。检查方法：删掉一切抽象，只留具体物理约束（"开了就炸"、"开了就死"）。
-- [2026-05-01] 「公理 3：命名在后」最容易被剧透——设计 layout 时，命名站点放最下面（路径终点），且标题不能出现概念名。
-- [2026-05-01] 「公理 5：文字克制」最容易触雷——AI 在 closing 段会自动写成"你以为你刚才学到了一个概念。其实你刚才不得不发明了它"。这种元自指破坏体验，禁止。要余韵就写诗意句（"于是，你看见了山"），不写元论。 (from: 20260501-180500_cast-potential-function-sketchnote)
-- [2026-05-01] 旧版"重新发明 / 重新分娩 / 不得不发明它"等元自指 framing 已彻底淘汰——文档和输出文字都不再用此类自指话术。 (from: 20260501-180500_cast-potential-function-sketchnote)
-- [2026-05-01] 杂志风排版需要四字族同时在场（Serif/Sans/Mono/Hand）。如果输出全是 Sans，回到 AI 单一字族的均质感。Mono 用于 kicker / num / byline / stamp，Hand 用于 ask / scribble / caption，缺一不可。 (from: 20260501-180500_cast-potential-function-sketchnote)
-- [2026-05-01] 两个失败站点必须形态不同——station 2 用 note（便签批注），station 3 用 archive（档案标签）。两个都用 note 或都用 archive，节奏不出来。 (from: 20260501-180500_cast-potential-function-sketchnote)
-- [2026-05-01] Drop cap 用 `::first-letter` 选第一段第一字。如果 pull quote 在 body 之前，drop cap 不会作用于 pull quote——只作用于其后第一段。这是预期行为。 (from: 20260501-180500_cast-potential-function-sketchnote)
-- [2026-05-01] S1 feature visual SVG 内若把红色批注（如"外面什么也没动"）紧贴主体物（玻璃罩边缘），易造成视觉拥挤。批注应该外移到 SVG 之外的 caption 位置，或保留为 SVG 内极小注解，让主体 visual 保持纯净。 (from: 20260501-181811_cast-agentic-sketchnote)
-- [2026-05-01] 公理 6（中文母语表达）最易触雷——AI 默认写"输入连续，输出不连续"这种英文直译腔。要改成"慢慢加热，到 100 度突然就开了"。检查方法：每句默念听是否像中文人说话；名词化抽象词（"共相""现象学""碎片化"）一律替换成具体动词或具体物件。 (from: refactor-ljg-card-v-mode 2026-05-01)
-- [2026-05-01] cross 模具 mega 字默认套"等等——"是僵硬的剧本套路。mega 必须紧扣具体转折——可以是动作词（"翻过来"）、视角词（"看地形"/"别盯球"）、单字爆点（"翻"/"山"），或保留"等等"如果它真是这个转折的自然语气。检查：换成别的转折词如果也成立，说明它没紧扣，重写。 (from: refactor-ljg-card-v-mode 2026-05-01)
-- [2026-05-01] 留白不能均匀分配。借鉴漫画分镜：feature 中等留白（开篇广角）→ note + archive 紧凑（铺垫快节奏）→ cross 留白偏大（爆点撑场）→ hero 中偏小（顿悟特写）→ closing 留白大（终格沉淀）。如果 6 节 margin-top 都在 60-80px，那是画廊陈列不是漫画分镜，重排。 (from: refactor-ljg-card-v-mode 2026-05-01)
-- [2026-05-02] note 模具旧版是单栏 540px 右浮，左侧 ~480px 死空白显得空洞。新版改双栏 grid（左 sidekick 涂鸦区 + 右 540px 便签纸）。原 .note 直接挂的 strike/scribble/footnote 全部迁到 `.note .paper` 内。如果生成 HTML 用了旧的扁平结构（直接 `.note > .scribble`），scribble 定位会错。 (from: ljg-card-v-mode-note-redesign 2026-05-02)
-- [2026-05-02] sidekick 不能空——空了就回到旧版死空白的问题。三种填法（SVG/formula/arrow）至少选一。但也不能塞满——sidekick 是注脚，便签是主角，密度低于便签。 (from: ljg-card-v-mode-note-redesign 2026-05-02)
-- [2026-05-02] 公理 6 实操经验：AI 在 lead/closing-body 这两个抒情段最容易冒翻译腔——"这是一个值得我们..."、"在...背景下..."、"对...而言..."。生成 HTML 后，先扫这两段的中文，命中模板词立即重写。其他段（kicker/byline/stamp）反而风险低。 (from: ljg-card-v-mode-note-redesign 2026-05-02)
+- [2026-04-29] SVG.relations viewBox must align with measured page height -- estimation causes arrow-HTML tag misalignment (30-50% error). (Historical lesson, arrow flow deprecated in new version)
+- [2026-05-01] Flex containers default to .station filling full width -- all .station variants must have explicit max-width, or align-self breaks. (Historical lesson, new version uses grid + margin auto)
+- [2026-05-01] "Axiom 1: Real problem" is the easiest to cut corners on -- it is easy to write "There's a problem in field X". Check method: delete all abstraction, keep only concrete physical constraints ("open and it blows", "open and it dies").
+- [2026-05-01] "Axiom 3: Naming last" is the easiest to spoil -- when designing layout, put the naming station at the very bottom (end of the path), and the title must not contain the concept name.
+- [2026-05-01] "Axiom 5: Text restraint" is the easiest to stumble on -- AI in the closing section automatically writes "You thought you just learned a concept. Actually you just had to invent it." This meta-self-reference ruins the experience, forbidden. For lingering resonance, write poetic sentences ("And so, you saw the mountain"), not meta-discourse. (from: 20260501-180500_cast-potential-function-sketchnote)
+- [2026-05-01] Old "re-invent / re-gestate / had to invent it" meta-self-referential framing is completely eliminated -- both documents and output text no longer use this kind of self-referential rhetoric. (from: 20260501-180500_cast-potential-function-sketchnote)
+- [2026-05-01] Magazine-style typesetting needs all four font families present (Serif/Sans/Mono/Hand). If output is all Sans, it returns to AI single-font uniformity. Mono used for kicker / num / byline / stamp, Hand used for ask / scribble / caption, none can be missing. (from: 20260501-180500_cast-potential-function-sketchnote)
+- [2026-05-01] Two failure stations must differ in form -- station 2 uses note (sticky note annotation), station 3 uses archive (file label). If both use note or both use archive, the rhythm doesn't emerge. (from: 20260501-180500_cast-potential-function-sketchnote)
+- [2026-05-01] Drop cap uses `::first-letter` to select the first character of the first paragraph. If pull quote comes before body, drop cap does not apply to pull quote -- only to the first paragraph after it. This is expected behavior. (from: 20260501-180500_cast-potential-function-sketchnote)
+- [2026-05-01] S1 feature visual SVG: if red annotations (e.g., "nothing moved outside") are placed too close to the subject (edge of the glass cover), it causes visual crowding. Annotations should be moved outside the SVG to caption position, or kept as minimal SVG-internal annotations, keeping the main subject visual clean. (from: 20260501-181811_cast-agentic-sketchnote)
+- [2026-05-01] Axiom 6 (native Chinese expression) is the easiest to stumble on -- AI default writes "输入连续，输出不连续" this kind of English direct-translation tone. Must change to "慢慢加热，到 100 度突然就开了". Check method: read each sentence silently to hear if it sounds like a Chinese person speaking; abstract nominalizations ("共相""现象学""碎片化") must always be replaced with concrete verbs or concrete objects. (from: refactor-ljg-card-v-mode 2026-05-01)
+- [2026-05-01] Cross mold mega word defaulting to "Wait--" is a rigid script pattern. Mega must be closely tied to the specific pivot -- can be action word ("翻过来"), perspective word ("看地形"/"别盯球"), single-character blast ("翻"/"山"), or keep "Wait--" if it truly is the natural tone of this pivot. Check: if changing to another pivot word also works, it means it's not closely tied, rewrite. (from: refactor-ljg-card-v-mode 2026-05-01)
+- [2026-05-01] Whitespace cannot be evenly allocated. Drawing from comic storyboarding: feature medium whitespace (opening wide shot) → note + archive compact (build-up fast rhythm) → cross larger whitespace (explosion commanding) → hero medium-small (insight close-up) → closing large (final settling). If all 6 section margin-tops are 60-80px, that's gallery display not comic storyboarding, re-layout. (from: refactor-ljg-card-v-mode 2026-05-01)
+- [2026-05-02] Note mold old version was single-column 540px right float, left ~480px dead space feeling hollow. New version changed to two-column grid (left sidekick doodle area + right 540px sticky note). Original .note directly hanging strike/scribble/footnote all migrated into `.note .paper`. If generated HTML uses the old flat structure (direct `.note > .scribble`), scribble positioning will be wrong. (from: ljg-card-v-mode-note-redesign 2026-05-02)
+- [2026-05-02] Sidekick cannot be empty -- empty returns to the old version's dead space problem. Three filling methods (SVG/formula/arrow) at least choose one. But also cannot be stuffed -- sidekick is footnote, sticky note is protagonist, density lower than sticky note. (from: ljg-card-v-mode-note-redesign 2026-05-02)
+- [2026-05-02] Axiom 6 practical experience: AI is most prone to translationese in lead/closing-body these two lyrical paragraphs -- "这是一个值得我们...", "在...背景下...", "对...而言...". After generating HTML, first scan these two paragraphs' Chinese, hit template words immediately rewrite. Other paragraphs (kicker/byline/stamp) are lower risk. (from: ljg-card-v-mode-note-redesign 2026-05-02)

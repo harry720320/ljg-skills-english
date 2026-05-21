@@ -10,7 +10,7 @@ All molds must pass this standards checklist before generating HTML. This is the
 | VISUAL_DENSITY | 4 | 1=gallery whitespace, 10=cockpit information density |
 
 Auto-adjusted by mold:
-- `-l` Long card: DESIGN_VARIANCE=5, VISUAL_DENSITY=3 (reading comfort first). Variation achieved through **hue perception** — different content temperaments对应 different background colors and accent colors (see mode-long.md step 2.5)
+- `-l` Long card: DESIGN_VARIANCE=5, VISUAL_DENSITY=3 (reading comfort first). Variation achieved through **hue perception** — different content temperaments correspond to different background colors and accent colors (see mode-long.md step 2.5)
 - `-i` Infograph: DESIGN_VARIANCE=7, VISUAL_DENSITY=8 (data density first). Variation achieved through **dynamic REF encoding** and **content-driven custom layouts**
 - `-c` Comic: DESIGN_VARIANCE=9, VISUAL_DENSITY=2 (visual impact first). Shares hue system with long card, end marker only appears on final page
 
@@ -18,7 +18,7 @@ Auto-adjusted by mold:
 
 ### Headings
 - Large headings: `tracking-tighter` (tight letter spacing), `leading-none` (minimal line height)
-- **Inter font forbidden**. Long card/comic use serif (Noto Serif SC), infograph uses mono + sans-serif混合
+- **Inter font forbidden**. Long card/comic use serif (Noto Serif SC), infograph uses mono + sans-serif mixed
 - Dashboard/technical scenarios strictly forbid serif — only premium sans-serif (Geist, Satoshi, Cabinet Grotesk)
 
 ### Body Text
@@ -33,7 +33,7 @@ Auto-adjusted by mold:
 
 ### Hard Rules
 - Maximum **1 accent color**, saturation < 80%
-- **Forbid "AI purple-blue"**: purple button glows, neon gradients一律 forbidden
+- **Forbid "AI purple-blue"**: purple button glows, neon gradients are all forbidden
 - Strictly unify warm/cool tone within a single image — don't oscillate between warm gray and cool gray
 - **Forbid pure black** `#000000`: use Off-Black (`#1a1a1a`), Zinc-950, or charcoal
 
@@ -45,7 +45,7 @@ Auto-adjusted by mold:
 
 ### When DESIGN_VARIANCE > 4
 - **Forbid centered Hero**: headings must not default to centered. Use left-aligned, split-screen, asymmetric whitespace
-- **Forbid "three-column cards"**: 3 equal-width并列 columns is the #1 AI-generation tell. Replace with 2-column staggered, asymmetric grid, or horizontal scroll
+- **Forbid "three-column cards"**: 3 equal-width parallel columns is the #1 AI-generation tell. Replace with 2-column staggered, asymmetric grid, or horizontal scroll
 
 ### When DESIGN_VARIANCE ≥ 8
 - Use CSS Grid fractional units (e.g. `grid-template-columns: 2fr 1fr 1fr`)
@@ -59,7 +59,7 @@ Auto-adjusted by mold:
 
 ## 5. AI Generation Forbidden Checklist
 
-Before generating any visual content,逐项 check for these typical AI traces:
+Before generating any visual content, check item by item for these typical AI traces:
 
 ### Visual & CSS
 - **Forbid outer glow**: no `box-shadow` default glow. Use inner borders or tinted shadows
@@ -68,7 +68,7 @@ Before generating any visual content,逐项 check for these typical AI traces:
 
 ### Typography
 - **Forbid Inter font**: use Geist, Outfit, Cabinet Grotesk, or Satoshi
-- **Forbid H1 screaming**: headings must not建立 hierarchy through pure size scaling. Use weight and color to control
+- **Forbid H1 screaming**: headings must not establish hierarchy through pure size scaling. Use weight and color to control
 
 ### Content & Data ("Jane Doe Effect")
 - **Forbid generic names**: John Doe, Sarah Chan, Jack Su forbidden. Use creative real names
@@ -79,12 +79,12 @@ Before generating any visual content,逐项 check for these typical AI traces:
 
 ### Spacing & Alignment
 - padding and margin must be mathematically precise, no awkward gaps
-- Adjacent elements strictly aligned, visual lines贯通
+- Adjacent elements strictly aligned, visual lines connect through
 
 ## 6. Material & Surface
 
 ### Glassmorphism
-If frosted glass effect needed, don't just use `backdrop-blur`. Must叠加:
+If frosted glass effect needed, don't just use `backdrop-blur`. Must layer on:
 - 1px inner border: `border: 1px solid rgba(255,255,255,0.1)`
 - Subtle inner shadow: `box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)`
 Simulating physical edge refraction.
@@ -95,7 +95,7 @@ Simulating physical edge refraction.
 
 ## 7. Factory Self-Check
 
-After generating HTML, before screenshot,逐项 confirm:
+After generating HTML, before screenshot, confirm item by item:
 
 - [ ] Avoided centered Hero (when DESIGN_VARIANCE > 4)?
 - [ ] Avoided three-column equal-width cards?
